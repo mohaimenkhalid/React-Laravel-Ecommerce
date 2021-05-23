@@ -1,6 +1,2 @@
-/admin/my-app/vendor
-/user/my-app/node_modules
 /admin/.idea
 /user/.idea
-/admin/my-app/.idea
-/user/my-app/.idea
