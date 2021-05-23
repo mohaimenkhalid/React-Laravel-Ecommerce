@@ -1,0 +1,4 @@
+/admin/my-app/vendor
+/user/my-app/node_modules
+/admin/.idea
+/user/.idea
