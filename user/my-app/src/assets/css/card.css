@@ -1,27 +1,29 @@
+.card {
+    width: 100% !important;
+    text-decoration: none;
+    border: none !important;
+    border-radius: 0% !important;
+    box-shadow: 0 0 4px 0 rgba(57, 78, 234, 0.1)
+}
+.card:hover {
+    border-radius: 0% !important;
+    text-decoration: none;
+    box-shadow: 0 0 12px 0 rgba(57, 78, 234, 0.1)
+}
+
 .image-box {
     position: relative;
     margin: auto;
     overflow: hidden;
-    width: 100%;
+    width: 100% !important;
 }
-
 .image-box img {
-    max-width: 100%;
+    width: 100% !important;
     transition: all 0.3s;
     display: block;
-    width: 100%;
     height: auto;
     transform: scale(1);
 }
-
 .image-box:hover img {
     transform: scale(1.1);
-}
-
-.card {
-    border: none !important;
-    border-radius: 4px !important;
-    box-shadow: 0 0 8px 0 rgb(57 78 234 / 10%);
-    transition: 0.3s;
-    text-decoration: none !important;
 }
