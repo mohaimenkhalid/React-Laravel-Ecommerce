@@ -26,3 +26,7 @@
     border-radius: 52% !important;
     box-shadow: 0 0 12px 0 rgba(57, 78, 234, 0.1)
 }
+
+.navbar {
+    display: block;
+}
