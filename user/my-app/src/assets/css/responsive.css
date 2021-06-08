@@ -1,4 +1,4 @@
-@media (max-width: 374.98px) {
+@media only screen and (max-width: 375px) {
     .section-title{
         font-size: 16px;
     }
@@ -26,10 +26,18 @@
 
     body {
         font-size: 14px;
+    }
+
+    .accordionMenuDiv {
+        height: auto;
+    }
+
+    .desktop-navbar-status {
+        display: none !important;
     }
 }
 
-@media (min-width: 375.98px) and (max-width: 575.98px){
+@media only screen and (min-width: 375.98px) and (max-width: 575.98px){
     .section-title{
         font-size: 16px;
     }
@@ -56,6 +64,14 @@
     }
     body {
         font-size: 14px;
+    }
+
+    .accordionMenuDiv {
+        height: auto;
+    }
+
+    .desktop-navbar-status {
+        display: none !important;
     }
 }
 

@@ -1,12 +1,12 @@
 import React, {Component, Fragment} from 'react';
-import {Container, Col, Navbar, Row, Button} from "react-bootstrap";
+import {Col, Navbar, Row, Button} from "react-bootstrap";
 import logo from '../../assets/images/logo.png'
 
 class NavMenuDesktop extends Component {
     render() {
         return (
             <Fragment>
-                <Navbar bg="light" className="navbar">
+                <Navbar bg="light" className="Desktop navbar">
                     <Row className="align-items-center">
                         <Col lg={4} md={4} sm={12} xs={12}>
                             <div>
