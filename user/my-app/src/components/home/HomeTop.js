@@ -33,7 +33,7 @@ class HomeTop extends Component {
     render() {
         return (
             <Fragment>
-                <Container className="p-0 -0" fluid={true}>
+                <Container className="p-0" fluid={true}>
                     <Row>
                         <Col lg={3} md={3} sm={12} className="Desktop">
                             <MegaMenu />

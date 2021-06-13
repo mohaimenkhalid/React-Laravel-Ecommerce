@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {Col, Navbar, Row, Button} from "react-bootstrap";
 import logo from '../../assets/images/logo.png'
+import {Link} from "react-router-dom";
 
 class NavMenuDesktop extends Component {
     render() {
@@ -10,9 +11,9 @@ class NavMenuDesktop extends Component {
                     <Row className="align-items-center">
                         <Col lg={4} md={4} sm={12} xs={12}>
                             <div>
-                                <Navbar.Brand href="#">
+                                <Link to="/">
                                     <img width="50px" src={logo} alt="" />
-                                </Navbar.Brand>
+                                </Link>
                                 <Button className="cart-btn">
                                     <i className="fa fa-shopping-cart" /> 4 items
                                 </Button>
@@ -47,9 +48,9 @@ class NavMenuDesktop extends Component {
                                         <span className="badge badge-danger">4</span>
                                     </sub>
                                 </a>
-                                <Button className="btn btn-danger">
+                                <Link to="/onboard" className="btn btn-danger">
                                     LOGIN
-                                </Button>
+                                </Link>
                             </div>
                         </Col>
                     </Row>

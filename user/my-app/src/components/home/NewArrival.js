@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import {Card, Col, Container, Row} from "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {Link} from "react-router-dom";
 
 class NewArrival extends Component {
 
@@ -73,31 +74,37 @@ class NewArrival extends Component {
                 </div>
                 <Slider ref={c => (this.slider = c)} {...settings}>
                     <div>
-                        <Card className="p-2">
-                            <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                            <Card.Body>
-                                <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                            </Card.Body>
-                        </Card>
+                        <Link to="/productDetails">
+                            <Card className="p-2">
+                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
+                                <Card.Body>
+                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
+                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
+                                </Card.Body>
+                            </Card>
+                        </Link>
                     </div>
                     <div>
-                        <Card className="p-2">
-                            <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                            <Card.Body>
-                                <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                            </Card.Body>
-                        </Card>
+                        <Link to="/productDetails">
+                            <Card className="p-2">
+                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
+                                <Card.Body>
+                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
+                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
+                                </Card.Body>
+                            </Card>
+                        </Link>
                     </div>
                     <div>
-                        <Card className="p-2">
-                            <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                            <Card.Body>
-                                <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                            </Card.Body>
-                        </Card>
+                        <Link to="/productDetails">
+                            <Card className="p-2">
+                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
+                                <Card.Body>
+                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
+                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
+                                </Card.Body>
+                            </Card>
+                        </Link>
                     </div>
                     <div>
                         <Card className="p-2">
