@@ -29,25 +29,25 @@ class NavMenuDesktop extends Component {
                         </Col>
                         <Col lg={4} md={4} sm={12} xs={12}>
                             <div className="float-right">
-                                <a className="btn">
+                                <Link to="/favourite" className="btn">
                                     <i className="fa h4 fa-heart" />
                                     <sub>
                                         <span className="badge badge-danger">4</span>
                                     </sub>
-                                </a>
+                                </Link>
 
-                                <a className="btn">
+                                <Link to="/notification" className="btn">
                                     <i className="fa h4 fa-bell" />
                                     <sub>
                                         <span className="badge badge-danger">4</span>
                                     </sub>
-                                </a>
-                                <a className="btn">
+                                </Link>
+                                <Link to="/" className="btn">
                                     <i className="fa h3 fa-mobile" />
                                     <sub>
                                         <span className="badge badge-danger">4</span>
                                     </sub>
-                                </a>
+                                </Link>
                                 <Link to="/onboard" className="btn btn-danger">
                                     LOGIN
                                 </Link>

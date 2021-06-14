@@ -6,7 +6,7 @@ class MegaMenu extends Component {
             <div className="accordionMenuDiv">
                 <div className="accordionMenuDivInside">
                     <button className="accordion">
-                       <i className="fa fa-list-alt"></i>
+                       <i className="fa fa-list-alt" />
                         Men's Clothing
                     </button>
                     <div className="panel">

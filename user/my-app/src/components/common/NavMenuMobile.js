@@ -23,13 +23,16 @@ class NavMenuMobile extends Component {
                                     </Col>
                                     <Col className="col-8">
                                         <div className="float-right">
-                                            <a className="btn">
+                                            <a className="btn p-0 mr-3 ">
+                                                <i className="fa h4 fa-search" />
+                                            </a>
+                                            <a className="btn p-0 mr-3">
                                                 <i className="fa h4 fa-bell" />
                                                 <sub>
                                                     <span className="badge badge-danger">4</span>
                                                 </sub>
                                             </a>
-                                            <a className="btn">
+                                            <a className="btn p-0 mr-3">
                                                 <i className="fa h3 fa-mobile" />
                                                 <sub>
                                                     <span className="badge badge-danger">4</span>
