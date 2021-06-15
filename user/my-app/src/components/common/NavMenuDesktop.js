@@ -51,6 +51,7 @@ class NavMenuDesktop extends Component {
                                 <Link to="/onboard" className="btn btn-danger">
                                     LOGIN
                                 </Link>
+                                <div id="google_translate_element"></div>
                             </div>
                         </Col>
                     </Row>

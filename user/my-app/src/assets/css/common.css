@@ -40,9 +40,42 @@ body {
 .ph-item{
     border: none !important;
 }
+
 a{
     text-decoration: none !important;
 }
 a:hover{
     text-decoration: none !important;
 }
+
+#google_translate_element {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.goog-te-gadget-simple {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    font-size: 14px;
+    border: none;
+    background: #f33c34;
+}
+
+.goog-te-gadget-icon {
+    display: none;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value {
+    color: #fff;
+}
+
+.goog-te-menu-value span {
+    color: #ffffff !important;
+}
+
+.goog-te-menu2-item span {
+    font-size: 16px;
+}
+
+
