@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import {Col, Navbar, Row, Button} from "react-bootstrap";
+import {Col, Navbar, Row} from "react-bootstrap";
 import logo from '../../assets/images/logo.png'
 import {Link} from "react-router-dom";
 
@@ -12,11 +12,11 @@ class NavMenuDesktop extends Component {
                         <Col lg={4} md={4} sm={12} xs={12}>
                             <div>
                                 <Link to="/">
-                                    <img width="50px" src={logo} alt="" />
+                                    <img width="175px" src={logo} alt="" />
                                 </Link>
-                                <Button className="cart-btn">
+                                <Link to="/cart" className="btn cart-btn">
                                     <i className="fa fa-shopping-cart" /> 4 items
-                                </Button>
+                                </Link>
                             </div>
                         </Col>
                         <Col lg={4} md={4} sm={12} xs={12}>

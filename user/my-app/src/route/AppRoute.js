@@ -5,6 +5,8 @@ import UserOnBoardPage from "../pages/UserOnBoardPage";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
 import NotificationPage from "../pages/NotificationPage";
 import FavouritePage from "../pages/FavouritePage";
+import CartPage from "../pages/CartPage";
+import OrderPage from "../pages/OrderPage";
 
 class AppRoute extends Component {
     render() {
@@ -16,6 +18,8 @@ class AppRoute extends Component {
                     <Route path="/productDetails" component={ProductDetailsPage} />
                     <Route path="/notification" component={NotificationPage} />
                     <Route path="/favourite" component={FavouritePage} />
+                    <Route path="/cart" component={CartPage} />
+                    <Route path="/order" component={OrderPage} />
                 </Switch>
             </Fragment>
         );

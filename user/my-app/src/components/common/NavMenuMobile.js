@@ -13,15 +13,11 @@ class NavMenuMobile extends Component {
                         <div className="page-content">
                             <Container>
                                 <Row>
-                                    <Col className="col-2">
-                                        <a href="#" className="p-0">
-                                            <img width="30px" src={logo} className="mt-1" alt="" />
-                                        </a>
-                                    </Col>
+
                                     <Col className="col-2">
                                         <label htmlFor="side" className="toggle mt-2">☰</label>
                                     </Col>
-                                    <Col className="col-8">
+                                    <Col className="col-10">
                                         <div className="float-right">
                                             <a className="btn p-0 mr-3 ">
                                                 <i className="fa h4 fa-search" />
