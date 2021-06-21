@@ -7,6 +7,7 @@ import HomeTop from "../components/home/HomeTop";
 import NavMenuMobile from "../components/common/NavMenuMobile";
 import NavMenuDesktop from "../components/common/NavMenuDesktop";
 import AppURL from "../api/AppURL";
+import FooterDesktop from "../components/common/FooterDesktop";
 const axios = require('axios');
 
 
@@ -32,6 +33,7 @@ class HomePage extends Component {
                 <FeaturedProducts />
                 <Categories />
                 <Collection />
+                <FooterDesktop />
             </Fragment>
         );
     }

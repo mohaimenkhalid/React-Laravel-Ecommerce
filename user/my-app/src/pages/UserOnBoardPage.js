@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import UserOnBoard from "../components/common/UserOnBoard";
 import NavMenuDesktop from "../components/common/NavMenuDesktop";
 import NavMenuMobile from "../components/common/NavMenuMobile";
+import FooterDesktop from "../components/common/FooterDesktop";
 
 class UserOnBoardPage extends Component {
     render() {
@@ -10,6 +11,7 @@ class UserOnBoardPage extends Component {
                 <NavMenuDesktop />
                 <NavMenuMobile />
                 <UserOnBoard />
+                <FooterDesktop />
             </Fragment>
         );
     }

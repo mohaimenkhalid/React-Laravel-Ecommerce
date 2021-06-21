@@ -3,6 +3,7 @@ import ProductDetails from "../components/productDetails/ProductDetails";
 import SuggestedProducts from "../components/productDetails/SuggestedProducts";
 import NavMenuDesktop from "../components/common/NavMenuDesktop";
 import NavMenuMobile from "../components/common/NavMenuMobile";
+import FooterDesktop from "../components/common/FooterDesktop";
 
 class ProductDetailsPage extends Component {
     render() {
@@ -12,6 +13,7 @@ class ProductDetailsPage extends Component {
                 <NavMenuMobile />
                 <ProductDetails />
                 <SuggestedProducts />
+                <FooterDesktop />
             </Fragment>
         );
     }

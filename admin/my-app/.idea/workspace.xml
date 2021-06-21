@@ -21,16 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/UserOnBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/common/UserOnBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/FooterDesktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/common/FooterDesktop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/CartPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/CartPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/FavouritePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/FavouritePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/NotificationPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/NotificationPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/OrderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/OrderPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/ProductDetailsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/ProductDetailsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/UserOnBoardPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/UserOnBoardPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +190,7 @@
       <updated>1623867182359</updated>
       <workItem from="1623867183501" duration="624000" />
       <workItem from="1624202590959" duration="6154000" />
-      <workItem from="1624290779112" duration="4523000" />
+      <workItem from="1624290779112" duration="5246000" />
     </task>
     <servers />
   </component>
