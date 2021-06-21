@@ -6,8 +6,22 @@ import NewArrival from "../components/home/NewArrival";
 import HomeTop from "../components/home/HomeTop";
 import NavMenuMobile from "../components/common/NavMenuMobile";
 import NavMenuDesktop from "../components/common/NavMenuDesktop";
+import AppURL from "../api/AppURL";
+const axios = require('axios');
+
 
 class HomePage extends Component {
+    componentDidMount() {
+        window.scroll(0, 0)
+        this.getVisitorDetails();
+    }
+
+    getVisitorDetails = () => {
+        axios.get(AppURL.visitorDetails)
+            .then()
+            .catch()
+    }
+
     render() {
         return (
             <Fragment>
