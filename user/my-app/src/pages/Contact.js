@@ -3,6 +3,12 @@ import NavMenuDesktop from "../components/common/NavMenuDesktop";
 import NavMenuMobile from "../components/common/NavMenuMobile";
 import {Button, Card, Col} from "react-bootstrap";
 import FooterDesktop from "../components/common/FooterDesktop";
+import Validation from "../validation/validation";
+import AppURL from "../api/AppURL";
+import { loadProgressBar } from 'axios-progress-bar';
+import { ToastContainer, toast } from 'react-toastify';
+
+const axios = require('axios');
 
 class Contact extends Component {
 
@@ -11,11 +17,103 @@ class Contact extends Component {
         this.state = {
             name: "",
             email: "",
-            phone: "",
+            mobile: "",
             message: "",
-        }
+        };
     }
 
+    nameOnChange = (event) => {
+        let name = event.target.value;
+        this.setState({
+            name: name
+        })
+    }
+
+    emailOnChange = (event) => {
+        let email = event.target.value;
+        this.setState({
+            email: email
+        })
+    }
+
+    mobileOnChange = (event) => {
+        let mobile = event.target.value;
+        this.setState({
+            mobile: mobile
+        })
+    }
+
+    messageOnChange = (event) => {
+        let message = event.target.value;
+        this.setState({
+            message: message
+        })
+    }
+
+    resetValues = () => {
+        this.setState(this.initialState)
+    }
+
+
+    onFormSubmit = (event) => {
+        loadProgressBar()
+        event.preventDefault();
+        let name = this.state.name;
+        let email = this.state.email;
+        let mobile = this.state.mobile;
+        let message = this.state.message;
+
+        let sendBtn = document.getElementById('sendBtn');
+        let contactForm = document.getElementById('contactForm');
+
+        if(name.length === 0) {
+            toast.error("Name is required!");
+        }
+        if(email.length === 0) {
+            toast.error("Email is required!");
+        }
+        if(mobile.length === 0) {
+            toast.error("Mobile is required!");
+        }
+        if(name.length !== 0 && !Validation.NameRegx.test(name)) {
+            toast.error("Name format is not allow.");
+        } else if(email.length !== 0 && !Validation.EmailRegx.test(email)) {
+            toast.error("Email is not valid.");
+        } else if(mobile.length !== 0 && !Validation.MobileRegx.test(mobile)) {
+            toast.error("Mobile number is allow only BD.");
+        } else if(message.length === 0) {
+            toast.error("Message field is required!");
+        } else {
+            sendBtn.innerHTML="Sending...";
+
+            let contactFormData = new FormData();
+            contactFormData.append('name', name)
+            contactFormData.append('email', email)
+            contactFormData.append('mobile', mobile)
+            contactFormData.append('message', message)
+
+            axios.post(AppURL.postContactDetails, contactFormData)
+                .then(function (res) {
+                    if (res.status === 200 && res.data) {
+                        contactForm.reset();
+                        toast.success("Message send to us successfully!");
+                        sendBtn.innerHTML="SUBMIT";
+                    } else {
+                        toast.error("Something went wrong!");
+                        sendBtn.innerHTML="SUBMIT";
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error)
+                    sendBtn.innerHTML="SUBMIT";
+                })
+        }
+
+    }
+
+    componentDidMount() {
+        window.scroll(0,0);
+    }
 
     render() {
         return (
@@ -30,19 +128,23 @@ class Contact extends Component {
                                 <Card.Body>
                                     <Card.Title className="text-danger">Contact US</Card.Title>
                                     <p>Enter Your Details Here. We Will Get Back To You.</p>
-                                    <div className="form-group">
-                                        <input type="text" className="form-control" placeholder="Your Name" />
-                                    </div>
-                                    <div className="form-group">
-                                        <input type="text" className="form-control" placeholder="Your Email Address" />
-                                    </div>
-                                    <div className="form-group">
-                                        <input type="text" className="form-control" placeholder="Mobile Number" />
-                                    </div>
-                                    <div className="form-group">
-                                        <textarea className="form-control" placeholder="Your Message" />
-                                    </div>
-                                    <Button variant="danger">SUBMIT</Button>
+                                    <form onSubmit={this.onFormSubmit} id="contactForm">
+                                        <div className="form-group">
+                                            <input onChange={this.nameOnChange} type="text" className="form-control" placeholder="Your Name" />
+                                        </div>
+                                        <div className="form-group">
+                                            <input onChange={this.emailOnChange} type="text" className="form-control" placeholder="Your Email Address" />
+                                        </div>
+                                        <div className="form-group">
+                                            <input onChange={this.mobileOnChange} type="text" className="form-control" placeholder="Mobile Number" />
+                                        </div>
+                                        <div className="form-group">
+                                            <textarea onChange={this.messageOnChange} className="form-control" placeholder="Your Message" />
+                                        </div>
+                                        <div className="form-group">
+                                            <Button className="btn-block" id="sendBtn" variant="danger" type="submit">SUBMIT</Button>
+                                        </div>
+                                    </form>
                                 </Card.Body>
                             </Card>
                         </div>
@@ -58,6 +160,7 @@ class Contact extends Component {
                         </div>
                     </div>
                 </div>
+                <ToastContainer />
                 <FooterDesktop />
             </Fragment>
         );

@@ -8,6 +8,7 @@ import NavMenuMobile from "../components/common/NavMenuMobile";
 import NavMenuDesktop from "../components/common/NavMenuDesktop";
 import AppURL from "../api/AppURL";
 import FooterDesktop from "../components/common/FooterDesktop";
+import {loadProgressBar} from "axios-progress-bar";
 const axios = require('axios');
 
 
@@ -18,6 +19,7 @@ class HomePage extends Component {
     }
 
     getVisitorDetails = () => {
+        loadProgressBar()
         axios.get(AppURL.visitorDetails)
             .then()
             .catch()
