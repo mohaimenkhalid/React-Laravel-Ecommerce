@@ -21,14 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/AboutPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

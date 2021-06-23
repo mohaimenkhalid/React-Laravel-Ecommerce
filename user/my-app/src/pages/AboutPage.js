@@ -6,6 +6,7 @@ import axios from "axios";
 import { loadProgressBar } from 'axios-progress-bar';
 import AppURL from "../api/AppURL";
 import ReactHtmlParser from 'react-html-parser';
+import TextLoader from "../components/loader/TextLoader";
 
 
 class AboutPage extends Component {
@@ -13,7 +14,8 @@ class AboutPage extends Component {
     constructor() {
         super();
         this.state = {
-            about: ''
+            about: '',
+            isLoading: true
         }
     }
 
@@ -28,12 +30,14 @@ class AboutPage extends Component {
                     if(status_code === 200) {
                         let about = res.data[0]['about'];
                         this.setState({about: about})
+                        this.setState({isLoading: false})
                         sessionStorage.setItem('siteInfo_about', JSON.stringify(about))
                     }
                 })
                 .catch()
         } else {
             this.setState({about: JSON.parse(session_siteInfo_about)})
+            this.setState({isLoading: false})
         }
     }
 
@@ -45,14 +49,20 @@ class AboutPage extends Component {
                 <div className="container mt-5">
                     <div className="row">
                         <div className="col-md-12">
-                            <div className="card">
-                                <div className="card-body">
-                                    <h4>About Us</h4>
-                                    <div className="mt-5">
-                                        {ReactHtmlParser(this.state.about)}
+
+                            {   this.state.isLoading
+                                ? <TextLoader />
+                                : (
+                                    <div className="card">
+                                        <div className="card-body">
+                                            <h4>About Us</h4>
+                                            <div className="mt-5">
+                                                {ReactHtmlParser(this.state.about)}
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
+                                )
+                            }
                         </div>
                     </div>
                 </div>
