@@ -9,7 +9,7 @@ import NavMenuDesktop from "../components/common/NavMenuDesktop";
 import AppURL from "../api/AppURL";
 import FooterDesktop from "../components/common/FooterDesktop";
 import {loadProgressBar} from "axios-progress-bar";
-const axios = require('axios');
+import axios from "axios";
 
 
 class HomePage extends Component {

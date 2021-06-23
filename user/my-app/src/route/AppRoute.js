@@ -8,6 +8,10 @@ import FavouritePage from "../pages/FavouritePage";
 import CartPage from "../pages/CartPage";
 import OrderPage from "../pages/OrderPage";
 import Contact from "../pages/Contact";
+import AboutPage from "../pages/AboutPage";
+import PolicyPage from "../pages/PolicyPage";
+import PurchaseGuidePage from "../pages/PurchaseGuidePage";
+import DeliveryNoticePage from "../pages/DeliveryNoticePage";
 
 class AppRoute extends Component {
     render() {
@@ -22,6 +26,10 @@ class AppRoute extends Component {
                     <Route path="/cart" component={CartPage} />
                     <Route path="/order" component={OrderPage} />
                     <Route path="/contact-us" component={Contact} />
+                    <Route path="/about" component={AboutPage} />
+                    <Route path="/privacy-policy" component={PolicyPage} />
+                    <Route path="/purchase-guide" component={PurchaseGuidePage} />
+                    <Route path="/delivery-notice" component={DeliveryNoticePage} />
                 </Switch>
             </Fragment>
         );

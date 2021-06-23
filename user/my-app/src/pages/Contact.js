@@ -7,8 +7,7 @@ import Validation from "../validation/validation";
 import AppURL from "../api/AppURL";
 import { loadProgressBar } from 'axios-progress-bar';
 import { ToastContainer, toast } from 'react-toastify';
-
-const axios = require('axios');
+import axios from "axios";
 
 class Contact extends Component {
 

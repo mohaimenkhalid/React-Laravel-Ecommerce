@@ -4,6 +4,7 @@ class AppURL {
 
     static visitorDetails = this.BaseURL+'getVisitorDetails';
     static postContactDetails = this.BaseURL+'postContactDetails';
+    static getSiteInfo = this.BaseURL+'getSiteInfo';
 
 }
 
