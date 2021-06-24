@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {Link} from "react-router-dom";
+import logo from '../../assets/images/logo.png'
 
 class FooterDesktop extends Component {
     render() {
@@ -43,7 +44,7 @@ class FooterDesktop extends Component {
                                 <div className="col-xl-4 col-lg-4 mb-50">
                                     <div className="footer-widget">
                                         <div className="footer-logo">
-                                            <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png"
+                                            <a href="index.html"><img src={logo}
                                                                       className="img-fluid" alt="logo" /></a>
                                         </div>
                                         <div className="footer-text">
@@ -99,19 +100,21 @@ class FooterDesktop extends Component {
                     <div className="copyright-area">
                         <div className="container">
                             <div className="row">
-                                <div className="col-xl-6 col-lg-6 text-center text-lg-left">
+                                <div className="col-xl-4 col-lg-4 text-center text-lg-left">
                                     <div className="copyright-text">
                                         <p>Copyright &copy; 2018, All Right Reserved <a
-                                            href="https://codepen.io/anupkumar92/">Anup</a></p>
+                                            href="#">mohaimen</a></p>
                                     </div>
                                 </div>
-                                <div className="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                                <div className="col-xl-8 col-lg-8 d-none d-lg-block text-right">
                                     <div className="footer-menu">
                                         <ul>
-                                            <li><a href="#">Home</a></li>
-                                            <li><a href="#">Terms</a></li>
-                                            <li><a href="#">Privacy</a></li>
-                                            <li><a href="#">Policy</a></li>
+                                            <li><Link to="/">Home</Link></li>
+                                            <li><Link to="/terms-condition">Terms & Condition</Link></li>
+                                            <li><Link to="/purchase-guide">Purchase Guide</Link></li>
+                                            <li><Link to="/delivery-notice">Delivery Notice</Link></li>
+                                            <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                                            <li><Link to="/about">About</Link></li>
                                             <li><Link to="/contact-us">Contact</Link></li>
                                         </ul>
                                     </div>

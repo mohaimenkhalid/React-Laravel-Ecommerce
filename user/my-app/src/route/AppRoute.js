@@ -12,6 +12,7 @@ import AboutPage from "../pages/AboutPage";
 import PolicyPage from "../pages/PolicyPage";
 import PurchaseGuidePage from "../pages/PurchaseGuidePage";
 import DeliveryNoticePage from "../pages/DeliveryNoticePage";
+import TermsConditionPage from "../pages/TermsConditionPage";
 
 class AppRoute extends Component {
     render() {
@@ -27,6 +28,7 @@ class AppRoute extends Component {
                     <Route path="/order" component={OrderPage} />
                     <Route path="/contact-us" component={Contact} />
                     <Route path="/about" component={AboutPage} />
+                    <Route path="/terms-condition" component={TermsConditionPage} />
                     <Route path="/privacy-policy" component={PolicyPage} />
                     <Route path="/purchase-guide" component={PurchaseGuidePage} />
                     <Route path="/delivery-notice" component={DeliveryNoticePage} />

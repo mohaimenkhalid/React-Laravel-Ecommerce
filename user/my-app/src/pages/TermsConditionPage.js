@@ -1,21 +1,19 @@
 import React, {Component, Fragment} from 'react';
+import {loadProgressBar} from "axios-progress-bar";
+import axios from "axios";
+import AppURL from "../api/AppURL";
+import {toast, ToastContainer} from "react-toastify";
 import NavMenuDesktop from "../components/common/NavMenuDesktop";
 import NavMenuMobile from "../components/common/NavMenuMobile";
-import FooterDesktop from "../components/common/FooterDesktop";
-import axios from "axios";
-import { loadProgressBar } from 'axios-progress-bar';
-import AppURL from "../api/AppURL";
-import ReactHtmlParser from 'react-html-parser';
 import TextLoader from "../components/loader/TextLoader";
-import {toast, ToastContainer} from "react-toastify";
+import ReactHtmlParser from "react-html-parser";
+import FooterDesktop from "../components/common/FooterDesktop";
 
-
-class AboutPage extends Component {
-
+class TermsConditionPage extends Component {
     constructor() {
         super();
         this.state = {
-            about: '',
+            termsCondition: '',
             isLoading: true
         }
     }
@@ -23,16 +21,16 @@ class AboutPage extends Component {
     componentDidMount() {
         window.scroll(0, 0)
         loadProgressBar();
-        let session_siteInfo_about = sessionStorage.getItem('siteInfo_about');
-        if(session_siteInfo_about === null) {
+        let session_siteInfo_terms_condition = sessionStorage.getItem('siteInfo_terms_condition');
+        if(session_siteInfo_terms_condition === null) {
             axios.get(AppURL.getSiteInfo)
                 .then( (res) => {
                     let status_code = res.status;
                     if(status_code === 200) {
-                        let about = res.data[0]['about'];
+                        let about = res.data[0]['terms'];
                         this.setState({about: about})
                         this.setState({isLoading: false})
-                        sessionStorage.setItem('siteInfo_about', JSON.stringify(about))
+                        sessionStorage.setItem('siteInfo_terms_condition', JSON.stringify(about))
                     }
                 })
                 .catch((error) => {
@@ -41,7 +39,7 @@ class AboutPage extends Component {
                     });
                 })
         } else {
-            this.setState({about: JSON.parse(session_siteInfo_about)})
+            this.setState({about: JSON.parse(session_siteInfo_terms_condition)})
             this.setState({isLoading: false})
         }
     }
@@ -59,7 +57,7 @@ class AboutPage extends Component {
                                 : (
                                     <div className="card">
                                         <div className="card-body">
-                                            <h4>About Us</h4>
+                                            <h4>Terms & Condition</h4>
                                             <div className="mt-5">
                                                 {ReactHtmlParser(this.state.about)}
                                             </div>
@@ -77,4 +75,4 @@ class AboutPage extends Component {
     }
 }
 
-export default AboutPage;
+export default TermsConditionPage;
