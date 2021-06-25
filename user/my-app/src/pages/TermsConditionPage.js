@@ -5,9 +5,9 @@ import AppURL from "../api/AppURL";
 import {toast, ToastContainer} from "react-toastify";
 import NavMenuDesktop from "../components/common/NavMenuDesktop";
 import NavMenuMobile from "../components/common/NavMenuMobile";
-import TextLoader from "../components/loader/TextLoader";
 import ReactHtmlParser from "react-html-parser";
 import FooterDesktop from "../components/common/FooterDesktop";
+import LargeTextLoader from "../components/loader/LargeTextLoader";
 
 class TermsConditionPage extends Component {
     constructor() {
@@ -27,10 +27,10 @@ class TermsConditionPage extends Component {
                 .then( (res) => {
                     let status_code = res.status;
                     if(status_code === 200) {
-                        let about = res.data[0]['terms'];
-                        this.setState({about: about})
+                        let termsCondition = res.data[0]['terms'];
+                        this.setState({termsCondition: termsCondition})
                         this.setState({isLoading: false})
-                        sessionStorage.setItem('siteInfo_terms_condition', JSON.stringify(about))
+                        sessionStorage.setItem('siteInfo_terms_condition', JSON.stringify(termsCondition))
                     }
                 })
                 .catch((error) => {
@@ -39,7 +39,7 @@ class TermsConditionPage extends Component {
                     });
                 })
         } else {
-            this.setState({about: JSON.parse(session_siteInfo_terms_condition)})
+            this.setState({termsCondition: JSON.parse(session_siteInfo_terms_condition)})
             this.setState({isLoading: false})
         }
     }
@@ -53,13 +53,13 @@ class TermsConditionPage extends Component {
                     <div className="row">
                         <div className="col-md-12">
                             {   this.state.isLoading
-                                ? <TextLoader />
+                                ? <LargeTextLoader />
                                 : (
                                     <div className="card">
                                         <div className="card-body">
                                             <h4>Terms & Condition</h4>
                                             <div className="mt-5">
-                                                {ReactHtmlParser(this.state.about)}
+                                                {ReactHtmlParser(this.state.termsCondition)}
                                             </div>
                                         </div>
                                     </div>
