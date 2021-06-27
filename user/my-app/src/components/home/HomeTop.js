@@ -11,7 +11,7 @@ class HomeTop extends Component {
     }
 
     componentDidMount() {
-        this.megaMenu();
+        /*this.megaMenu();*/
     }
 
     megaMenu() {

@@ -21,8 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/FooterDesktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/common/FooterDesktop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/HomeTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/HomeTop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/MegaMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/MegaMenu.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +188,8 @@
       <workItem from="1624467913884" duration="3400000" />
       <workItem from="1624552772340" duration="1208000" />
       <workItem from="1624609670578" duration="1221000" />
-      <workItem from="1624723346415" duration="1974000" />
+      <workItem from="1624723346415" duration="1975000" />
+      <workItem from="1624814635769" duration="7882000" />
     </task>
     <servers />
   </component>
@@ -207,9 +209,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1624724136821">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1624814666747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1624724136821" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1624814666747" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1624824440967">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1624824440967" />
   </component>
 </project>
