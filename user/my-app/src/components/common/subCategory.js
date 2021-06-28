@@ -1,63 +1,40 @@
 import React, {Component} from 'react';
 import {Accordion, Card, Button} from "react-bootstrap";
-import axios from "axios";
-import AppURL from "../../api/AppURL";
-import SubCategory from "../common/subCategory";
 
-class MegaMenu extends Component {
-
-    constructor() {
-        super();
-        this.state = {
-            categories: [],
-            isLoading: true
-        }
-    }
-
-    componentDidMount() {
-        axios.get(AppURL.getAllCategories)
-            .then(res => {
-                if (res.status === 200) {
-                    this.setState({
-                        categories: res.data
-                    })
-                }
-            })
-            .catch()
-    }
-
+class SubCategory extends Component {
     render() {
         return (
             <>
                 {
-                    this.state.categories.map((parent_category, index) => {
+                    this.props.subCategory.map((subCategory) => {
                         return (
                             <Accordion>
                                 <Card>
                                     <Card.Header>
                                         <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                                            { parent_category.name }
+                                            { subCategory.name }
                                         </Accordion.Toggle>
                                     </Card.Header>
                                     {
-                                        parent_category.children.length !== 0
-                                        ?  (
+                                        subCategory.children.length !== 0
+                                            ?  (
                                                 <Accordion.Collapse eventKey="0">
                                                     <Card.Body>
-                                                        <SubCategory subCategory={parent_category.children} />
+                                                        <SubCategory subCategory={subCategory.children} />
                                                     </Card.Body>
                                                 </Accordion.Collapse>
                                             )
-                                        : ""
+                                            : ""
                                     }
                                 </Card>
                             </Accordion>
                         )
                     })
                 }
+
             </>
         );
     }
 }
 
-export default MegaMenu;
+export default SubCategory;
