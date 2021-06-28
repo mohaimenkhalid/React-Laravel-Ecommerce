@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/subCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/common/subCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/HomeTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/HomeTop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/MegaMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/MegaMenu.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

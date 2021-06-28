@@ -7,14 +7,14 @@ class HomeTop extends Component {
 
     constructor(props) {
         super(props);
-        this.megaMenu = this.megaMenu.bind(this);
+        /*this.megaMenu = this.megaMenu.bind(this);*/
     }
 
     componentDidMount() {
         /*this.megaMenu();*/
     }
 
-    megaMenu() {
+   /* megaMenu() {
         var acc = document.getElementsByClassName('accordion');
         var accNumber = acc.length;
         var i;
@@ -29,7 +29,7 @@ class HomeTop extends Component {
                 }
             })
         }
-    }
+    }*/
     render() {
         return (
             <Fragment>

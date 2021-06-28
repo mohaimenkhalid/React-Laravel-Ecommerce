@@ -10,11 +10,9 @@ class SubCategory extends Component {
                         return (
                             <Accordion>
                                 <Card>
-                                    <Card.Header>
-                                        <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                                            { subCategory.name }
-                                        </Accordion.Toggle>
-                                    </Card.Header>
+                                    <Accordion.Toggle variant="link" eventKey="0" className="card-header text-left border-0">
+                                        { subCategory.name }
+                                    </Accordion.Toggle>
                                     {
                                         subCategory.children.length !== 0
                                             ?  (

@@ -34,11 +34,9 @@ class MegaMenu extends Component {
                         return (
                             <Accordion>
                                 <Card>
-                                    <Card.Header>
-                                        <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                                            { parent_category.name }
-                                        </Accordion.Toggle>
-                                    </Card.Header>
+                                    <Accordion.Toggle eventKey="0" className="card-header text-left border-0">
+                                        { parent_category.name }
+                                    </Accordion.Toggle>
                                     {
                                         parent_category.children.length !== 0
                                         ?  (
