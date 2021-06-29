@@ -2,6 +2,9 @@ import React, {Component, Fragment} from 'react';
 import {Container, Col, Row} from "react-bootstrap";
 import MegaMenu from "./MegaMenu";
 import HomeSlider from "./HomeSlider";
+import landingBannerTop from "../../assets/images/landingBannerTop.jpg"
+import searchIcon from "../../assets/images/search-icon.svg"
+import {Link} from "react-router-dom";
 
 class HomeTop extends Component {
 
@@ -39,7 +42,19 @@ class HomeTop extends Component {
                             <MegaMenu />
                         </Col>
                         <Col lg={9} md={9} sm={12}>
-                            <HomeSlider />
+                            <div className="BannerTop">
+                                <img src={landingBannerTop} alt="" />
+                                <div className="search-section">
+                                    <div className="col-md-12">
+                                        <Link to={'/category/' + 10} >tett</Link>
+                                        <h1>Groceries delivered in 1 hour</h1>
+                                        <input className="form-control"
+                                               style={{ backgroundImage: `url(${searchIcon})` }}
+                                               type="text" placeholder="Search for product.." />
+                                    </div>
+                                </div>
+                            </div>
+                            {/*<HomeSlider />*/}
                         </Col>
                     </Row>
                 </Container>

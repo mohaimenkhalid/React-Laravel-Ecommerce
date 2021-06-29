@@ -10,6 +10,7 @@ import AppURL from "../api/AppURL";
 import FooterDesktop from "../components/common/FooterDesktop";
 import {loadProgressBar} from "axios-progress-bar";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 
 class HomePage extends Component {
@@ -28,14 +29,15 @@ class HomePage extends Component {
     render() {
         return (
             <Fragment>
-                <NavMenuDesktop />
-                <NavMenuMobile />
+
                 <HomeTop />
                 <NewArrival />
                 <FeaturedProducts />
                 <Categories />
                 <Collection />
                 <FooterDesktop />
+
+
             </Fragment>
         );
     }

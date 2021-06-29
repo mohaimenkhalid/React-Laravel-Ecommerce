@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import Slider from "react-slick";
-import Slider1 from '../../assets/images/slider-1.jpg';
-import Slider2 from '../../assets/images/slider-2.png';
 
 class HomeSlider extends Component {
     render() {

@@ -40,3 +40,34 @@
     border-top-color: red !important;
     border-left-color: red !important;
 }
+
+.BannerTop {
+    position: relative;
+    height: 325px;
+    width: 100%;
+}
+.BannerTop img {
+    width: 100%;
+    height: 100%;
+}
+
+.BannerTop .search-section{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+    width: 100%;
+    text-align: center;
+    padding: 0 12rem;
+}
+
+.search-section input{
+    padding: .5rem 0 .5rem 2.9rem;
+    vertical-align: top;
+    background-size: 1.4rem;
+    background-repeat: no-repeat;
+    background-position: 1rem .7rem;
+    height: 3rem;
+    border: 2px solid darkred;
+    border-radius: .5rem !important;
+}
