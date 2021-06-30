@@ -9,11 +9,8 @@ class ProductDetailsPage extends Component {
     render() {
         return (
             <Fragment>
-                <NavMenuDesktop />
-                <NavMenuMobile />
                 <ProductDetails />
                 <SuggestedProducts />
-                <FooterDesktop />
             </Fragment>
         );
     }

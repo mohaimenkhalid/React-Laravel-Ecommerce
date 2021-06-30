@@ -117,8 +117,6 @@ class Contact extends Component {
     render() {
         return (
             <Fragment>
-                <NavMenuDesktop />
-                <NavMenuMobile />
                 <div className="container mt-5">
                     <div className="row">
                         <div className="col-md-6">
@@ -160,7 +158,6 @@ class Contact extends Component {
                     </div>
                 </div>
                 <ToastContainer />
-                <FooterDesktop />
             </Fragment>
         );
     }

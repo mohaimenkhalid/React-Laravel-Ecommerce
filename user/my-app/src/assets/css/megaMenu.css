@@ -2,7 +2,7 @@
     background-color: #ffffff;
     color: #444;
     cursor: pointer;
-    padding: 7px;
+    padding: 4px 10px;
     width: 100%;
     border: none;
     font-size: 14px;
@@ -12,23 +12,18 @@
     font-family: 'Roboto Condensed', sans-serif;
     transition: 0.4s;
     overflow: paged-y;
-    box-shadow: 0 0 2px 0 rgba(57, 78, 234, 0.1)
+    box-shadow: 0 0 2px 0 rgba(57, 78, 234, 0.1);
+    display: flex;
+    justify-content: space-between;
 }
-.active, .accordion:hover {
-    color: #ffffff;
-    font-weight: 400;
-    background-color: #F59315;
-}
+
 .accordion:after {
     content: '\276F';
-    color: #f3f3f3;
+    color: #e43023;
     float: right;
     margin-left: 5px;
 }
-.active:after,hover {
-    color: #ffffff;
-    content: "\276E";
-}
+
 .panel {
     padding: 0 10px;
     background-color: white;
@@ -75,3 +70,31 @@
 .accordionItem:hover{
     text-decoration: none;
 }
+
+.top-70 {
+    top: 100px !important;
+}
+
+.desktop_menu {
+    border-right: 2px solid #e9e2e2;
+    background: white;
+}
+
+.desktop_menu .card-body{
+    padding: 0;
+}
+
+.desktop_menu .card-header{
+    padding: 4px 0 4px 7px;
+    margin: 2px 8px;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 0;
+}
+
+.desktop_menu a{
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+

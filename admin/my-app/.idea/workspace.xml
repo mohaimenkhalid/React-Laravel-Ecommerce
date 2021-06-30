@@ -22,11 +22,25 @@
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/megaMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/megaMenu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/HomeSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/HomeSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavMenuDesktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavMenuDesktop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/Categories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/HomeTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/HomeTop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/MegaMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/MegaMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/AboutPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/CartPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/CartPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/DeliveryNoticePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/DeliveryNoticePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/FavouritePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/FavouritePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/NotificationPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/NotificationPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/OrderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/OrderPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/PolicyPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/PolicyPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/ProductDetailsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/ProductDetailsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/PurchaseGuidePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/PurchaseGuidePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/TermsConditionPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/TermsConditionPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/UserOnBoardPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/UserOnBoardPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,6 +211,7 @@
       <workItem from="1624891260532" duration="3500000" />
       <workItem from="1624902161643" duration="877000" />
       <workItem from="1624975238744" duration="634000" />
+      <workItem from="1625065510905" duration="710000" />
     </task>
     <servers />
   </component>
@@ -216,10 +231,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1624975271036">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1625065620330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1624975271036" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625065620330" />
     <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1624896791955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

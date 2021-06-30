@@ -5,205 +5,54 @@ class Categories extends Component {
     render() {
         return (
             <Fragment>
-                <Container fluid={true} className="card py-5 mb-3">
+                <Container fluid={true} className="card py-5 mb-3 feature-category">
                     <div className="text-center">
-                        <h5 className="text-danger">CATEGORIES</h5>
-                        <p>Some of Our Exclusive Collection, you May Like</p>
+                        <h2 className="text-danger">Our Product Categories</h2>
                     </div>
-                    <Row>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={1} lg={1} md={3} sm={6} xs={6}>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" />
-                                <Card.Body className="p-0">
-                                    <h5 className='category-name'>Category Name</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    </Row>
+                    <div className="row">
+                        <div className="col-md-4">
+                            <div className="card">
+                                <div className="card-body">
+                                    Food
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="card">
+                                <div className="card-body">
+                                    Home & Cleaning
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="card">
+                                <div className="card-body">
+                                    Men
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="card">
+                                <div className="card-body">
+                                    Women
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="card">
+                                <div className="card-body">
+                                    Personal Care
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="card">
+                                <div className="card-body">
+                                    Fruits and Vegetables
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </Container>
             </Fragment>
         );

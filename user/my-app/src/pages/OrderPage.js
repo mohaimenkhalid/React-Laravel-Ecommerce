@@ -8,10 +8,7 @@ class OrderPage extends Component {
     render() {
         return (
             <Fragment>
-                <NavMenuDesktop />
-                <NavMenuMobile />
                 <OrderForm />
-                <FooterDesktop />
             </Fragment>
         );
     }

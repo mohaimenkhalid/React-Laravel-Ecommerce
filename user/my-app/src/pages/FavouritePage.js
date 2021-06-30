@@ -8,10 +8,7 @@ class FavouritePage extends Component {
     render() {
         return (
             <Fragment>
-                <NavMenuDesktop />
-                <NavMenuMobile />
                 <Favourite />
-                <FooterDesktop />
             </Fragment>
         );
     }

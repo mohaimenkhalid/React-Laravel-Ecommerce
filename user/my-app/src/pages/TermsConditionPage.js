@@ -47,8 +47,6 @@ class TermsConditionPage extends Component {
     render() {
         return (
             <Fragment>
-                <NavMenuDesktop />
-                <NavMenuMobile />
                 <div className="container mt-5">
                     <div className="row">
                         <div className="col-md-12">
@@ -69,7 +67,6 @@ class TermsConditionPage extends Component {
                     </div>
                 </div>
                 <ToastContainer />
-                <FooterDesktop />
             </Fragment>
         );
     }

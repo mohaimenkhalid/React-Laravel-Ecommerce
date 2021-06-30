@@ -11,7 +11,8 @@ import FooterDesktop from "../components/common/FooterDesktop";
 import {loadProgressBar} from "axios-progress-bar";
 import axios from "axios";
 import {Link} from "react-router-dom";
-
+import {Route, Switch} from "react-router";
+import Test from "../components/Test";
 
 class HomePage extends Component {
     componentDidMount() {
@@ -26,18 +27,15 @@ class HomePage extends Component {
             .catch()
     }
 
+
     render() {
         return (
             <Fragment>
-
                 <HomeTop />
+                <Categories />
                 <NewArrival />
                 <FeaturedProducts />
-                <Categories />
                 <Collection />
-                <FooterDesktop />
-
-
             </Fragment>
         );
     }

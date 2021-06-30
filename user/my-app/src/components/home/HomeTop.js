@@ -38,15 +38,11 @@ class HomeTop extends Component {
             <Fragment>
                 <Container className="p-0" fluid={true}>
                     <Row>
-                        <Col lg={3} md={3} sm={12} className="Desktop">
-                            <MegaMenu />
-                        </Col>
-                        <Col lg={9} md={9} sm={12}>
+                        <Col lg={12} md={12} sm={12}>
                             <div className="BannerTop">
                                 <img src={landingBannerTop} alt="" />
                                 <div className="search-section">
                                     <div className="col-md-12">
-                                        <Link to={'/category/' + 10} >tett</Link>
                                         <h1>Groceries delivered in 1 hour</h1>
                                         <input className="form-control"
                                                style={{ backgroundImage: `url(${searchIcon})` }}

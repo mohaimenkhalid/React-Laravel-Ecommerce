@@ -71,3 +71,13 @@
     border: 2px solid darkred;
     border-radius: .5rem !important;
 }
+
+.feature-category .card {
+    margin: 8px 0;
+    background: #f0f8ff;
+}
+
+.feature-category .card-body {
+    font-size: 20px;
+    font-weight: 500;
+}

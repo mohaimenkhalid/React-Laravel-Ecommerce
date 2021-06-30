@@ -8,10 +8,7 @@ class NotificationPage extends Component {
     render() {
         return (
             <Fragment>
-                <NavMenuDesktop />
-                <NavMenuMobile />
                 <Notification />
-                <FooterDesktop />
             </Fragment>
         );
     }

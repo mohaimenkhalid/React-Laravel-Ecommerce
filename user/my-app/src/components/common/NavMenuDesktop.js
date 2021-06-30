@@ -7,7 +7,7 @@ class NavMenuDesktop extends Component {
     render() {
         return (
             <Fragment>
-                <Navbar bg="light" className="Desktop navbar">
+                <Navbar bg="light" className="Desktop navbar sticky-top">
                     <Row className="align-items-center">
                         <Col lg={4} md={4} sm={12} xs={12}>
                             <div>

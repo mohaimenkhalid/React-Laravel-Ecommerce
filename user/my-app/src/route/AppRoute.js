@@ -13,7 +13,6 @@ import PolicyPage from "../pages/PolicyPage";
 import PurchaseGuidePage from "../pages/PurchaseGuidePage";
 import DeliveryNoticePage from "../pages/DeliveryNoticePage";
 import TermsConditionPage from "../pages/TermsConditionPage";
-import Test from "../components/Test";
 
 class AppRoute extends Component {
     render() {
@@ -21,8 +20,6 @@ class AppRoute extends Component {
             <Fragment>
                 <Switch>
                     <Route exact path="/" component={HomePage} />
-                    <Route path="/category/:id" component={Test} />
-
                     <Route path="/onboard" component={UserOnBoardPage} />
                     <Route path="/productDetails" component={ProductDetailsPage} />
                     <Route path="/notification" component={NotificationPage} />

@@ -8,10 +8,7 @@ class CartPage extends Component {
     render() {
         return (
             <Fragment>
-                <NavMenuDesktop />
-                <NavMenuMobile />
                 <Cart />
-                <FooterDesktop />
             </Fragment>
         );
     }

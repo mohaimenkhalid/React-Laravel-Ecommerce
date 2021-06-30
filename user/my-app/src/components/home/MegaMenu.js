@@ -30,27 +30,41 @@ class MegaMenu extends Component {
     render() {
         return (
             <>
+                <div className="card">
+                   <Link to="">
+                       <div className="card-header">
+                           Popular Products
+                       </div>
+                   </Link>
+                    <Link to="">
+                        <div className="card-header">
+                            Offers
+                        </div>
+                    </Link>
+                </div>
                 {
                     this.state.categories.map((parent_category, index) => {
                         return (
-                            <Accordion>
-                                <Card>
-                                    <Accordion.Toggle eventKey="0" className="card-header text-left border-0">
-                                        { parent_category.name }
-                                    </Accordion.Toggle>
-                                    {
-                                        parent_category.children.length !== 0
-                                        ?  (
-                                                <Accordion.Collapse eventKey="0">
-                                                    <Card.Body>
-                                                        <SubCategory subCategory={parent_category.children} />
-                                                    </Card.Body>
-                                                </Accordion.Collapse>
-                                            )
-                                        : ""
-                                    }
-                                </Card>
-                            </Accordion>
+                            <>
+                                <Accordion>
+                                    <Card>
+                                        <Accordion.Toggle eventKey="0" className="card-header text-left border-0">
+                                            { parent_category.name }
+                                        </Accordion.Toggle>
+                                        {
+                                            parent_category.children.length !== 0
+                                                ?  (
+                                                    <Accordion.Collapse eventKey="0">
+                                                        <Card.Body>
+                                                            <SubCategory subCategory={parent_category.children} />
+                                                        </Card.Body>
+                                                    </Accordion.Collapse>
+                                                )
+                                                : ""
+                                        }
+                                    </Card>
+                                </Accordion>
+                            </>
                         )
                     })
                 }
