@@ -16,11 +16,11 @@
     margin: auto;
     overflow: hidden;
     width: 100% !important;
+    margin-bottom: 1.5rem;
 }
 .image-box img {
     width: 100% !important;
     transition: all 0.3s;
-    display: block;
     height: auto;
     transform: scale(1);
 }

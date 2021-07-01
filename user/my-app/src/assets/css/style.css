@@ -81,3 +81,15 @@
     font-size: 20px;
     font-weight: 500;
 }
+
+.product-card-image {
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.product-card-details {
+    height: 80px;
+}

@@ -8,6 +8,7 @@
 }
 .slick-slide{
     height:auto !important;
+    padding: 0 .5rem;
 }
 .slider-title-div{
     padding:70px ;

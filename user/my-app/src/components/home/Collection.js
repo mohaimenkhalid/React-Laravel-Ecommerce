@@ -1,88 +1,57 @@
 import React, {Component, Fragment} from 'react';
 import {Card, Col, Container, Row} from "react-bootstrap";
+import axios from "axios";
+import AppURL from "../../api/AppURL";
 
 class Collection extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            collection_products: []
+        }
+    }
+
+    componentDidMount() {
+        //COLLECTION_PRODUCT = 2
+        axios.get(AppURL.getProductByRemark, { params: { remark: 2 } })
+            .then(res => {
+                if(res.status === 200) {
+                    this.setState({collection_products: res.data})
+                }
+            })
+            .catch(error => {
+
+            })
+    }
     render() {
         return (
             <Fragment>
                 <Container fluid={true} className="card py-5 mb-3">
                     <div className="text-center">
-                        <h5 className="text-danger">Collection</h5>
+                        <h2 className="text-danger">Collection</h2>
                         <p>Some of Our Exclusive Collection, you May Like</p>
                     </div>
                     <Row>
-                        <Col xl={3} lg={3} md={2} sm={4} xs={6}>
-                            <Card className="image-box card">
-                                <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                                <Card.Body>
-                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={3} lg={3} md={2} sm={4} xs={6}>
-                            <Card className="image-box card">
-                                <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                                <Card.Body>
-                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={3} lg={3} md={2} sm={4} xs={6}>
-                            <Card className="image-box card">
-                                <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                                <Card.Body>
-                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={3} lg={3} md={2} sm={4} xs={6}>
-                            <Card className="image-box card">
-                                <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                                <Card.Body>
-                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={3} lg={3} md={2} sm={4} xs={6}>
-                            <Card className="image-box card">
-                                <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                                <Card.Body>
-                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={3} lg={3} md={2} sm={4} xs={6}>
-                            <Card className="image-box card">
-                                <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                                <Card.Body>
-                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={3} lg={3} md={2} sm={4} xs={6}>
-                            <Card className="image-box card">
-                                <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                                <Card.Body>
-                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={3} lg={3} md={2} sm={4} xs={6}>
-                            <Card className="image-box card">
-                                <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                                <Card.Body>
-                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                                </Card.Body>
-                            </Card>
-                        </Col>
+                        {
+                            this.state.collection_products.map((product, index) => {
+                                return (
+                                    <Col xl={2} lg={2} md={2} sm={4} xs={6} key={index}>
+                                        <Card className="image-box card">
+                                            <div className="product-card-image">
+                                                <Card.Img variant="top" src={AppURL.ServerBaseURL+product.image} />
+                                            </div>
+                                            <Card.Body>
+                                                <div className="product-card-details">
+                                                    <h5 className='product-name-on-card'>{product.name}</h5>
+                                                    <h5 className="product-price-on-card">Price: {product.price}Tk</h5>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                )
+                            })
+                        }
                     </Row>
                 </Container>
             </Fragment>

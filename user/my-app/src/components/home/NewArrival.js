@@ -4,15 +4,34 @@ import {Card, Col, Container, Row} from "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {Link} from "react-router-dom";
+import axios from "axios";
+import AppURL from "../../api/AppURL";
 
 class NewArrival extends Component {
 
     constructor(props) {
         super(props);
 
+        this.state = {
+            new_products: []
+        }
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
     }
+
+    componentDidMount() {
+        //NEW_PRODUCT = 3
+        axios.get(AppURL.getProductByRemark, { params: { remark: 3 } })
+            .then(res => {
+                if(res.status === 200) {
+                    this.setState({new_products: res.data})
+                }
+            })
+            .catch(error => {
+
+            })
+    }
+
 
     next() {
         this.slider.slickNext();
@@ -24,20 +43,18 @@ class NewArrival extends Component {
     render() {
         var settings = {
             dots: false,
-            infinite: true,
             speed: 500,
             slidesToShow: 5,
             slidesToScroll: 1,
-            initialSlide: 0,
             autoplay: true,
             autoplaySpeed: 2000,
+            infinite: true,
             responsive: [
                 {
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 1,
-                        infinite: true,
                         dots: true
                     }
                 },
@@ -46,7 +63,6 @@ class NewArrival extends Component {
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
-                        initialSlide: 2
                     }
                 },
                 {
@@ -73,84 +89,29 @@ class NewArrival extends Component {
                     </button>
                 </div>
                 <Slider ref={c => (this.slider = c)} {...settings}>
-                    <div>
-                        <Link to="/productDetails">
-                            <Card className="p-2">
-                                <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                                <Card.Body>
-                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                                </Card.Body>
-                            </Card>
-                        </Link>
-                    </div>
-                    <div>
-                        <Link to="/productDetails">
-                            <Card className="p-2">
-                                <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                                <Card.Body>
-                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                                </Card.Body>
-                            </Card>
-                        </Link>
-                    </div>
-                    <div>
-                        <Link to="/productDetails">
-                            <Card className="p-2">
-                                <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                                <Card.Body>
-                                    <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                    <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                                </Card.Body>
-                            </Card>
-                        </Link>
-                    </div>
-                    <div>
-                        <Card className="p-2">
-                            <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                            <Card.Body>
-                                <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                    <div>
-                        <Card className="p-2">
-                            <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                            <Card.Body>
-                                <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                    <div>
-                        <Card className="p-2">
-                            <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                            <Card.Body>
-                                <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                    <div>
-                        <Card className="p-2">
-                            <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                            <Card.Body>
-                                <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                    <div>
-                        <Card className="p-2">
-                            <Card.Img variant="top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1604021663000" />
-                            <Card.Body>
-                                <h5 className='product-name-on-card'>HP Pavilion 15-eg0112TX | Core i5-1135G7 | 8GB | 512GB NVMe | GeForce MX450 2GB</h5>
-                                <h5 className="product-price-on-card">Price: 3000Tk</h5>
-                            </Card.Body>
-                        </Card>
-                    </div>
+
+                    {
+                        this.state.new_products.map((product, index) => {
+                            return (
+                                <div>
+                                    <Link to="/productDetails">
+                                        <Card className="image-box card">
+                                            <div className="product-card-image">
+                                                <Card.Img variant="top" src={AppURL.ServerBaseURL+product.image} />
+                                            </div>
+                                            <Card.Body>
+                                                <div className="product-card-details">
+                                                    <h5 className='product-name-on-card'>{product.name}</h5>
+                                                    <h5 className="product-price-on-card">Price: {product.price}Tk</h5>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                    </Link>
+                                </div>
+                            )
+                        })
+                    }
+
                 </Slider>
             </Container>
         );
