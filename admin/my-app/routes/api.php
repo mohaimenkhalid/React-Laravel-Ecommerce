@@ -14,3 +14,4 @@ Route::get('/getSiteInfo', [SiteInfoController::class, 'getSiteInfo']);
 Route::get('/getAllCategories', [CategoryController::class, 'getAllCategories']);
 
 Route::get('/getProductByRemark', [ProductController::class, 'getProductByRemark']);
+Route::get('/getCategoryAndProductByCategory/{slug}', [ProductController::class, 'getCategoryAndProductByCategory']);

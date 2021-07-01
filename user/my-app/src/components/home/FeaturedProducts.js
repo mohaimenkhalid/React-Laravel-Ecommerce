@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Container, Row, Col, Card} from "react-bootstrap";
 import axios from "axios";
 import AppURL from "../../api/AppURL";
+import ProductList from "../product/ProductList";
 
 class FeaturedProducts extends Component {
 
@@ -33,27 +34,7 @@ class FeaturedProducts extends Component {
                         <h2 className="text-danger">Featured Product</h2>
                         <p>Some of Our Exclusive Collection, you May Like</p>
                     </div>
-                    <Row>
-                        {
-                            this.state.featured_products.map((product, index) => {
-                                return (
-                                    <Col xl={2} lg={2} md={2} sm={4} xs={6} key={index}>
-                                        <Card className="image-box card">
-                                            <div className="product-card-image">
-                                                <Card.Img variant="top" src={AppURL.ServerBaseURL+product.image} />
-                                            </div>
-                                            <Card.Body>
-                                                <div className="product-card-details">
-                                                    <h5 className='product-name-on-card'>{product.name}</h5>
-                                                    <h5 className="product-price-on-card">Price: {product.price}Tk</h5>
-                                                </div>
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                )
-                            })
-                        }
-                    </Row>
+                    <ProductList products={this.state.featured_products} />
                 </Container>
             </div>
         );

@@ -13,6 +13,7 @@ import PolicyPage from "../pages/PolicyPage";
 import PurchaseGuidePage from "../pages/PurchaseGuidePage";
 import DeliveryNoticePage from "../pages/DeliveryNoticePage";
 import TermsConditionPage from "../pages/TermsConditionPage";
+import CategoryProductView from "../pages/CategoryProductView";
 
 class AppRoute extends Component {
     render() {
@@ -20,6 +21,7 @@ class AppRoute extends Component {
             <Fragment>
                 <Switch>
                     <Route exact path="/" component={HomePage} />
+                    <Route path="/category/:slug" component={CategoryProductView} />
                     <Route path="/onboard" component={UserOnBoardPage} />
                     <Route path="/productDetails" component={ProductDetailsPage} />
                     <Route path="/notification" component={NotificationPage} />
@@ -31,6 +33,7 @@ class AppRoute extends Component {
                     <Route path="/terms-condition" component={TermsConditionPage} />
                     <Route path="/privacy-policy" component={PolicyPage} />
                     <Route path="/purchase-guide" component={PurchaseGuidePage} />
+                    <Route path="/delivery-notice" component={DeliveryNoticePage} />
                     <Route path="/delivery-notice" component={DeliveryNoticePage} />
                 </Switch>
             </Fragment>

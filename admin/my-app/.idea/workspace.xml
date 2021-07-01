@@ -20,17 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../user/my-app/src/components/product/CategoryList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../user/my-app/src/components/product/ProductList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/CategoryProductView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/bigSlider.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/bigSlider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/megaMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/megaMenu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/subCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/common/subCategory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/Collection.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/Collection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/FeaturedProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/FeaturedProducts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/NewArrival.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/NewArrival.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/MegaMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/MegaMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +203,7 @@
       <workItem from="1624902161643" duration="877000" />
       <workItem from="1624975238744" duration="634000" />
       <workItem from="1625065510905" duration="710000" />
-      <workItem from="1625154506155" duration="7936000" />
+      <workItem from="1625154506155" duration="12318000" />
     </task>
     <servers />
   </component>
@@ -225,9 +227,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625154530182" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1625161864788">
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1625172724670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625161864788" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625172724670" />
   </component>
 </project>

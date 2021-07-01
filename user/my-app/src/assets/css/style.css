@@ -83,7 +83,7 @@
 }
 
 .product-card-image {
-    height: 260px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,4 +92,5 @@
 
 .product-card-details {
     height: 80px;
+    text-align: center;
 }

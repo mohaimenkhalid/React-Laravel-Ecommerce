@@ -8,6 +8,9 @@ class AppURL {
     static getSiteInfo = this.BaseURL+'getSiteInfo';
     static getAllCategories = this.BaseURL+'getAllCategories';
     static getProductByRemark = this.BaseURL+'getProductByRemark';
+    static getCategoryAndProductByCategory(category_slug) {
+        return this.BaseURL+'getCategoryAndProductByCategory/'+category_slug;
+    }
 
 }
 

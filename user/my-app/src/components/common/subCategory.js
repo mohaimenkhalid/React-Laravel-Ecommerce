@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Accordion, Card, Button} from "react-bootstrap";
+import {Accordion, Card} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 class SubCategory extends Component {
     render() {
@@ -10,9 +11,11 @@ class SubCategory extends Component {
                         return (
                             <Accordion>
                                 <Card>
-                                    <Accordion.Toggle variant="link" eventKey="0" className="card-header text-left border-0">
-                                        { subCategory.name }
-                                    </Accordion.Toggle>
+                                    <Link to={`/category/${subCategory.slug}`}>
+                                        <Accordion.Toggle variant="link" eventKey="0" className="card-header text-left border-0 w-100">
+                                            { subCategory.name }
+                                        </Accordion.Toggle>
+                                    </Link>
                                     {
                                         subCategory.children.length !== 0
                                             ?  (
