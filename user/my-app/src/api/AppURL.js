@@ -11,6 +11,7 @@ class AppURL {
     static getCategoryAndProductByCategory(category_slug) {
         return this.BaseURL+'getCategoryAndProductByCategory/'+category_slug;
     }
+    static getFeaturedCategory = this.BaseURL+'getFeaturedCategory';
 
 }
 

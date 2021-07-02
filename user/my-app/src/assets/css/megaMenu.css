@@ -2,7 +2,7 @@
     background-color: #ffffff;
     color: #444;
     cursor: pointer;
-    padding: 4px 10px 0 0;
+    padding: 4px 0 0 20px;
     width: 100%;
     border: none;
     font-size: 14px;
@@ -17,11 +17,25 @@
     justify-content: space-between;
 }
 
-.accordion:after {
+.accordion .active:after,hover {
+    color: #ffffff;
+    content: "\276F";
+    line-height: 2.3;
+}
+
+/*.accordion:after {
     content: '\276F';
     color: #e43023;
     float: right;
     margin-left: 5px;
+}*/
+
+.accordion a{
+    display: flex;
+}
+
+.accordion a.active {
+
 }
 
 .panel {

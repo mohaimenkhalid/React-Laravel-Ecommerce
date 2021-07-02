@@ -42,7 +42,6 @@ class CategoryProductView extends Component {
                             isLoading: false
                         })
                     } else {
-                        console.log(res)
                         this.setState({
                             products: [],
                             categories: res.data.data.single_children,

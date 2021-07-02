@@ -17,8 +17,9 @@
 .active, .accordionMobile:hover {
     color: #ffffff;
     font-weight: 400;
-    background-color: #F59315;
+    background-color: #d2d2d2;
 }
+
 .accordionMobile:after {
     content: '\276F';
     color: #f3f3f3;
@@ -27,7 +28,8 @@
 }
 .active:after,hover {
     color: #ffffff;
-    content: "\276E";
+    content: "\276F";
+    line-height: 2.3;
 }
 .panelMobile {
     padding: 0 10px;

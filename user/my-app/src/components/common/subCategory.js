@@ -1,21 +1,21 @@
 import React, {Component} from 'react';
 import {Accordion, Card} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 class SubCategory extends Component {
     render() {
         return (
             <>
                 {
-                    this.props.subCategory.map((subCategory) => {
+                    this.props.subCategory.map((subCategory, index) => {
                         return (
-                            <Accordion>
+                            <Accordion key={index}>
                                 <Card>
-                                    <Link to={`/category/${subCategory.slug}`}>
+                                    <NavLink to={`/category/${subCategory.slug}`} activeClassName="active">
                                         <Accordion.Toggle variant="link" eventKey="0" className="card-header text-left border-0 w-100">
                                             { subCategory.name }
                                         </Accordion.Toggle>
-                                    </Link>
+                                    </NavLink>
                                     {
                                         subCategory.children.length !== 0
                                             ?  (
