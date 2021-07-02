@@ -5,6 +5,7 @@ import AppURL from "../api/AppURL";
 import ProductList from "../components/product/ProductList";
 import noProductFound from "../assets/images/no_product_found.png";
 import {loadProgressBar} from "axios-progress-bar";
+import ProductLoader from "../components/loader/ProductLoader";
 
 class ProductSearchPage extends Component {
     constructor(props) {
@@ -13,7 +14,9 @@ class ProductSearchPage extends Component {
         this.state = {
             query: '',
             fetched: false,
-            results: []
+            results: [],
+            isLoading: true,
+            loaderCount: Array.from(Array(8)),
         }
     }
 
@@ -71,7 +74,8 @@ class ProductSearchPage extends Component {
                 .then(res => {
                     console.log(res)
                     if(res.status === 200) {
-                        this.setState({results: res.data})
+                        this.setState({results: res.data, isLoading: false})
+
                     }
                 })
                 .catch(error => {})
@@ -85,6 +89,40 @@ class ProductSearchPage extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
+
+                            {
+                                this.state.isLoading
+                                    ? (
+                                        <div className="row mt-4">
+                                            {
+                                                this.state.loaderCount.map((item, index) => {
+                                                    return (
+                                                        <div className="col-md-3" key={index}>
+                                                            <ProductLoader />
+                                                        </div>
+                                                    );
+                                                })
+                                            }
+                                        </div>
+                                    )
+                                    : (
+                                        this.state.results.length <= 0
+                                            ? (
+                                                <div className="card text-center p-4">
+                                                    <div className="card-body">
+                                                        <img src={noProductFound} style={{width: "400px", textAlign: "center"}} alt="" />
+                                                        <h5 className="mt-4">No Product Found!</h5>
+                                                    </div>
+                                                </div>
+                                            )
+                                            :
+                                            <ProductList products={this.state.results} />
+                                        )
+                            }
+
+
+
+                          {/*
                             {
                                 this.state.results.length <= 0
                                     ? (
@@ -97,7 +135,7 @@ class ProductSearchPage extends Component {
                                     )
                                     :
                                     <ProductList products={this.state.results} />
-                            }
+                            }*/}
                         </div>
                     </div>
                 </div>
