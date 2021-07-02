@@ -30,4 +30,10 @@ class ProductController extends Controller
 
     }
 
+    public function productSearch(Request $request) {
+        $query = $request->searchQuery;
+        $products = Product::where('name', 'LIKE', '%'. $query .'%')->get();
+        return response()->json($products);
+    }
+
 }

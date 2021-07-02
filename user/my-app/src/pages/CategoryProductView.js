@@ -18,14 +18,14 @@ class CategoryProductView extends Component {
         }
     }
 
-    componentWillMount(prevProps) {
-        this.fetchData(prevProps);
-    }
-
     componentDidUpdate(prevProps) {
         if(prevProps.match.params.slug !== this.props.match.params.slug) {
             this.fetchData(prevProps);
         }
+    }
+
+    componentWillMount(prevProps) {
+        this.fetchData(prevProps);
     }
 
     fetchData(prevProps) {
@@ -34,6 +34,7 @@ class CategoryProductView extends Component {
         })
         axios.get(AppURL.getCategoryAndProductByCategory(this.props.match.params.slug))
             .then(res => {
+                console.log(res);
                 if(res.status === 200) {
                     if(res.data.response_type === 'product') {
                         this.setState({

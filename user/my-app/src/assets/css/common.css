@@ -58,8 +58,13 @@ a:hover{
     padding-bottom: 4px;
     padding-left: 8px;
     font-size: 14px;
+    font-weight: bold;
     border: none;
-    background: #f33c34;
+    background: #ff0000;
+    height: 45px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .goog-te-gadget-icon {

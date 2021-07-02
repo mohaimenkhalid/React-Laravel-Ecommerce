@@ -20,3 +20,4 @@ Route::get('/getFeaturedCategory', [CategoryController::class, 'getFeaturedCateg
 
 Route::get('/getProductByRemark', [ProductController::class, 'getProductByRemark']);
 Route::get('/getCategoryAndProductByCategory/{slug}', [ProductController::class, 'getCategoryAndProductByCategory']);
+Route::get('/productSearch', [ProductController::class, 'productSearch']);

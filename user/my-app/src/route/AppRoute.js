@@ -14,6 +14,8 @@ import PurchaseGuidePage from "../pages/PurchaseGuidePage";
 import DeliveryNoticePage from "../pages/DeliveryNoticePage";
 import TermsConditionPage from "../pages/TermsConditionPage";
 import CategoryProductView from "../pages/CategoryProductView";
+import ProductSearchPage from "../pages/ProductSearchPage";
+import SearchComponent from "../components/product/SearchComponent";
 
 class AppRoute extends Component {
     render() {
@@ -35,6 +37,8 @@ class AppRoute extends Component {
                     <Route path="/purchase-guide" component={PurchaseGuidePage} />
                     <Route path="/delivery-notice" component={DeliveryNoticePage} />
                     <Route path="/delivery-notice" component={DeliveryNoticePage} />
+                    <Route path="/search/:query" component={ProductSearchPage} />
+                    <Route path="/search" component={SearchComponent} />
                 </Switch>
             </Fragment>
         );
