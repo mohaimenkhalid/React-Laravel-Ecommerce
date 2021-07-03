@@ -25,7 +25,6 @@ class AppRoute extends Component {
                     <Route exact path="/" component={HomePage} />
                     <Route path="/category/:slug" component={CategoryProductView} />
                     <Route path="/onboard" component={UserOnBoardPage} />
-                    <Route path="/productDetails" component={ProductDetailsPage} />
                     <Route path="/notification" component={NotificationPage} />
                     <Route path="/favourite" component={FavouritePage} />
                     <Route path="/cart" component={CartPage} />
@@ -39,6 +38,7 @@ class AppRoute extends Component {
                     <Route path="/delivery-notice" component={DeliveryNoticePage} />
                     <Route path="/search/:query" component={ProductSearchPage} />
                     <Route path="/search" component={SearchComponent} />
+                    <Route path="/product/:slug" component={ProductDetailsPage} />
                 </Switch>
             </Fragment>
         );

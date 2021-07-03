@@ -36,4 +36,9 @@ class ProductController extends Controller
         return response()->json($products);
     }
 
+    public function getProductDetails($slug) {
+        $product = Product::with(['category', 'product_details'])->where('slug', $slug)->first();
+        return response()->json($product);
+    }
+
 }

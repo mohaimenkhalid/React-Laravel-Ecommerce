@@ -20,7 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/ProductSearchPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/ProductSearchPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_07_01_162648_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_07_01_162648_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/ProductDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/ProductDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/FeaturedProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/FeaturedProducts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/product/ProductList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/product/ProductList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/productDetails/ProductDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/productDetails/ProductDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/CategoryProductView.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/CategoryProductView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/ProductDetailsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/ProductDetailsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +204,8 @@
       <workItem from="1624975238744" duration="634000" />
       <workItem from="1625065510905" duration="710000" />
       <workItem from="1625154506155" duration="12319000" />
-      <workItem from="1625206677659" duration="7836000" />
+      <workItem from="1625206677659" duration="7837000" />
+      <workItem from="1625289795753" duration="7260000" />
     </task>
     <servers />
   </component>
@@ -216,13 +229,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625218700096" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1625206704979">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1625289973717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625206704979" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1625224793109">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625289973717" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1625325788027">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625224793109" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625325788027" />
   </component>
 </project>

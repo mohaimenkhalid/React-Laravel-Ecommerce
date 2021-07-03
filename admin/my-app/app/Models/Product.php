@@ -12,4 +12,12 @@ class Product extends Model
     CONST FEATURED_PRODUCT = 1;
     CONST NEW_PRODUCT = 2;
     CONST COLLECTION_PRODUCT = 3;
+
+    public function product_details() {
+        return $this->hasOne(ProductDetails::class, 'product_id');
+    }
+
+    public function category() {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
 }

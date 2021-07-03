@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Container, Row, Col, Card} from "react-bootstrap";
+import { Container} from "react-bootstrap";
 import axios from "axios";
 import AppURL from "../../api/AppURL";
 import ProductList from "../product/ProductList";

@@ -13,11 +13,10 @@ Route::post('/postContactDetails', [ContactController::class, 'postContactDetail
 Route::get('/getSiteInfo', [SiteInfoController::class, 'getSiteInfo']);
 
 //category & product
-
 Route::get('/getAllCategories', [CategoryController::class, 'getAllCategories']);
 Route::get('/getFeaturedCategory', [CategoryController::class, 'getFeaturedCategory']);
-
 
 Route::get('/getProductByRemark', [ProductController::class, 'getProductByRemark']);
 Route::get('/getCategoryAndProductByCategory/{slug}', [ProductController::class, 'getCategoryAndProductByCategory']);
 Route::get('/productSearch', [ProductController::class, 'productSearch']);
+Route::get('/getProductDetails/{slug}', [ProductController::class, 'getProductDetails']);

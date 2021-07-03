@@ -24,7 +24,7 @@ class CategoryProductView extends Component {
         }
     }
 
-    componentWillMount(prevProps) {
+    componentDidMount(prevProps) {
         this.fetchData(prevProps);
     }
 
