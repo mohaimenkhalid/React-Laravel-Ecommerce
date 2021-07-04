@@ -22,7 +22,7 @@ class AppRoute extends Component {
         return (
             <Fragment>
                 <Switch>
-                    <Route exact path="/" component={HomePage} />
+                    <Route exact path="/" render={(props) => <HomePage {...props} key={Date.now()} />} />
                     <Route path="/category/:slug" component={CategoryProductView} />
                     <Route path="/onboard" component={UserOnBoardPage} />
                     <Route path="/notification" component={NotificationPage} />

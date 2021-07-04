@@ -44,6 +44,7 @@ class ProductDetails extends Component {
     render() {
         let product = this.props.product;
         let product_details = product.product_details;
+
         return (
             <Fragment>
                 <Container  className="animated slideInDown">
@@ -104,33 +105,37 @@ class ProductDetails extends Component {
 
                                     <div> { this.price() } </div>
 
-                                   <div className="row">
+                                   <div className="row mt-5">
                                        <div className="col-md-4">
-                                           <h6 className="mt-2">Color</h6>
-                                           <select onChange="" className="form-control form-select">
-                                               <option value="">Choose Color</option>
-                                           </select>
+                                           <h6 className="mt-2">Choose Quantity</h6>
+                                           <input type="number" defaultValue="1" className="form-control"/>
+                                       </div>
+                                       <div className="col-md-4">
+                                           <div>
+                                               <h6 className="mt-2">Color</h6>
+                                               <select className="form-control form-select">
+                                                   <option value="">Choose Color</option>
+                                                   { product_details && product_details.color
+                                                       ?
+                                                       product_details.color.split(',').map(option => {
+                                                           return (<option value={option}>{option}</option>)
+                                                       })
+                                                       : ""
+                                                   }
+                                               </select>
+                                           </div>
                                        </div>
                                        <div className="col-md-4">
                                            <h6 className="mt-2">Choose Size</h6>
                                            <select onChange={this.sizeOnChange} className="form-control form-select">
                                                <option value="">Choose Size</option>
-                                           </select>
-                                       </div>
-                                       <div className="col-md-4">
-                                           <h6 className="mt-2">Choose Quantity</h6>
-                                           <select onChange={this.quantityOnChange} className="form-control form-select">
-                                               <option value="">Choose Quantity</option>
-                                               <option value="01">1</option>
-                                               <option value="02">2</option>
-                                               <option value="03">3</option>
-                                               <option value="04">4</option>
-                                               <option value="05">5</option>
-                                               <option value="06">6</option>
-                                               <option value="07">7</option>
-                                               <option value="08">8</option>
-                                               <option value="09">9</option>
-                                               <option value="10">10</option>
+                                               { product_details && product_details.size
+                                                   ?
+                                                   product_details.size.split(',').map(option => {
+                                                       return (<option value={option}>{option}</option>)
+                                                   })
+                                                   : ""
+                                               }
                                            </select>
                                        </div>
                                    </div>

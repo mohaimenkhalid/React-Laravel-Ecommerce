@@ -24,6 +24,7 @@ class CreateProductDetailsTable extends Migration
             $table->text('description')->nullable();
             $table->string('color')->nullable();
             $table->string('size')->nullable();
+            $table->timestamps();
         });
     }
 

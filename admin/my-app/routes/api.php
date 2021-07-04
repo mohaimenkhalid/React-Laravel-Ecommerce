@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SiteInfoController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\NotificationController;
 
 
 Route::get('/getVisitorDetails', [VisitorController::class, 'getVisitorDetails']);
@@ -20,3 +21,4 @@ Route::get('/getProductByRemark', [ProductController::class, 'getProductByRemark
 Route::get('/getCategoryAndProductByCategory/{slug}', [ProductController::class, 'getCategoryAndProductByCategory']);
 Route::get('/productSearch', [ProductController::class, 'productSearch']);
 Route::get('/getProductDetails/{slug}', [ProductController::class, 'getProductDetails']);
+Route::get('/getNotifications', [NotificationController::class, 'getNotifications']);

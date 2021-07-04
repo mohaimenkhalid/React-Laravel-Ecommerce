@@ -16,6 +16,7 @@ class AppURL {
     static getProductDetails (slug) {
         return this.ApiBaseURL+'getProductDetails/'+slug;
     }
+    static getNotifications = this.ApiBaseURL+'getNotifications';
 
 }
 
