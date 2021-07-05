@@ -12,9 +12,15 @@ class UserOnBoard extends Component {
                                 <Card.Img variant="top" src="" />
                                 <Card.Body>
                                     <Card.Title>Login</Card.Title>
-                                    <p>Enter Your Registered Mobile Number.</p>
+                                    <p>Enter Your Login Details.</p>
                                     <div className="form-group">
-                                        <input type="text" className="form-control" placeholder="Mobile Number" />
+                                        <input type="text" className="form-control" placeholder="Email Address" />
+                                    </div>
+                                    <div className="form-group">
+                                        <input type="text" className="form-control" placeholder="Password" />
+                                    </div>
+                                    <div className="form-group">
+                                        <small>Not Register User? <a href="">Register</a> </small>
                                     </div>
                                     <Button variant="danger">LOGIN</Button>
                                 </Card.Body>

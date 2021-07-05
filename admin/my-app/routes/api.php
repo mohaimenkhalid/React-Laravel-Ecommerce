@@ -7,6 +7,7 @@ use App\Http\Controllers\SiteInfoController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\AuthController;
 
 
 Route::get('/getVisitorDetails', [VisitorController::class, 'getVisitorDetails']);
@@ -22,3 +23,7 @@ Route::get('/getCategoryAndProductByCategory/{slug}', [ProductController::class,
 Route::get('/productSearch', [ProductController::class, 'productSearch']);
 Route::get('/getProductDetails/{slug}', [ProductController::class, 'getProductDetails']);
 Route::get('/getNotifications', [NotificationController::class, 'getNotifications']);
+
+
+//Authentication api
+Route::post('/auth/register', [AuthController::class, 'register']);
