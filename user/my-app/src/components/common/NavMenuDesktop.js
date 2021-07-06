@@ -47,7 +47,7 @@ class NavMenuDesktop extends Component {
                                         <span className="badge badge-danger">4</span>
                                     </sub>
                                 </Link>
-                                <Link to="/onboard" className="signin">
+                                <Link to="/login" className="signin">
                                     Sign In
                                 </Link>
                                 <div id="google_translate_element"></div>

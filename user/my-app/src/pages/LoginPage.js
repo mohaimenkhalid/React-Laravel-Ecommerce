@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import UserOnBoard from "../components/common/UserOnBoard";
 
-class UserOnBoardPage extends Component {
+class LoginPage extends Component {
     render() {
         return (
             <Fragment>
@@ -11,4 +11,4 @@ class UserOnBoardPage extends Component {
     }
 }
 
-export default UserOnBoardPage;
+export default LoginPage;

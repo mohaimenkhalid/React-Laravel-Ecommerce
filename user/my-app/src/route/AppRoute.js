@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {Route, Switch} from "react-router";
 import HomePage from "../pages/HomePage";
-import UserOnBoardPage from "../pages/UserOnBoardPage";
+import LoginPage from "../pages/LoginPage";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
 import NotificationPage from "../pages/NotificationPage";
 import FavouritePage from "../pages/FavouritePage";
@@ -16,6 +16,7 @@ import TermsConditionPage from "../pages/TermsConditionPage";
 import CategoryProductView from "../pages/CategoryProductView";
 import ProductSearchPage from "../pages/ProductSearchPage";
 import SearchComponent from "../components/product/SearchComponent";
+import RegisterPage from "../pages/RegisterPage";
 
 class AppRoute extends Component {
     render() {
@@ -24,7 +25,8 @@ class AppRoute extends Component {
                 <Switch>
                     <Route exact path="/" render={(props) => <HomePage {...props} key={Date.now()} />} />
                     <Route path="/category/:slug" component={CategoryProductView} />
-                    <Route path="/onboard" component={UserOnBoardPage} />
+                    <Route path="/login" component={LoginPage} />
+                    <Route path="/register" component={RegisterPage} />
                     <Route path="/notification" component={NotificationPage} />
                     <Route path="/favourite" component={FavouritePage} />
                     <Route path="/cart" component={CartPage} />
