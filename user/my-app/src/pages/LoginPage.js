@@ -4,7 +4,7 @@ import AppURL from "../api/AppURL";
 import AppStorage from "../helpers/AppStorage";
 import {toast} from "react-toastify";
 import {Button, Card, Col, Container, Row} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 
 class LoginPage extends Component {
 
@@ -13,6 +13,7 @@ class LoginPage extends Component {
         this.state = {
             email: '',
             password: '',
+            userRedirect: false,
         }
     }
 
@@ -41,7 +42,7 @@ class LoginPage extends Component {
                     let token = JSON.stringify(res.data.access_token);
                     let user = JSON.stringify(res.data.user);
                     AppStorage.store(token, user)
-                    this.props.history.push('/');
+                    this.setState({userRedirect: true});
                     toast.success("Login Successfully!");
                 }else {
                     if(res.data.error) {
@@ -59,6 +60,14 @@ class LoginPage extends Component {
                 console.log(error)
             })
 
+    }
+
+    onUserRedirect() {
+        if(this.state.userRedirect === true) {
+            return (
+                <Redirect to="/" />
+            )
+        }
     }
 
     render() {
@@ -89,6 +98,7 @@ class LoginPage extends Component {
                         </Col>
                     </Row>
                 </Container>
+                { this.onUserRedirect() }
             </Fragment>
         );
     }

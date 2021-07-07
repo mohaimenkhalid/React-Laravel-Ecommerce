@@ -1,29 +1,27 @@
 class AppStorage {
 
-     static store(token, user) {
+     store(token, user) {
          this.setToken(token)
          this.setUser(user)
      }
-
-    static setToken(token) {
+     setToken(token) {
         localStorage.setItem('token', token)
      }
-
-    static setUser(user) {
+     setUser(user) {
         localStorage.setItem('user_details', user)
     }
 
-    static clear() {
+    clear() {
          localStorage.removeItem(['token', 'user_details'])
     }
 
-    static getToken() {
+    getToken() {
         localStorage.getItem("token");
     }
 
-    static getUser(){
+    getUser(){
         localStorage.getItem("user_details");
     }
 }
 
-export default AppStorage;
+export default new AppStorage();

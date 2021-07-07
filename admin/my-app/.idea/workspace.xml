@@ -21,15 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavMenuDesktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavMenuDesktop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/helpers/AppStorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/helpers/AppStorage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/RegisterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/RegisterPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +210,7 @@
       <workItem from="1625505812308" duration="7137000" />
       <workItem from="1625586413816" duration="3477000" />
       <workItem from="1625664797877" duration="352000" />
-      <workItem from="1625645493471" duration="5448000" />
+      <workItem from="1625645493471" duration="6052000" />
     </task>
     <servers />
   </component>

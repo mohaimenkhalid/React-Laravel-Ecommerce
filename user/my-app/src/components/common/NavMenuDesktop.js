@@ -3,6 +3,7 @@ import {Col, Navbar, Row} from "react-bootstrap";
 import logo from '../../assets/images/logo.png'
 import {Link} from "react-router-dom";
 import SearchBar from "../product/SearchBar";
+import AppStorage from "../../helpers/AppStorage";
 
 class NavMenuDesktop extends Component {
     render() {
@@ -36,12 +37,6 @@ class NavMenuDesktop extends Component {
                                     </sub>
                                 </Link>
                                 <Link to="/">
-                                    <i className="fa fa-mobile font-40" />
-                                    <sub>
-                                        <span className="badge badge-danger">4</span>
-                                    </sub>
-                                </Link>
-                                <Link to="/">
                                     <i className="fa fa-shopping-cart font-30" />
                                     <sub>
                                         <span className="badge badge-danger">4</span>
@@ -50,6 +45,7 @@ class NavMenuDesktop extends Component {
                                 <Link to="/login" className="signin">
                                     Sign In
                                 </Link>
+
                                 <div id="google_translate_element"></div>
                             </div>
                         </Col>
