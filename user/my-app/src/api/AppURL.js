@@ -17,6 +17,8 @@ class AppURL {
         return this.ApiBaseURL+'getProductDetails/'+slug;
     }
     static getNotifications = this.ApiBaseURL+'getNotifications';
+    static register = this.ApiBaseURL+'auth/register';
+    static login = this.ApiBaseURL+'auth/login';
 
 }
 

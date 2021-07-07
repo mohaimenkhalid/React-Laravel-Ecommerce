@@ -26,4 +26,5 @@ Route::get('/getNotifications', [NotificationController::class, 'getNotification
 
 
 //Authentication api
+Route::post('/auth/login', [AuthController::class, 'login']);
 Route::post('/auth/register', [AuthController::class, 'register']);

@@ -1,6 +1,10 @@
 import React, {Component, Fragment} from 'react';
 import {Button, Card, Col, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import axios from "axios";
+import AppURL from "../api/AppURL";
+import AppStorage from "../helpers/AppStorage";
+import {toast} from "react-toastify";
 
 class RegisterPage extends Component {
 
@@ -36,7 +40,43 @@ class RegisterPage extends Component {
 
     onFormSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state.first_name);
+
+        let first_name = this.state.first_name;
+        let last_name = this.state.last_name;
+        let email = this.state.email;
+        let password = this.state.password;
+
+        let registerFormData = new FormData();
+        registerFormData.append('first_name', first_name)
+        registerFormData.append('last_name', last_name)
+        registerFormData.append('email', email)
+        registerFormData.append('password', password)
+
+        axios.post(AppURL.register, registerFormData)
+            .then(res => {
+                console.log(res)
+                if(res.status === 200 && res.data.access_token) {
+                    let token = JSON.stringify(res.data.access_token);
+                    let user = JSON.stringify(res.data.user);
+                    AppStorage.store(token, user)
+                    this.props.history.push('/');
+                    toast.success("Registration successfully Completed!");
+                }else {
+                    if(res.data.email && res.data.email.length > 0) {
+                        toast.error(res.data.email[0])
+                    }
+                    if(res.data.first_name && res.data.first_name.length > 0) {
+                        toast.error(res.data.first_name[0])
+                    }
+                    if(res.data.password && res.data.password.length > 0) {
+                        toast.error(res.data.password[0])
+                    }
+                }
+            })
+            .then(error => {
+                console.log(error)
+            })
+
     }
 
 

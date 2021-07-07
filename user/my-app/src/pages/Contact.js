@@ -1,8 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import NavMenuDesktop from "../components/common/NavMenuDesktop";
-import NavMenuMobile from "../components/common/NavMenuMobile";
-import {Button, Card, Col} from "react-bootstrap";
-import FooterDesktop from "../components/common/FooterDesktop";
+import {Button, Card} from "react-bootstrap";
 import Validation from "../validation/validation";
 import AppURL from "../api/AppURL";
 import { loadProgressBar } from 'axios-progress-bar';

@@ -7,6 +7,7 @@ import NavMenuDesktop from "./components/common/NavMenuDesktop";
 import NavMenuMobile from "./components/common/NavMenuMobile";
 import MegaMenu from "./components/home/MegaMenu";
 import FooterDesktop from "./components/common/FooterDesktop";
+import {ToastContainer} from "react-toastify";
 
 class App extends Component {
     render() {
@@ -28,6 +29,7 @@ class App extends Component {
                         </div>
                     </div>
                     <FooterDesktop />
+                    <ToastContainer />
                 </BrowserRouter>
             </Fragment>
         );

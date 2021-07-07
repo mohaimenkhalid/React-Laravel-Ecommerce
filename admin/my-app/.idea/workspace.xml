@@ -20,17 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/my-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/UserOnBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/common/UserOnBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/UserOnBoardPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/UserOnBoardPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/RegisterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/RegisterPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +172,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/migrations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -215,6 +214,9 @@
       <workItem from="1625289795753" duration="7261000" />
       <workItem from="1625410438139" duration="5529000" />
       <workItem from="1625505812308" duration="7137000" />
+      <workItem from="1625586413816" duration="3477000" />
+      <workItem from="1625664797877" duration="352000" />
+      <workItem from="1625645493471" duration="5448000" />
     </task>
     <servers />
   </component>
@@ -242,9 +244,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625411112911" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1625514034379">
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1625652150327">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625514034379" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625652150327" />
   </component>
 </project>

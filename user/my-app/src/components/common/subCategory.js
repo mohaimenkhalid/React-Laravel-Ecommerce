@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Accordion, Card} from "react-bootstrap";
-import {Link, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 class SubCategory extends Component {
     render() {
