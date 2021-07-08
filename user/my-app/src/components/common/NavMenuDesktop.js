@@ -1,11 +1,16 @@
 import React, {Component, Fragment} from 'react';
-import {Col, Navbar, Row} from "react-bootstrap";
+import {Col, Navbar, Row, Dropdown} from "react-bootstrap";
 import logo from '../../assets/images/logo.png'
 import {Link} from "react-router-dom";
 import SearchBar from "../product/SearchBar";
 import AppStorage from "../../helpers/AppStorage";
 
 class NavMenuDesktop extends Component {
+
+    onLogout = () => {
+
+    }
+
     render() {
         return (
             <Fragment>
@@ -42,11 +47,34 @@ class NavMenuDesktop extends Component {
                                         <span className="badge badge-danger">4</span>
                                     </sub>
                                 </Link>
-                                <Link to="/login" className="signin">
-                                    Sign In
-                                </Link>
 
                                 <div id="google_translate_element"></div>
+
+                                {
+                                    AppStorage.getToken() !== undefined
+                                        ?
+                                        (
+                                            <Dropdown>
+                                                <Dropdown.Toggle variant="default"
+                                                                 id="dropdown-basic dropdown-button-drop-left"
+                                                                 drop="left">
+                                                    {AppStorage.getUser().first_name}
+                                                </Dropdown.Toggle>
+
+                                                <Dropdown.Menu>
+                                                    <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
+                                                    <Dropdown.Item href="#/action-2">dashboard</Dropdown.Item>
+                                                    <Dropdown.Item onClick={this.onLogout}>Logout</Dropdown.Item>
+                                                </Dropdown.Menu>
+                                            </Dropdown>
+                                        )
+                                        :
+                                        (
+                                            <Link to="/login" className="signin">
+                                                Sign In
+                                            </Link>
+                                        )
+                                }
                             </div>
                         </Col>
                     </Row>

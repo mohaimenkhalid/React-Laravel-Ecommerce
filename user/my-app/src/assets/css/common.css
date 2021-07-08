@@ -60,7 +60,7 @@ a:hover{
     font-size: 14px;
     font-weight: bold;
     border: none;
-    background: #ff0000;
+    background: transparent;
     height: 45px;
     border-radius: 1rem;
     display: flex;
@@ -72,11 +72,11 @@ a:hover{
 }
 
 .goog-te-gadget-simple .goog-te-menu-value {
-    color: #fff;
+    color: #ffffff;
 }
 
 .goog-te-menu-value span {
-    color: #ffffff !important;
+    color: #000000 !important;
 }
 
 .goog-te-menu2-item span {
