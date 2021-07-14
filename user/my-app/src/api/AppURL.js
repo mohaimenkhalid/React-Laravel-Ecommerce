@@ -19,6 +19,7 @@ class AppURL {
     static getNotifications = this.ApiBaseURL+'getNotifications';
     static register = this.ApiBaseURL+'auth/register';
     static login = this.ApiBaseURL+'auth/login';
+    static logoutUser = this.ApiBaseURL+'auth/logout';
 
 }
 

@@ -29,13 +29,21 @@ class AuthController extends Controller
 
         $user = User::where('email', $request['email'])->firstOrFail();
 
-        $token = $user->createToken('auth_token')->plainTextToken;
+        $token = $user->createToken('Login Token')->accessToken;
 
         return response()->json([
             'access_token' => $token,
             'user' => $user,
             'token_type' => 'Bearer',
         ]);
+    }
+
+    public function logout(Request $request) {
+        $token = Auth::guard("api")->user()->token();
+        if($token->revoke()) {
+            return response()->json(['status' => true]);
+        }
+        return response()->json(['status' => false]);
     }
 
     public function register(Request $request)
@@ -58,7 +66,7 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        $token = $user->createToken('auth_token')->plainTextToken;
+        $token = $user->createToken('Login Token')->accessToken;
 
         return response()->json([
             'access_token' => $token,

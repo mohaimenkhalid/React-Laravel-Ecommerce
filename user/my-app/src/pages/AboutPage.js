@@ -1,7 +1,4 @@
 import React, {Component, Fragment} from 'react';
-import NavMenuDesktop from "../components/common/NavMenuDesktop";
-import NavMenuMobile from "../components/common/NavMenuMobile";
-import FooterDesktop from "../components/common/FooterDesktop";
 import axios from "axios";
 import { loadProgressBar } from 'axios-progress-bar';
 import AppURL from "../api/AppURL";

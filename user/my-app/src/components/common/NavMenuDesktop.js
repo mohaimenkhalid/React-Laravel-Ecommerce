@@ -1,15 +1,41 @@
 import React, {Component, Fragment} from 'react';
 import {Col, Navbar, Row, Dropdown} from "react-bootstrap";
 import logo from '../../assets/images/logo.png'
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 import SearchBar from "../product/SearchBar";
 import AppStorage from "../../helpers/AppStorage";
+import axios from "axios";
+import AppURL from "../../api/AppURL";
+import {toast} from "react-toastify";
 
 class NavMenuDesktop extends Component {
 
-    onLogout = () => {
-
+    constructor() {
+      super();
+      this.state = {
+        homeRedirect: false,
+      }
     }
+
+
+    onLogout = () => {
+      axios.post(AppURL.logoutUser, { headers: {"Authorization" : `Bearer ${AppStorage.getToken()}`}})
+        .then(res => {
+          console.log(res);
+          if(res.status === 200 && res.data.status === true) {
+            AppStorage.clear();
+            this.setState({ homeRedirect: true });
+            toast.success("You are logged out!");
+          }
+        })
+        .catch()
+    };
+
+    HomeRedirect = () => {
+      if(this.state.homeRedirect === true) {
+        return <Redirect to="/" />
+      }
+    };
 
     render() {
         return (
@@ -51,14 +77,14 @@ class NavMenuDesktop extends Component {
                                 <div id="google_translate_element"></div>
 
                                 {
-                                    AppStorage.getToken() !== undefined
+                                    AppStorage.getToken()
                                         ?
                                         (
                                             <Dropdown>
                                                 <Dropdown.Toggle variant="default"
                                                                  id="dropdown-basic dropdown-button-drop-left"
                                                                  drop="left">
-                                                    {AppStorage.getUser().first_name}
+                                                    {AppStorage.getUser() && AppStorage.getUser().first_name}
                                                 </Dropdown.Toggle>
 
                                                 <Dropdown.Menu>
@@ -79,6 +105,7 @@ class NavMenuDesktop extends Component {
                         </Col>
                     </Row>
                 </Navbar>
+              { this.HomeRedirect() }
             </Fragment>
         );
     }
