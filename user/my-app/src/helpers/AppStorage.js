@@ -12,7 +12,8 @@ class AppStorage {
     }
 
     clear() {
-         localStorage.removeItem(['token', 'user_details'])
+         localStorage.removeItem('token');
+         localStorage.removeItem('user_details');
     }
 
     getToken() {

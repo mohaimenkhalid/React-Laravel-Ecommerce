@@ -17,18 +17,24 @@ class NavMenuDesktop extends Component {
       }
     }
 
-
     onLogout = () => {
-      axios.post(AppURL.logoutUser, { headers: {"Authorization" : `Bearer ${AppStorage.getToken()}`}})
+      const headers = {
+        'Content-Type' : 'application/json',
+        'Accept' : 'application/json',
+        'Authorization' : `Bearer ${AppStorage.getToken()}`
+      }
+
+      axios.post(AppURL.logoutUser, { }, {headers: headers})
         .then(res => {
-          console.log(res);
           if(res.status === 200 && res.data.status === true) {
             AppStorage.clear();
             this.setState({ homeRedirect: true });
             toast.success("You are logged out!");
           }
         })
-        .catch()
+        .catch(error => {
+          console.log(error)
+        })
     };
 
     HomeRedirect = () => {
@@ -75,31 +81,30 @@ class NavMenuDesktop extends Component {
                                 </Link>
 
                                 <div id="google_translate_element"></div>
-
                                 {
                                     AppStorage.getToken()
-                                        ?
-                                        (
-                                            <Dropdown>
-                                                <Dropdown.Toggle variant="default"
-                                                                 id="dropdown-basic dropdown-button-drop-left"
-                                                                 drop="left">
-                                                    {AppStorage.getUser() && AppStorage.getUser().first_name}
-                                                </Dropdown.Toggle>
+                                    ?
+                                    (
+                                        <Dropdown>
+                                            <Dropdown.Toggle variant="default"
+                                                             id="dropdown-basic dropdown-button-drop-left"
+                                                             drop="left">
+                                                {AppStorage.getUser() && AppStorage.getUser().first_name}
+                                            </Dropdown.Toggle>
 
-                                                <Dropdown.Menu>
-                                                    <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
-                                                    <Dropdown.Item href="#/action-2">dashboard</Dropdown.Item>
-                                                    <Dropdown.Item onClick={this.onLogout}>Logout</Dropdown.Item>
-                                                </Dropdown.Menu>
-                                            </Dropdown>
-                                        )
-                                        :
-                                        (
-                                            <Link to="/login" className="signin">
-                                                Sign In
-                                            </Link>
-                                        )
+                                            <Dropdown.Menu>
+                                                <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
+                                                <Dropdown.Item href="#/action-2">dashboard</Dropdown.Item>
+                                                <Dropdown.Item onClick={this.onLogout}>Logout</Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
+                                    )
+                                    :
+                                    (
+                                        <Link to="/login" className="signin">
+                                            Sign In
+                                        </Link>
+                                    )
                                 }
                             </div>
                         </Col>

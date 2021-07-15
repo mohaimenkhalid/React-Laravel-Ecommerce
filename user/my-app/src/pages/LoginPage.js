@@ -27,6 +27,7 @@ class LoginPage extends Component {
         this.setState({password: password});
     }
 
+
     onFormSubmit = (e) => {
         e.preventDefault();
         let email = this.state.email;
@@ -62,7 +63,7 @@ class LoginPage extends Component {
 
     }
 
-    onUserRedirect() {
+    onUserRedirect = () => {
         if(this.state.userRedirect === true) {
             return (
                 <Redirect to="/" />

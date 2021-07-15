@@ -3,8 +3,20 @@ import {Breadcrumb, Container, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import AppURL from "../../api/AppURL";
 import ReactDom from "react-dom";
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
+import InnerImageZoom from 'react-inner-image-zoom';
 
 class ProductDetails extends Component {
+    
+    constructor() {
+      super();
+      this.state = {
+        previewImg: ''
+      }
+    }
+    componentDidMount() {
+      this.setState({previewImg: AppURL.ServerBaseURL+this.props.product.image});
+    }
 
     imgOnclick(e) {
         let imgSource = e.target.getAttribute('src');
@@ -44,7 +56,6 @@ class ProductDetails extends Component {
     render() {
         let product = this.props.product;
         let product_details = product.product_details;
-
         return (
             <Fragment>
                 <Container  className="animated slideInDown">
@@ -58,13 +69,12 @@ class ProductDetails extends Component {
                         <Col  md={12} lg={12} sm={12} xs={12}>
                             <Row className=" shadow-sm  bg-white">
                                 <Col className="p-2 animated " md={4} lg={4} sm={12} xs={12}>
-                                    <img width="100%" id="previewImage" src={AppURL.ServerBaseURL+product.image} />
-                                   {/* <InnerImageZoom
+                                    <InnerImageZoom
                                         zoomType={"hover"}
                                         zoomScale={1.8}
-                                        src={this.state.previewImg}
-                                        zoomSrc={this.state.previewImg} />
-                                    */}
+                                        src={AppURL.ServerBaseURL+product.image}
+                                        zoomSrc={AppURL.ServerBaseURL+product.image} />
+
                                     {
                                         product_details ?
                                             (

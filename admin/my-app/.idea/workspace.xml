@@ -20,37 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/my-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/node_modules_web-vitals_dist_web-vitals_js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavMenuDesktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavMenuDesktop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/productDetails/ProductDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/productDetails/ProductDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/helpers/AppStorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/helpers/AppStorage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/AboutPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/LoginPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +177,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../user/my-app" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -264,7 +240,10 @@
       <workItem from="1625645493471" duration="6053000" />
       <workItem from="1625737855131" duration="711000" />
       <workItem from="1625938969280" duration="2621000" />
-      <workItem from="1626281804678" duration="6790000" />
+      <workItem from="1626281804678" duration="7312000" />
+      <workItem from="1626322151669" duration="236000" />
+      <workItem from="1626322413338" duration="33000" />
+      <workItem from="1626373065075" duration="4637000" />
     </task>
     <servers />
   </component>
@@ -289,15 +268,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625218700096" />
-    <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1626287183121">
+    <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1626373119869">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1626287183121" />
+    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1626373119869" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625737963288" />
-    <state x="498" y="181" width="672" height="538" key="search.everywhere.popup" timestamp="1626286613564">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1626291333882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="181" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1626286613564" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1626291333882" />
+    <state x="498" y="181" width="672" height="538" key="search.everywhere.popup" timestamp="1626374894726">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="181" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1626374894726" />
     <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625652150327" />
   </component>
 </project>
