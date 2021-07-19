@@ -20,6 +20,7 @@ class AppURL {
     static register = this.ApiBaseURL+'auth/register';
     static login = this.ApiBaseURL+'auth/login';
     static logoutUser = this.ApiBaseURL+'auth/logout';
+    static addToCart = this.ApiBaseURL+'addToCart';
 
 }
 

@@ -5,20 +5,26 @@ import AppURL from "../../api/AppURL";
 import ReactDom from "react-dom";
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import InnerImageZoom from 'react-inner-image-zoom';
+import axios from "axios";
+import AppStorage from "../../helpers/AppStorage";
 
 class ProductDetails extends Component {
     
     constructor() {
       super();
       this.state = {
-        previewImg: ''
+        previewImg: '',
+        quantity: 1,
+        product_color: '',
+        product_size: '',
+        product_id: ''
       }
     }
     componentDidMount() {
       this.setState({previewImg: AppURL.ServerBaseURL+this.props.product.image});
     }
 
-    imgOnclick(e) {
+    imgOnclick = (e) =>{
         let imgSource = e.target.getAttribute('src');
         let previewImage = document.getElementById('previewImage');
         ReactDom.findDOMNode(previewImage).setAttribute('src', imgSource);
@@ -52,6 +58,46 @@ class ProductDetails extends Component {
         );
     }
 
+    quantityChangeHandler = (e) => {
+        e.preventDefault();
+        this.setState({ quantity: e.target.value});
+        console.log(e.target.value)
+    };
+
+    colorChangeHandler = (e) => {
+        e.preventDefault();
+        this.setState({ product_color: e.target.value});
+        console.log(this.state.product_color)
+    };
+
+  sizeChangeHandler = (e) => {
+      e.preventDefault();
+      this.setState({ product_size: e.target.value});
+      console.log(e.target.value)
+    };
+    
+    addToCart = () => {
+
+
+      let formData = new FormData();
+      formData.append('product_color', this.state.product_color);
+      formData.append('product_size', this.state.product_size);
+      formData.append('product_id', this.props.product.id);
+      formData.append('quantity', this.state.quantity);
+
+      const headers = {
+        'Content-Type' : 'application/json',
+        'Accept' : 'application/json',
+        'Authorization' : `Bearer ${AppStorage.getToken()}`
+      };
+      axios.post(AppURL.addToCart, formData, {headers: headers})
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => {
+
+        })
+    };
 
     render() {
         let product = this.props.product;
@@ -118,35 +164,39 @@ class ProductDetails extends Component {
                                    <div className="row mt-5">
                                        <div className="col-md-4">
                                            <h6 className="mt-2">Choose Quantity</h6>
-                                           <input type="number" defaultValue="1" className="form-control"/>
+                                           <input onChange={this.quantityChangeHandler} type="number" defaultValue="1" className="form-control"/>
                                        </div>
                                        <div className="col-md-4">
-                                           <div>
+                                         {
+                                           product_details && product_details.color
+                                             ?
+                                             <div>
                                                <h6 className="mt-2">Color</h6>
-                                               <select className="form-control form-select">
-                                                   <option value="">Choose Color</option>
-                                                   { product_details && product_details.color
-                                                       ?
-                                                       product_details.color.split(',').map(option => {
-                                                           return (<option value={option}>{option}</option>)
-                                                       })
-                                                       : ""
-                                                   }
+                                               <select className="form-control form-select" onChange={this.colorChangeHandler}>
+                                                 <option value="">Choose Color</option>
+                                                 { product_details.color.split(',').map(option => {
+                                                   return (<option value={option}>{option}</option>)
+                                                 })
+                                                 }
                                                </select>
-                                           </div>
+                                             </div> : ''
+                                         }
                                        </div>
                                        <div className="col-md-4">
-                                           <h6 className="mt-2">Choose Size</h6>
-                                           <select onChange={this.sizeOnChange} className="form-control form-select">
-                                               <option value="">Choose Size</option>
-                                               { product_details && product_details.size
-                                                   ?
-                                                   product_details.size.split(',').map(option => {
-                                                       return (<option value={option}>{option}</option>)
-                                                   })
-                                                   : ""
-                                               }
-                                           </select>
+                                         {
+                                           product_details && product_details.size
+                                             ?
+                                             <div>
+                                               <h6 className="mt-2">Choose Size</h6>
+                                               <select onChange={this.sizeChangeHandler} className="form-control form-select">
+                                                 <option value="">Choose Size</option>
+                                                 { product_details.size.split(',').map(option => {
+                                                   return (<option value={option}>{option}</option>)
+                                                 })
+                                                 }
+                                               </select>
+                                             </div> : ""
+                                         }
                                        </div>
                                    </div>
                                     <div className="input-group mt-3 product-button-group">
