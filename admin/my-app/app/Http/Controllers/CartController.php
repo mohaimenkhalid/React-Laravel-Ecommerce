@@ -48,4 +48,9 @@ class CartController extends Controller
 
         return response()->json(['message' => $message]);
     }
+
+    public function getCart() {
+        $cart = Cart::with('product')->where(['user_id' => auth()->user()->id])->get();
+        return response()->json($cart);
+    }
 }

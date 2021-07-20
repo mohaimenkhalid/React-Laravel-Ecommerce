@@ -33,6 +33,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::middleware('auth:api')->group(function () {
         Route::post('/auth/logout', [AuthController::class, 'logout']);
         Route::post('/addToCart', [CartController::class, 'addToCart']);
+        Route::get('/getCart', [CartController::class, 'getCart']);
     });
 });
 

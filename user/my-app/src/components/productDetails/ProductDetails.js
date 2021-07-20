@@ -126,7 +126,8 @@ class ProductDetails extends Component {
                                         zoomType={"hover"}
                                         zoomScale={1.8}
                                         src={this.state.previewImg}
-                                        zoomSrc={this.state.previewImg} />
+                                        zoomSrc={this.state.previewImg}
+                                    />
 
                                     {
                                         product_details ?
