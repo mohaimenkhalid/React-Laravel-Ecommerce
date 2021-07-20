@@ -1,12 +1,13 @@
 import React, {Component, Fragment} from 'react';
-import {Breadcrumb, Container, Row, Col} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import {Container, Row, Col} from "react-bootstrap";
 import AppURL from "../../api/AppURL";
 import ReactDom from "react-dom";
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import InnerImageZoom from 'react-inner-image-zoom';
 import axios from "axios";
 import AppStorage from "../../helpers/AppStorage";
+import {toast} from "react-toastify";
+import {Redirect} from "react-router-dom";
 
 class ProductDetails extends Component {
     
@@ -17,7 +18,8 @@ class ProductDetails extends Component {
         quantity: 1,
         product_color: '',
         product_size: '',
-        product_id: ''
+        product_id: '',
+        addToCartStatus: false
       }
     }
     componentDidMount() {
@@ -26,9 +28,11 @@ class ProductDetails extends Component {
 
     imgOnclick = (e) =>{
         let imgSource = e.target.getAttribute('src');
-        let previewImage = document.getElementById('previewImage');
-        ReactDom.findDOMNode(previewImage).setAttribute('src', imgSource);
-    }
+        console.log(imgSource);
+        this.setState({previewImg: imgSource})
+        //let previewImage = document.getElementById('previewImage');
+        //ReactDom.findDOMNode(previewImage).setAttribute('src', imgSource);
+    };
 
     price() {
         let product = this.props.product;
@@ -65,20 +69,19 @@ class ProductDetails extends Component {
     };
 
     colorChangeHandler = (e) => {
-        e.preventDefault();
-        this.setState({ product_color: e.target.value});
-        console.log(this.state.product_color)
+      e.preventDefault();
+      console.log(e.target.value, this.state.product_color);
+      this.setState({ product_color: e.target.value});
+      console.log(e.target.value, this.state.product_color)
     };
 
-  sizeChangeHandler = (e) => {
+    sizeChangeHandler = (e) => {
       e.preventDefault();
       this.setState({ product_size: e.target.value});
       console.log(e.target.value)
     };
     
     addToCart = () => {
-
-
       let formData = new FormData();
       formData.append('product_color', this.state.product_color);
       formData.append('product_size', this.state.product_size);
@@ -93,10 +96,20 @@ class ProductDetails extends Component {
       axios.post(AppURL.addToCart, formData, {headers: headers})
         .then(res => {
           console.log(res);
+          if(res.data && res.status === 200) {
+              toast.success(res.data.message);
+              this.setState({ addToCartStatus: true });
+          }
         })
         .catch(err => {
 
         })
+    };
+
+    cartPageRedirect = () => {
+      if(this.state.addToCartStatus === true) {
+        return <Redirect to="/cart" />
+      }
     };
 
     render() {
@@ -105,12 +118,6 @@ class ProductDetails extends Component {
         return (
             <Fragment>
                 <Container  className="animated slideInDown">
-                    <Row>
-                        <Breadcrumb className="shadow-sm w-100 bg-white">
-                            <Breadcrumb.Item> <Link to="/">Home</Link>    </Breadcrumb.Item>
-                            <Breadcrumb.Item> <Link to={"/productDetails/"}>product</Link></Breadcrumb.Item>
-                        </Breadcrumb>
-                    </Row>
                     <Row className="p-1">
                         <Col  md={12} lg={12} sm={12} xs={12}>
                             <Row className=" shadow-sm  bg-white">
@@ -118,8 +125,8 @@ class ProductDetails extends Component {
                                     <InnerImageZoom
                                         zoomType={"hover"}
                                         zoomScale={1.8}
-                                        src={AppURL.ServerBaseURL+product.image}
-                                        zoomSrc={AppURL.ServerBaseURL+product.image} />
+                                        src={this.state.previewImg}
+                                        zoomSrc={this.state.previewImg} />
 
                                     {
                                         product_details ?
@@ -173,10 +180,10 @@ class ProductDetails extends Component {
                                              <div>
                                                <h6 className="mt-2">Color</h6>
                                                <select className="form-control form-select" onChange={this.colorChangeHandler}>
-                                                 <option value="">Choose Color</option>
+                                                 <option value="" selected disabled>Choose Color</option>
                                                  { product_details.color.split(',').map(option => {
-                                                   return (<option value={option}>{option}</option>)
-                                                 })
+                                                      return (<option value={option}>{option}</option>)
+                                                    })
                                                  }
                                                </select>
                                              </div> : ''
@@ -230,6 +237,7 @@ class ProductDetails extends Component {
                         </Col>
                     </Row>
                 </Container>
+              { this.cartPageRedirect() }
             </Fragment>
         );
     }

@@ -14,6 +14,22 @@ class CartController extends Controller
         $product_color = $request->product_color;
         $product_size = $request->product_size;
         $quantity = $request->quantity;
+
+        $check_cart = Cart::where([
+            'user_id' => auth()->user()->id,
+            'product_id' => $product->id,
+            'product_color' => $product_color,
+            'product_size' => $product_size
+        ])->first();
+        if(!empty($check_cart)) {
+            $cart = $check_cart;
+            $quantity = $quantity + $check_cart->quantity;
+            $message = 'Your Cart Updated Successfully';
+        } else {
+            $cart = new Cart;
+            $message = 'product successfully added your to cart';
+        }
+
         if($product->special_price) {
             $unit_price = $product->special_price;
         } else {
@@ -21,16 +37,15 @@ class CartController extends Controller
         }
         $total_price = $unit_price * $quantity;
 
-        $cart = new Cart;
         $cart->user_id = $user_id;
         $cart->product_id = $product->id;
         $cart->quantity = $quantity;
         $cart->product_color = $product_color;
-        $cart->product_color = $product_size;
+        $cart->product_size = $product_size;
         $cart->unit_price = $unit_price;
         $cart->total_price = $total_price;
         $cart->save();
 
-        return response()->json($cart);
+        return response()->json(['message' => $message]);
     }
 }

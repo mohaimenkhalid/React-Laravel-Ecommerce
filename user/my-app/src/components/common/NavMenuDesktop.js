@@ -73,7 +73,7 @@ class NavMenuDesktop extends Component {
                                         <span className="badge badge-danger">4</span>
                                     </sub>
                                 </Link>
-                                <Link to="/">
+                                <Link to="/cart">
                                     <i className="fa fa-shopping-cart font-30" />
                                     <sub>
                                         <span className="badge badge-danger">4</span>
