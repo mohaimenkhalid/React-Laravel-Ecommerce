@@ -2,6 +2,8 @@ import React, {Component, Fragment} from 'react';
 import axios from "axios";
 import AppURL from "../../api/AppURL";
 import AppStorage from "../../helpers/AppStorage";
+import CartItemLoader from "../loader/CartItemLoader";
+import {loadProgressBar} from "axios-progress-bar";
 
 class Cart extends Component {
 
@@ -9,10 +11,13 @@ class Cart extends Component {
     super();
     this.state = {
       carts: [],
+      totalPrice: '',
+      isLoading: true
     }
   }
 
   componentWillMount () {
+      loadProgressBar();
       this.getCart();
   }
 
@@ -25,9 +30,18 @@ class Cart extends Component {
     axios.get(AppURL.getCart, {headers: headers})
       .then(res => {
         this.setState({ carts: res.data});
-        console.log(res)
+        this.setState({isLoading: false});
+        this.getTotalPrice();
+        //console.log(res)
       })
       .catch()
+  };
+
+  getTotalPrice = () => {
+    let TotalPrice = this.state.carts.reduce(function (accumulator, current) {
+      return accumulator + current.total_price;
+    }, 0);
+    this.setState({totalPrice: TotalPrice});
   };
 
 
@@ -39,6 +53,7 @@ class Cart extends Component {
                         <div className="col-lg-12 pb-2">
                             <h4>Your Shopping Cart </h4>
                         </div>
+
                         <div className="col-lg-12 pl-3 pt-3">
                             <table className="table table-hover border bg-white">
                                 <thead>
@@ -50,7 +65,20 @@ class Cart extends Component {
                                     <th>Action</th>
                                 </tr>
                                 </thead>
+
                                 <tbody>
+                                  {
+                                    this.state.isLoading
+                                      ?
+                                      (
+                                        <tr>
+                                          <td colSpan="5">
+                                            <CartItemLoader/>
+                                          </td>
+                                        </tr>
+                                      )
+                                      : ""
+                                  }
                                   {
                                     this.state.carts.map((cart, index) => {
                                       return (
@@ -63,7 +91,7 @@ class Cart extends Component {
                                               </div>
                                               <div className="col-lg-10">
                                                 <h4 className="nomargin">{cart.product.name}</h4>
-                                                <p>{cart.product.product_details.short_description}</p>
+                                                <p>{cart.product.product_details ? cart.product.product_details.short_description: ''}</p>
                                               </div>
                                             </div>
                                           </td>
@@ -91,7 +119,7 @@ class Cart extends Component {
                                     </td>
                                     <td colSpan="2" className="hidden-xs"></td>
                                     <td className="hidden-xs text-center" width="10%"><strong>Total :
-                                        47,000</strong></td>
+                                      { this.state.totalPrice }</strong></td>
                                     <td width="20%">
                                       <a href="#" className="btn btn-success btn-block">Checkout <i
                                         className="fa fa-angle-right" />
