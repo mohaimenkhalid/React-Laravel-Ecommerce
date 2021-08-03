@@ -4,6 +4,7 @@ import AppURL from "../../api/AppURL";
 import AppStorage from "../../helpers/AppStorage";
 import CartItemLoader from "../loader/CartItemLoader";
 import {loadProgressBar} from "axios-progress-bar";
+import {toast} from "react-toastify";
 
 class Cart extends Component {
 
@@ -42,6 +43,24 @@ class Cart extends Component {
       return accumulator + current.total_price;
     }, 0);
     this.setState({totalPrice: TotalPrice});
+  };
+
+  updateCartProduct = (cartId, type) => {
+    const headers = {
+      'Content-Type' : 'application/json',
+      'Accept' : 'application/json',
+      'Authorization' : `Bearer ${AppStorage.getToken()}`
+    };
+    axios.post(AppURL.updateCartProductQuantity(cartId, type), { }, {headers: headers})
+      .then(res => {
+        if(res.status === 200) {
+          this.getCart();
+          toast.success(res.data.message);
+        }
+      })
+      .catch(err => {
+        console.log(err)
+      });
   };
 
 
@@ -96,14 +115,16 @@ class Cart extends Component {
                                             </div>
                                           </td>
                                           <td> {cart.unit_price} </td>
-                                          <td data-th="Quantity">
-                                            <input type="number" className="form-control text-center" value={cart.quantity} />
+                                          <td data-th="Quantity" width="12%">
+                                            <div className="d-flex">
+                                              <button className="btn btn-info" onClick={ ()=> this.updateCartProduct(cart.id, 'decrement') }>-</button>
+                                              <input type="number" className="form-control text-center" value={cart.quantity}  readOnly/>
+                                              <button className="btn btn-info" onClick={ ()=> this.updateCartProduct(cart.id, 'increment') }>+</button>
+                                            </div>
                                           </td>
                                           <td>{cart.total_price}</td>
                                           <td className="actions" data-th="" width="10%">
-                                            <button className="btn btn-info btn-sm"><i className="fa fa-refresh" />
-                                            </button>
-                                            <button className="btn btn-danger btn-sm"><i className="fa fa-trash-o" /></button>
+                                            <button className="btn btn-danger btn-sm" style={{borderRadius: '2rem' }}><i className="fa fa-times"/></button>
                                           </td>
                                         </tr>
                                       );

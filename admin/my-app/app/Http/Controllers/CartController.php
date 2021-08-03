@@ -53,4 +53,22 @@ class CartController extends Controller
         $cart = Cart::with('product')->where(['user_id' => auth()->user()->id])->get();
         return response()->json($cart);
     }
+
+    public function updateCartProductQuantity($cartId, $type) {
+        $cartProduct = Cart::find($cartId);
+        if($type == 'increment') {
+            $cartProduct->increment('quantity');
+            $cartProduct->total_price = $cartProduct->quantity * $cartProduct->unit_price;
+            $cartProduct->save();
+        } else {
+            if($cartProduct->quantity == 1) {
+                $cartProduct->delete();
+            } else {
+                $cartProduct->decrement('quantity');
+                $cartProduct->total_price = $cartProduct->quantity * $cartProduct->unit_price;
+                $cartProduct->save();
+            }
+        }
+        return response()->json(['message' => 'Cart updated successfully.']);
+    }
 }

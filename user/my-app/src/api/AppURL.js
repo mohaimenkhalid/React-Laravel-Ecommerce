@@ -22,6 +22,9 @@ class AppURL {
     static logoutUser = this.ApiBaseURL+'auth/logout';
     static addToCart = this.ApiBaseURL+'addToCart';
     static getCart = this.ApiBaseURL+'getCart';
+    static updateCartProductQuantity(cartId, type) {
+      return this.ApiBaseURL+'updateCartProductQuantity/'+cartId+'/'+type;
+    }
 
 }
 

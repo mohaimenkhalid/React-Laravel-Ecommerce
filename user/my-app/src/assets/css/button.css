@@ -1,6 +1,5 @@
 .btn {
     border: none !important;
-    border-radius: 2px !important;
 }
 .btn:focus {
     box-shadow: none;
