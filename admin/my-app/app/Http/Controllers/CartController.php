@@ -71,4 +71,12 @@ class CartController extends Controller
         }
         return response()->json(['message' => 'Cart updated successfully.']);
     }
+
+    public function cartProductDelete($cartId) {
+        $cart = Cart::find($cartId);
+        if($cart->delete()) {
+            return response()->json(['message' => 'Product removed successfully.']);
+        }
+        return response()->json(['error' => 'Something went wrong.']);
+    }
 }

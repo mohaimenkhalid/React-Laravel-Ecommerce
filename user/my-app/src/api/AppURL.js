@@ -25,6 +25,9 @@ class AppURL {
     static updateCartProductQuantity(cartId, type) {
       return this.ApiBaseURL+'updateCartProductQuantity/'+cartId+'/'+type;
     }
+    static cartProductDelete(cartId) {
+      return this.ApiBaseURL+'cartProductDelete/'+cartId;
+    }
 
 }
 

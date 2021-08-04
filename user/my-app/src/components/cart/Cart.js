@@ -63,6 +63,26 @@ class Cart extends Component {
       });
   };
 
+  cartProductDelete = (cartId) => {
+    const headers = {
+      'Content-Type' : 'application/json',
+      'Accept' : 'application/json',
+      'Authorization' : `Bearer ${AppStorage.getToken()}`
+    };
+    axios.post(AppURL.cartProductDelete(cartId), { }, {headers: headers})
+      .then(res => {
+        if(res.status === 200) {
+          this.getCart();
+          toast.success(res.data.message);
+        } else {
+          toast.error(res.data.error);
+        }
+      })
+      .catch(err => {
+        console.log(err)
+      });
+  };
+
 
     render() {
         return (
@@ -124,7 +144,7 @@ class Cart extends Component {
                                           </td>
                                           <td>{cart.total_price}</td>
                                           <td className="actions" data-th="" width="10%">
-                                            <button className="btn btn-danger btn-sm" style={{borderRadius: '2rem' }}><i className="fa fa-times"/></button>
+                                            <button onClick={()=> this.cartProductDelete(cart.id)} className="btn btn-danger btn-sm" style={{borderRadius: '2rem' }}><i className="fa fa-times"/></button>
                                           </td>
                                         </tr>
                                       );

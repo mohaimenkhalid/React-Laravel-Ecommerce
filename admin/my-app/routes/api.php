@@ -35,6 +35,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::post('/addToCart', [CartController::class, 'addToCart']);
         Route::get('/getCart', [CartController::class, 'getCart']);
         Route::post('/updateCartProductQuantity/{cartId}/{type}', [CartController::class, 'updateCartProductQuantity']);
+        Route::post('/cartProductDelete/{cartId}', [CartController::class, 'cartProductDelete']);
     });
 });
 
