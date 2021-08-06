@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/cart/Cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/FavouritePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/FavouritePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/Test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/CheckoutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/CheckoutPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +266,7 @@
       <workItem from="1628099312909" duration="2706000" />
       <workItem from="1628139084602" duration="1447000" />
       <workItem from="1628189539094" duration="747000" />
-      <workItem from="1628226637291" duration="8945000" />
+      <workItem from="1628226637291" duration="11464000" />
     </task>
     <servers />
   </component>
