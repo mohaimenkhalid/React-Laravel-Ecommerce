@@ -17,6 +17,7 @@ import CategoryProductView from "../pages/CategoryProductView";
 import ProductSearchPage from "../pages/ProductSearchPage";
 import SearchComponent from "../components/product/SearchComponent";
 import RegisterPage from "../pages/RegisterPage";
+import CheckoutPage from "../pages/CheckoutPage";
 
 class AppRoute extends Component {
     render() {
@@ -41,6 +42,7 @@ class AppRoute extends Component {
                     <Route path="/search/:query" component={ProductSearchPage} />
                     <Route path="/search" component={SearchComponent} />
                     <Route path="/product/:slug" component={ProductDetailsPage} />
+                    <Route path="/checkout" component={CheckoutPage} />
                 </Switch>
             </Fragment>
         );
