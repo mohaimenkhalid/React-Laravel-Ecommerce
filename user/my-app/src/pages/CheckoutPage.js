@@ -3,7 +3,7 @@ import AppStorage from "../helpers/AppStorage";
 import axios from "axios";
 import AppURL from "../api/AppURL";
 import {loadProgressBar} from "axios-progress-bar";
-import {Redirect} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 import {toast} from "react-toastify";
 
 class CheckoutPage extends Component {
@@ -12,7 +12,8 @@ class CheckoutPage extends Component {
     super();
     this.state = {
       carts: [],
-      isLoading: true
+      isLoading: true,
+      totalPrice: 0
     }
   }
 
@@ -30,10 +31,18 @@ class CheckoutPage extends Component {
     axios.get(AppURL.getCart, {headers: headers})
       .then(res => {
         this.setState({ carts: res.data});
+        this.getTotalPrice();
         this.setState({isLoading: false});
         //console.log(res)
       })
       .catch()
+  };
+
+  getTotalPrice = () => {
+    let TotalPrice = this.state.carts.reduce(function (accumulator, current) {
+      return accumulator + current.total_price;
+    }, 0);
+    this.setState({totalPrice: TotalPrice});
   };
 
   HomePageRedirect = () => {
@@ -103,6 +112,77 @@ class CheckoutPage extends Component {
                   </div>
                 </div>
               </div>
+              <div className="card w-100 mt-3">
+                <div className="card-body">
+                  <h5>Order Review</h5>
+
+                  <table className="table border bg-white">
+                    <thead>
+                      <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      {
+                        this.state.carts.map((cart, index) => {
+                          return (
+                            <tr>
+                              <td>
+                                <div className="row">
+                                  <div className="col-lg-2 Product-img">
+                                    <img src={AppURL.ServerBaseURL + cart.product.image} alt="..."
+                                         className="img-responsive"/>
+                                  </div>
+                                  <div className="col-lg-10">
+                                    <h4 className="nomargin">{cart.product.name}</h4>
+                                    <p>{cart.product.product_details ? cart.product.product_details.short_description : ''}</p>
+                                  </div>
+                                </div>
+                              </td>
+                              <td> {cart.unit_price} </td>
+                              <td>
+                                <div className="d-flex">
+                                  {cart.quantity}
+                                </div>
+                              </td>
+                              <td>{cart.total_price}</td>
+                            </tr>
+                          );
+                        })
+                      }
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colSpan="4">
+                          <Link to="/" className="btn btn-danger text-white">
+                            <i className="fa fa-angle-left mr-1"/>
+                            <span>Continue Shopping</span>
+                          </Link>
+                        </td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+                <div className="card">
+                  <div className="card-body">
+                    <h5>Order Summery</h5>
+                    <hr />
+                    <div className="d-flex justify-content-between">
+                      <h6>Total</h6>
+                      <h6>
+                        { this.state.totalPrice }
+                      </h6>
+                    </div>
+                    <button className="btn btn-danger btn-lg btn-block mt-5">Place Order</button>
+                  </div>
+                </div>
             </div>
         </div>
 
