@@ -14,7 +14,7 @@ class CheckoutPage extends Component {
       carts: [],
       isLoading: true,
       totalPrice: 0,
-      name: '',
+      full_name: '',
       phone_no: '',
       region: '',
       city: '',
@@ -60,8 +60,8 @@ class CheckoutPage extends Component {
     }
   };
 
-  nameChangeHandle = (e) => {
-    this.setState({name: e.target.value});
+  full_nameChangeHandle = (e) => {
+    this.setState({full_name: e.target.value});
   };
   phoneChangeHandle = (e) => {
     this.setState({phone_no: e.target.value});
@@ -87,17 +87,59 @@ class CheckoutPage extends Component {
     this.setState({payment_type: e.target.value});
   };
 
-  confirmOrder() {
+  confirmOrder = (e) =>{
+    e.preventDefault();
     this.setState({submit: true});
-    this.validate();
+    if(this.validate() !== false) {
+      this.order();
+    } else {
+      this.setState({submit: false});
+    }
+  };
 
+  order = () => {
 
+    let totalPrice = this.state.totalPrice;
+    let full_name = this.state.full_name;
+    let phone_no = this.state.phone_no;
+    let region = this.state.region;
+    let city = this.state.city;
+    let area = this.state.area;
+    let address = this.state.address;
+    let payment_type = this.state.payment_type;
 
-    this.setState({submit: false});
+    let orderFormData = new FormData();
+    orderFormData.append('total_amount', totalPrice);
+    orderFormData.append('full_name', full_name);
+    orderFormData.append('phone_no', phone_no);
+    orderFormData.append('region', region);
+    orderFormData.append('city', city);
+    orderFormData.append('area', area);
+    orderFormData.append('address', address);
+    orderFormData.append('payment_type', payment_type);
+
+    const headers = {
+      'Content-Type' : 'application/json',
+      'Accept' : 'application/json',
+      'Authorization' : `Bearer ${AppStorage.getToken()}`
+    };
+
+    axios.post(AppURL.placeOrder, orderFormData, {headers: headers})
+      .then(function (res) {
+        if (res.status === 200 && res.data) {
+          toast.success(res.data.message);
+        } else {
+          toast.error("Something went wrong!");
+        }
+      })
+      .catch(function (error) {
+        //this.setState({submit: false});
+        console.log(error)
+      })
   }
 
   validate() {
-    if(this.state.name === '') {
+    if(this.state.full_name === '') {
       toast.error("Name field is empty.", {position: "bottom-left",});
     }
     if(this.state.phone_no === '') {
@@ -117,6 +159,17 @@ class CheckoutPage extends Component {
     }
     if(this.state.payment_type === '') {
       toast.error("Payment Type field is empty.", {position: "bottom-left",});
+    }
+
+    if(this.state.full_name === ''
+      || this.state.phone_no === ''
+      || this.state.region === ''
+      || this.state.city === ''
+      || this.state.area === ''
+      || this.state.address === ''
+      || this.state.payment_type === ''
+    ) {
+      return false;
     }
   }
 
@@ -147,7 +200,7 @@ class CheckoutPage extends Component {
                   <div className="row mt-3">
                     <label className="col-12"><strong>Contact</strong></label>
                     <div className="form-group col-6">
-                      <input onChange={this.nameChangeHandle} type="text" className="form-control" placeholder="Enter Your Name" />
+                      <input onChange={this.full_nameChangeHandle} type="text" className="form-control" placeholder="Enter Your Name" />
                     </div>
                     <div className="form-group col-6">
                       <input onChange={this.phoneChangeHandle} type="text" className="form-control" placeholder="Enter Phone No." />
@@ -176,6 +229,7 @@ class CheckoutPage extends Component {
                     <label className="col-12"><strong>Payment Type</strong></label>
                     <div className="form-group col-12">
                       <select className="form-control" onChange={this.paymentTypeChangeHandle}>
+                        <option value="">Select Payment Type</option>
                         <option value="cash_on_delivery">Cash on Delivery</option>
                         <option value="">Stripe</option>
                       </select>
@@ -251,7 +305,7 @@ class CheckoutPage extends Component {
                           { this.state.totalPrice }
                         </h6>
                       </div>
-                      <button onClick={() => this.confirmOrder()} className="btn btn-danger btn-lg btn-block mt-5" disabled={this.state.submit}>
+                      <button onClick={this.confirmOrder} className="btn btn-danger btn-lg btn-block mt-5" disabled={this.state.submit}>
                         {this.state.submit ? (<div>< i className="fa fa-spin fa-spinner mr-2" /> Processing...</div>) : 'Place Order'}
 
                       </button>

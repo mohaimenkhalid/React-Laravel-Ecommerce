@@ -19,11 +19,12 @@ class OrderController extends Controller
 
         $order = new Order;
         $order->customer_id = auth()->user()->id;
+        $order->total_amount = $request->total_amount;
         $order->payment_type = $payment_type;
         $order->save();
 
         $shipping_address = new ShippingAddress;
-        $shipping_address->order_id = $order->order_id;
+        $shipping_address->order_id = $order->id;
         $shipping_address->customer_id = $order->customer_id;
         $shipping_address->full_name = $request->full_name;
         $shipping_address->phone_no = $request->phone_no;
@@ -35,8 +36,7 @@ class OrderController extends Controller
 
         $orderDetails = new OrderDetails;
         foreach($carts as $cart) {
-            $orderDetails->order_id = $cart->order_id;
-            $orderDetails->user_id = $cart->user_id;
+            $orderDetails->order_id = $order->id;
             $orderDetails->product_id = $cart->product_id;
             $orderDetails->product_color = $cart->product_color;
             $orderDetails->product_size = $cart->product_size;
@@ -48,7 +48,8 @@ class OrderController extends Controller
             $cart->delete();
         }
 
-        return response(['json' => 'Order placed successfully.']);
+        $order->update(['is_completed' => 1, 'status' => 'success']);
 
+        return response()->json(['message' => 'Order placed successfully.']);
     }
 }

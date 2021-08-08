@@ -28,7 +28,7 @@ class AppURL {
     static cartProductDelete(cartId) {
       return this.ApiBaseURL+'cartProductDelete/'+cartId;
     }
-
+    static placeOrder = this.ApiBaseURL+'placeOrder';
 }
 
 export default AppURL;

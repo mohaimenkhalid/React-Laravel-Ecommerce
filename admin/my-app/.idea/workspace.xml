@@ -24,10 +24,7 @@
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Order.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_08_06_054031_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_08_06_054031_create_orders_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/cart/Cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/api/AppURL.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/CheckoutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/CheckoutPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -275,7 +272,8 @@
       <workItem from="1628226637291" duration="11464000" />
       <workItem from="1628345348602" duration="595000" />
       <workItem from="1628367735289" duration="1765000" />
-      <workItem from="1628401963566" duration="5272000" />
+      <workItem from="1628401963566" duration="5438000" />
+      <workItem from="1628441936463" duration="5050000" />
     </task>
     <servers />
   </component>
@@ -300,19 +298,23 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625218700096" />
-    <state x="437" y="176" key="FileChooserDialogImpl" timestamp="1628402663367">
+    <state x="437" y="176" key="FileChooserDialogImpl" timestamp="1628442968834">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="437" y="176" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1628402663367" />
+    <state x="437" y="176" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1628442968834" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625737963288" />
     <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1626291333882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1626291333882" />
-    <state x="498" y="181" width="672" height="538" key="search.everywhere.popup" timestamp="1628019060843">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1628448909533">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="181" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1628019060843" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1628448909533" />
+    <state x="498" y="181" width="672" height="538" key="search.everywhere.popup" timestamp="1628449296502">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="181" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1628449296502" />
     <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625652150327" />
   </component>
 </project>

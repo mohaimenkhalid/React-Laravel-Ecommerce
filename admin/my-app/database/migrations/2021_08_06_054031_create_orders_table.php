@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('invoice_no');
             $table->string('payment_type');
             $table->string('payment_id')->nullable();
+            $table->string('total_amount')->default(0);
             $table->string('shipping_price')->default(0);
             $table->tinyInteger('is_completed')->default(0);
             $table->string('status')->default('pending');
