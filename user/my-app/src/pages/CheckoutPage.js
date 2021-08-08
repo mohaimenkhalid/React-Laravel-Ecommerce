@@ -13,7 +13,15 @@ class CheckoutPage extends Component {
     this.state = {
       carts: [],
       isLoading: true,
-      totalPrice: 0
+      totalPrice: 0,
+      name: '',
+      phone_no: '',
+      region: '',
+      city: '',
+      area: '',
+      address: '',
+      payment_type: '',
+      submit: false,
     }
   }
 
@@ -52,16 +60,79 @@ class CheckoutPage extends Component {
     }
   };
 
+  nameChangeHandle = (e) => {
+    this.setState({name: e.target.value});
+  };
+  phoneChangeHandle = (e) => {
+    this.setState({phone_no: e.target.value});
+  };
+
+  regionChangeHandle = (e) => {
+    this.setState({region: e.target.value});
+  };
+
+  cityChangeHandle = (e) => {
+    this.setState({city: e.target.value});
+  };
+
+  areaChangeHandle = (e) => {
+    this.setState({area: e.target.value});
+  };
+
+  addressChangeHandle = (e) => {
+    this.setState({address: e.target.value});
+  };
+
+  paymentTypeChangeHandle = (e) => {
+    this.setState({payment_type: e.target.value});
+  };
+
+  confirmOrder() {
+    this.setState({submit: true});
+    this.validate();
+
+
+
+    this.setState({submit: false});
+  }
+
+  validate() {
+    if(this.state.name === '') {
+      toast.error("Name field is empty.", {position: "bottom-left",});
+    }
+    if(this.state.phone_no === '') {
+      toast.error("Phone field is empty.", {position: "bottom-left",});
+    }
+    if(this.state.region === '') {
+      toast.error("Region field is empty.", {position: "bottom-left",});
+    }
+    if(this.state.city === '') {
+      toast.error("City field is empty.", {position: "bottom-left",});
+    }
+    if(this.state.area === '') {
+      toast.error("Area field is empty.", {position: "bottom-left",});
+    }
+    if(this.state.address === '') {
+      toast.error("Address field is empty.", {position: "bottom-left",});
+    }
+    if(this.state.payment_type === '') {
+      toast.error("Payment Type field is empty.", {position: "bottom-left",});
+    }
+  }
+
+
   render() {
 
     if (this.state.isLoading === true) {
       return (
         <div className="row">
           <div className="col-md-12">
-            <h5>
-              <i className="fa fa-spinner fa-spin mx-2" />
-              Loading...
-            </h5>
+            <div className="loader-custom-wrapper">
+              <h4>
+                <i className="fa fa-spinner fa-spin mx-2" />
+                Loading...
+              </h4>
+            </div>
           </div>
         </div>
       )
@@ -76,37 +147,37 @@ class CheckoutPage extends Component {
                   <div className="row mt-3">
                     <label className="col-12"><strong>Contact</strong></label>
                     <div className="form-group col-6">
-                      <input type="text" className="form-control" placeholder="Enter Your Name" />
+                      <input onChange={this.nameChangeHandle} type="text" className="form-control" placeholder="Enter Your Name" />
                     </div>
                     <div className="form-group col-6">
-                      <input type="text" className="form-control" placeholder="Enter Phone No." />
+                      <input onChange={this.phoneChangeHandle} type="text" className="form-control" placeholder="Enter Phone No." />
                     </div>
                   </div>
                   <div className="row">
                     <label className="col-12"><strong>Address</strong></label>
                     <div className="form-group col-4">
-                      <select className="form-control">
-                          <option>Select Region</option>
-                          <option>Dhaka</option>
+                      <select className="form-control" onChange={this.regionChangeHandle}>
+                          <option value="">Select Region</option>
+                          <option value="dhaka">Dhaka</option>
                       </select>
                     </div>
                     <div className="form-group col-4">
-                      <input type="text" className="form-control" placeholder="Enter Your City" />
+                      <input onChange={this.cityChangeHandle} type="text" className="form-control" placeholder="Enter Your City" />
                     </div>
                     <div className="form-group col-4">
-                      <input type="text" className="form-control" placeholder="Enter Your Area" />
+                      <input onChange={this.areaChangeHandle} type="text" className="form-control" placeholder="Enter Your Area" />
                     </div>
                     <div className="form-group col-12">
-                      <textarea className="form-control" placeholder="Enter Your Address" />
+                      <textarea onChange={this.addressChangeHandle} className="form-control" placeholder="Enter Your Address" />
                     </div>
                   </div>
 
                   <div className="row">
-                    <label className="col-12"><strong>Payment</strong></label>
+                    <label className="col-12"><strong>Payment Type</strong></label>
                     <div className="form-group col-12">
-                      <select className="form-control">
-                        <option>Cash on Delivery</option>
-                        <option>Stripe</option>
+                      <select className="form-control" onChange={this.paymentTypeChangeHandle}>
+                        <option value="cash_on_delivery">Cash on Delivery</option>
+                        <option value="">Stripe</option>
                       </select>
                     </div>
                   </div>
@@ -138,7 +209,7 @@ class CheckoutPage extends Component {
                                          className="img-responsive"/>
                                   </div>
                                   <div className="col-lg-10">
-                                    <h4 className="nomargin">{cart.product.name}</h4>
+                                    <h5 className="nomargin">{cart.product.name}</h5>
                                     <p>{cart.product.product_details ? cart.product.product_details.short_description : ''}</p>
                                   </div>
                                 </div>
@@ -171,17 +242,20 @@ class CheckoutPage extends Component {
             </div>
             <div className="col-md-4">
                 <div className="card">
-                  <div className="card-body">
-                    <h5>Order Summery</h5>
-                    <hr />
-                    <div className="d-flex justify-content-between">
-                      <h6>Total</h6>
-                      <h6>
-                        { this.state.totalPrice }
-                      </h6>
+                    <div className="card-body">
+                      <h5>Order Summery</h5>
+                      <hr />
+                      <div className="d-flex justify-content-between">
+                        <h6>Total</h6>
+                        <h6>
+                          { this.state.totalPrice }
+                        </h6>
+                      </div>
+                      <button onClick={() => this.confirmOrder()} className="btn btn-danger btn-lg btn-block mt-5" disabled={this.state.submit}>
+                        {this.state.submit ? (<div>< i className="fa fa-spin fa-spinner mr-2" /> Processing...</div>) : 'Place Order'}
+
+                      </button>
                     </div>
-                    <button className="btn btn-danger btn-lg btn-block mt-5">Place Order</button>
-                  </div>
                 </div>
             </div>
         </div>

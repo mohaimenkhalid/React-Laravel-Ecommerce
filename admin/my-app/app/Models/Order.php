@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+
+    CONST CASH_ON_DELIVERY = 1;
+
+    public static function boot() {
+        parent::boot();
+        static::creating(function($model) {
+            $model->invoice_no = Order::max('invoice_no') + 1;
+        });
+    }
 }

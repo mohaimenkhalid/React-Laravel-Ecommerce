@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 
 Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::get('/getVisitorDetails', [VisitorController::class, 'getVisitorDetails']);
@@ -36,6 +37,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::get('/getCart', [CartController::class, 'getCart']);
         Route::post('/updateCartProductQuantity/{cartId}/{type}', [CartController::class, 'updateCartProductQuantity']);
         Route::post('/cartProductDelete/{cartId}', [CartController::class, 'cartProductDelete']);
+        Route::post('/placeOrder', [OrderController::class, 'placeOrder']);
     });
 });
 

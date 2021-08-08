@@ -139,7 +139,7 @@ class Cart extends Component {
                                                              className="img-responsive"/>
                                                       </div>
                                                       <div className="col-lg-10">
-                                                        <h4 className="nomargin">{cart.product.name}</h4>
+                                                        <h5 className="nomargin">{cart.product.name}</h5>
                                                         <p>{cart.product.product_details ? cart.product.product_details.short_description : ''}</p>
                                                       </div>
                                                     </div>

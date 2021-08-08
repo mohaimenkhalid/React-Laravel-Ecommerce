@@ -94,3 +94,11 @@
     height: 80px;
     text-align: center;
 }
+
+.loader-custom-wrapper {
+  height: 400px;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
