@@ -5,6 +5,7 @@ import AppStorage from "../helpers/AppStorage";
 import {toast} from "react-toastify";
 import {Button, Card, Col, Container, Row} from "react-bootstrap";
 import {Link, Redirect} from "react-router-dom";
+import {useDispatch} from "react-redux";
 
 class LoginPage extends Component {
 
@@ -27,7 +28,6 @@ class LoginPage extends Component {
         this.setState({password: password});
     }
 
-
     onFormSubmit = (e) => {
         e.preventDefault();
         let email = this.state.email;
@@ -36,7 +36,6 @@ class LoginPage extends Component {
         let loginFormData = new FormData();
         loginFormData.append('email', email)
         loginFormData.append('password', password)
-
         axios.post(AppURL.login, loginFormData)
             .then(res => {
                 if(res.status === 200 && res.data.access_token) {
