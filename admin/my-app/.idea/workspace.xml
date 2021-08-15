@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavMenuDesktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavMenuDesktop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/redux/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/redux/slice.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/redux/slice.js" afterDir="false" />
