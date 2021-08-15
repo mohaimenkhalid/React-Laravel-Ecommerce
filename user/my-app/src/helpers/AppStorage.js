@@ -5,10 +5,10 @@ class AppStorage {
          this.setUser(user)
      }
      setToken(token) {
-        localStorage.setItem('token', token)
+        localStorage.setItem('token', JSON.stringify(token))
      }
      setUser(user) {
-        localStorage.setItem('user_details', user)
+        localStorage.setItem('user_details', JSON.stringify(user))
     }
 
     clear() {

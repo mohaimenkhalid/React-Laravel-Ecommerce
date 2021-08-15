@@ -5,7 +5,8 @@ import AppStorage from "../helpers/AppStorage";
 import {toast} from "react-toastify";
 import {Button, Card, Col, Container, Row} from "react-bootstrap";
 import {Link, Redirect} from "react-router-dom";
-import {useDispatch} from "react-redux";
+import {loginAction} from "../redux/actions"
+import { store } from "../store/store";
 
 class LoginPage extends Component {
 
@@ -32,16 +33,13 @@ class LoginPage extends Component {
         e.preventDefault();
         let email = this.state.email;
         let password = this.state.password;
-
         let loginFormData = new FormData();
         loginFormData.append('email', email)
         loginFormData.append('password', password)
         axios.post(AppURL.login, loginFormData)
             .then(res => {
                 if(res.status === 200 && res.data.access_token) {
-                    let token = JSON.stringify(res.data.access_token);
-                    let user = JSON.stringify(res.data.user);
-                    AppStorage.store(token, user)
+                    store.dispatch(() => loginAction(res.data))
                     this.setState({userRedirect: true});
                     toast.success("Login Successfully!");
                 }else {
