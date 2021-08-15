@@ -2,7 +2,7 @@ import {createSlice} from "@reduxjs/toolkit";
 import AppStorage from "../helpers/AppStorage";
 
 export const authSlice = createSlice({
-    name: "loginAuth",
+    name: "auth",
     initialState: {
         isAuth: !!AppStorage.getToken(),
         access_token: AppStorage.getToken(),

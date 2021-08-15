@@ -1,7 +1,6 @@
 import {authSlice} from "./slice";
 import {store} from "../store/store";
 import AppStorage from "../helpers/AppStorage";
-
 const {actions: authSlices} = authSlice;
 
 //login actions

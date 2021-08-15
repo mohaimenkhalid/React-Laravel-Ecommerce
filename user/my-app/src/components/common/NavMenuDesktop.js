@@ -121,7 +121,7 @@ class NavMenuDesktop extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        isAuth: state.loginAuth.isAuth
+        isAuth: state.auth.isAuth
     }
 }
 
