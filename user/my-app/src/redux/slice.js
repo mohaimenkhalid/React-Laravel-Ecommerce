@@ -6,14 +6,18 @@ export const authSlice = createSlice({
     initialState: {
         isAuth: !!AppStorage.getToken(),
         access_token: AppStorage.getToken(),
-        user: AppStorage.getUser()
+        user: AppStorage.getUser(),
     },
     reducers: {
         setLogin(state, action) {
-            AppStorage.store(action.payload.access_token, action.payload.user)
             state.isAuth = true;
             state.access_token = action.payload.access_token;
             state.user = action.payload.user;
+        },
+        setLogout(state, action) {
+            state.isAuth = !!AppStorage.getToken();
+            state.access_token = AppStorage.getToken();
+            state.user = AppStorage.getUser();
         }
     }
 })

@@ -7,6 +7,9 @@ import AppStorage from "../../helpers/AppStorage";
 import axios from "axios";
 import AppURL from "../../api/AppURL";
 import {toast} from "react-toastify";
+import {connect} from 'react-redux';
+import {logoutAction} from "../../redux/actions";
+import {store} from "../../store/store";
 
 class NavMenuDesktop extends Component {
 
@@ -27,9 +30,9 @@ class NavMenuDesktop extends Component {
       axios.post(AppURL.logoutUser, { }, {headers: headers})
         .then(res => {
           if(res.status === 200 && res.data.status === true) {
-            AppStorage.clear();
-            this.setState({ homeRedirect: true });
-            toast.success("You are logged out!");
+              store.dispatch(() => logoutAction())
+              this.setState({ homeRedirect: true });
+              toast.success("You are logged out!");
           }
         })
         .catch(error => {
@@ -82,7 +85,7 @@ class NavMenuDesktop extends Component {
 
                                 <div id="google_translate_element"></div>
                                 {
-                                    AppStorage.getToken()
+                                    this.props.isAuth
                                     ?
                                     (
                                         <Dropdown>
@@ -116,4 +119,10 @@ class NavMenuDesktop extends Component {
     }
 }
 
-export default NavMenuDesktop;
+const mapStateToProps = (state) => {
+    return {
+        isAuth: state.loginAuth.isAuth
+    }
+}
+
+export default connect(mapStateToProps)(NavMenuDesktop)

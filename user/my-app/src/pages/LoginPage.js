@@ -1,11 +1,10 @@
 import React, {Component, Fragment} from 'react';
 import axios from "axios";
 import AppURL from "../api/AppURL";
-import AppStorage from "../helpers/AppStorage";
 import {toast} from "react-toastify";
 import {Button, Card, Col, Container, Row} from "react-bootstrap";
 import {Link, Redirect} from "react-router-dom";
-import {loginAction} from "../redux/actions"
+import {loginAction} from "../redux/actions";
 import { store } from "../store/store";
 
 class LoginPage extends Component {
@@ -36,6 +35,7 @@ class LoginPage extends Component {
         let loginFormData = new FormData();
         loginFormData.append('email', email)
         loginFormData.append('password', password)
+
         axios.post(AppURL.login, loginFormData)
             .then(res => {
                 if(res.status === 200 && res.data.access_token) {
@@ -55,7 +55,7 @@ class LoginPage extends Component {
                 }
             })
             .then(error => {
-                console.log(error)
+                //console.log(error)
             })
 
     }
