@@ -4,7 +4,7 @@ import AppURL from "../api/AppURL";
 import {toast} from "react-toastify";
 import {Button, Card, Col, Container, Row} from "react-bootstrap";
 import {Link, Redirect} from "react-router-dom";
-import {loginAction} from "../redux/actions";
+import {loginAction} from "../redux/actions/authActions";
 import { store } from "../store/store";
 
 class LoginPage extends Component {

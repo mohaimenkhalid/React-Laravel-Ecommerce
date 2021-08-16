@@ -8,6 +8,8 @@ import axios from "axios";
 import AppStorage from "../../helpers/AppStorage";
 import {toast} from "react-toastify";
 import {Redirect} from "react-router-dom";
+import {store} from "../../store/store";
+import {getCartAction} from "../../redux/actions/cartActions";
 
 class ProductDetails extends Component {
     
@@ -97,6 +99,7 @@ class ProductDetails extends Component {
         .then(res => {
           console.log(res);
           if(res.data && res.status === 200) {
+              store.dispatch(() => getCartAction());
               toast.success(res.data.message);
               this.setState({ addToCartStatus: true });
           }

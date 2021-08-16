@@ -8,8 +8,9 @@ import axios from "axios";
 import AppURL from "../../api/AppURL";
 import {toast} from "react-toastify";
 import {connect} from 'react-redux';
-import {logoutAction} from "../../redux/actions";
+import {logoutAction} from "../../redux/actions/authActions";
 import {store} from "../../store/store";
+import {getCartAction} from "../../redux/actions/cartActions";
 
 class NavMenuDesktop extends Component {
 
@@ -18,6 +19,10 @@ class NavMenuDesktop extends Component {
       this.state = {
         homeRedirect: false,
       }
+    }
+
+    componentDidMount() {
+        store.dispatch(() => getCartAction());
     }
 
     onLogout = () => {
@@ -79,7 +84,7 @@ class NavMenuDesktop extends Component {
                                 <Link to="/cart">
                                     <i className="fa fa-shopping-cart font-30" />
                                     <sub>
-                                        <span className="badge badge-danger">4</span>
+                                        <span className="badge badge-danger">{this.props.numberOfItems}</span>
                                     </sub>
                                 </Link>
 
@@ -92,7 +97,7 @@ class NavMenuDesktop extends Component {
                                             <Dropdown.Toggle variant="default"
                                                              id="dropdown-basic dropdown-button-drop-left"
                                                              drop="left">
-                                                {AppStorage.getUser() && AppStorage.getUser().first_name}
+                                                {this.props.user.first_name}
                                             </Dropdown.Toggle>
 
                                             <Dropdown.Menu>
@@ -121,7 +126,10 @@ class NavMenuDesktop extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        isAuth: state.auth.isAuth
+        isAuth: state.auth.isAuth,
+        user: state.auth.user,
+        carts: state.cart.items,
+        numberOfItems: state.cart.items.length
     }
 }
 

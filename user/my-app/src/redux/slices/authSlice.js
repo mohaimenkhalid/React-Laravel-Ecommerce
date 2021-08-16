@@ -1,5 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import AppStorage from "../helpers/AppStorage";
+import AppStorage from "../../helpers/AppStorage";
 
 export const authSlice = createSlice({
     name: "auth",

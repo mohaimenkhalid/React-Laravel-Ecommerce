@@ -5,6 +5,7 @@ import AppURL from "../api/AppURL";
 import {loadProgressBar} from "axios-progress-bar";
 import {Link, Redirect} from "react-router-dom";
 import {toast} from "react-toastify";
+import {connect} from "react-redux";
 
 class CheckoutPage extends Component {
 
@@ -27,34 +28,10 @@ class CheckoutPage extends Component {
 
   componentWillMount () {
     loadProgressBar();
-    this.getCart();
   }
 
-  getCart = () => {
-    const headers = {
-      'Content-Type' : 'application/json',
-      'Accept' : 'application/json',
-      'Authorization' : `Bearer ${AppStorage.getToken()}`
-    };
-    axios.get(AppURL.getCart, {headers: headers})
-      .then(res => {
-        this.setState({ carts: res.data});
-        this.getTotalPrice();
-        this.setState({isLoading: false});
-        //console.log(res)
-      })
-      .catch()
-  };
-
-  getTotalPrice = () => {
-    let TotalPrice = this.state.carts.reduce(function (accumulator, current) {
-      return accumulator + current.total_price;
-    }, 0);
-    this.setState({totalPrice: TotalPrice});
-  };
-
   HomePageRedirect = () => {
-    if(this.state.carts.length < 1) {
+    if(this.props.carts.length < 1) {
       toast.error("Your cart is empty.");
       return <Redirect to="/" />
     }
@@ -176,7 +153,7 @@ class CheckoutPage extends Component {
 
   render() {
 
-    if (this.state.isLoading === true) {
+    if (this.props.isLoading === true) {
       return (
         <div className="row">
           <div className="col-md-12">
@@ -253,7 +230,7 @@ class CheckoutPage extends Component {
                     <tbody>
 
                       {
-                        this.state.carts.map((cart, index) => {
+                        this.props.carts.map((cart, index) => {
                           return (
                             <tr>
                               <td>
@@ -302,7 +279,7 @@ class CheckoutPage extends Component {
                       <div className="d-flex justify-content-between">
                         <h6>Total</h6>
                         <h6>
-                          { this.state.totalPrice }
+                          { this.props.totalPrice }
                         </h6>
                       </div>
                       <button onClick={this.confirmOrder} className="btn btn-danger btn-lg btn-block mt-5" disabled={this.state.submit}>
@@ -319,5 +296,13 @@ class CheckoutPage extends Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    carts: state.cart.items,
+    isLoading: state.cart.isLoading,
+    totalPrice: state.cart.totalPrice,
+  }
+}
 
-export default CheckoutPage;
+export default connect(mapStateToProps)(CheckoutPage)
+

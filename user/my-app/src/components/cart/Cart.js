@@ -1,12 +1,12 @@
 import React, {Component, Fragment} from 'react';
-import axios from "axios";
 import AppURL from "../../api/AppURL";
-import AppStorage from "../../helpers/AppStorage";
 import CartItemLoader from "../loader/CartItemLoader";
 import {loadProgressBar} from "axios-progress-bar";
-import {toast} from "react-toastify";
 import {Link} from "react-router-dom";
 import EmptyCart from "../../assets/images/cart-empty.png";
+import {connect} from "react-redux";
+import {store} from "../../store/store";
+import {cartProductDelete, updateCartAction} from "../../redux/actions/cartActions";
 
 class Cart extends Component {
 
@@ -15,74 +15,20 @@ class Cart extends Component {
     this.state = {
       carts: [],
       totalPrice: '',
-      isLoading: true
+      isLoading: false
     }
   }
 
   componentWillMount () {
       loadProgressBar();
-      this.getCart();
   }
 
-  getCart = () => {
-    const headers = {
-      'Content-Type' : 'application/json',
-      'Accept' : 'application/json',
-      'Authorization' : `Bearer ${AppStorage.getToken()}`
-    };
-    axios.get(AppURL.getCart, {headers: headers})
-      .then(res => {
-        this.setState({ carts: res.data});
-        this.setState({isLoading: false});
-        this.getTotalPrice();
-        //console.log(res)
-      })
-      .catch()
-  };
-
-  getTotalPrice = () => {
-    let TotalPrice = this.state.carts.reduce(function (accumulator, current) {
-      return accumulator + current.total_price;
-    }, 0);
-    this.setState({totalPrice: TotalPrice});
-  };
-
   updateCartProduct = (cartId, type) => {
-    const headers = {
-      'Content-Type' : 'application/json',
-      'Accept' : 'application/json',
-      'Authorization' : `Bearer ${AppStorage.getToken()}`
-    };
-    axios.post(AppURL.updateCartProductQuantity(cartId, type), { }, {headers: headers})
-      .then(res => {
-        if(res.status === 200) {
-          this.getCart();
-          toast.success(res.data.message);
-        }
-      })
-      .catch(err => {
-        console.log(err)
-      });
+      store.dispatch(() => updateCartAction(cartId, type));
   };
 
   cartProductDelete = (cartId) => {
-    const headers = {
-      'Content-Type' : 'application/json',
-      'Accept' : 'application/json',
-      'Authorization' : `Bearer ${AppStorage.getToken()}`
-    };
-    axios.post(AppURL.cartProductDelete(cartId), { }, {headers: headers})
-      .then(res => {
-        if(res.status === 200) {
-          this.getCart();
-          toast.success(res.data.message);
-        } else {
-          toast.error(res.data.error);
-        }
-      })
-      .catch(err => {
-        console.log(err)
-      });
+    store.dispatch(() => cartProductDelete(cartId));
   };
 
 
@@ -95,7 +41,7 @@ class Cart extends Component {
                             <h4>Your Shopping Cart </h4>
                         </div>
                       {
-                        this.state.isLoading
+                        this.props.isLoading
                           ?
                           (
                             <CartItemLoader/>
@@ -104,7 +50,7 @@ class Cart extends Component {
                           (
                             <>
                               {
-                                this.state.isLoading === false && this.state.carts.length < 1 ?
+                                this.props.isLoading === false && this.props.carts.length < 1 ?
                                   (
                                     <div className="row my-5">
                                       <div className="col-md-4 offset-4 text-center">
@@ -127,9 +73,8 @@ class Cart extends Component {
                                           </tr>
                                         </thead>
                                         <tbody>
-
                                           {
-                                            this.state.carts.map((cart, index) => {
+                                            this.props.carts.map((cart, index) => {
                                               return (
                                                 <tr>
                                                   <td>
@@ -172,8 +117,9 @@ class Cart extends Component {
                                               </a>
                                             </td>
                                             <td colSpan="2" className="hidden-xs"></td>
-                                            <td className="hidden-xs text-center" width="10%"><strong>Total :
-                                              {this.state.totalPrice}</strong></td>
+                                            <td className="hidden-xs text-center" width="10%">
+                                                <strong>Total :
+                                              {this.props.totalPrice}</strong></td>
                                             <td width="20%">
                                               <Link to="/checkout" className="btn btn-success btn-block">Checkout <i
                                                 className="fa fa-angle-right"/>
@@ -195,5 +141,12 @@ class Cart extends Component {
         );
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        carts: state.cart.items,
+        isLoading: state.cart.isLoading,
+        totalPrice: state.cart.totalPrice,
+    }
+}
 
-export default Cart;
+export default connect(mapStateToProps)(Cart)
