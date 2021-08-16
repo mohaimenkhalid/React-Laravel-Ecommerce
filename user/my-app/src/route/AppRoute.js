@@ -18,6 +18,7 @@ import ProductSearchPage from "../pages/ProductSearchPage";
 import SearchComponent from "../components/product/SearchComponent";
 import RegisterPage from "../pages/RegisterPage";
 import CheckoutPage from "../pages/CheckoutPage";
+import NotFound from "../components/other/NotFound";
 
 class AppRoute extends Component {
     render() {
@@ -43,6 +44,7 @@ class AppRoute extends Component {
                     <Route path="/search" component={SearchComponent} />
                     <Route path="/product/:slug" component={ProductDetailsPage} />
                     <Route path="/checkout" component={CheckoutPage} />
+                    <Route path="*" component={NotFound} />
                 </Switch>
             </Fragment>
         );
