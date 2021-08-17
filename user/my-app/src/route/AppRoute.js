@@ -19,19 +19,22 @@ import SearchComponent from "../components/product/SearchComponent";
 import RegisterPage from "../pages/RegisterPage";
 import CheckoutPage from "../pages/CheckoutPage";
 import NotFound from "../components/other/NotFound";
+import ProtectedRoute from "./protected.route";
+import {connect} from "react-redux";
 
 class AppRoute extends Component {
     render() {
+
         return (
             <Fragment>
                 <Switch>
                     <Route exact path="/" render={(props) => <HomePage {...props} key={Date.now()} />} />
                     <Route path="/category/:slug" component={CategoryProductView} />
-                    <Route path="/login" component={LoginPage} />
-                    <Route path="/register" component={RegisterPage} />
+                    <ProtectedRoute path="/login" component={LoginPage} isAuth={this.props.isAuth} />
+                    <ProtectedRoute path="/register" component={RegisterPage} isAuth={this.props.isAuth} />
                     <Route path="/notification" component={NotificationPage} />
                     <Route path="/favourite" component={FavouritePage} />
-                    <Route path="/cart" component={CartPage} />
+                    <ProtectedRoute path="/cart" component={CartPage} isAuth={this.props.isAuth} />
                     <Route path="/order" component={OrderPage} />
                     <Route path="/contact-us" component={Contact} />
                     <Route path="/about" component={AboutPage} />
@@ -43,7 +46,7 @@ class AppRoute extends Component {
                     <Route path="/search/:query" component={ProductSearchPage} />
                     <Route path="/search" component={SearchComponent} />
                     <Route path="/product/:slug" component={ProductDetailsPage} />
-                    <Route path="/checkout" component={CheckoutPage} />
+                    <ProtectedRoute path="/checkout" component={CheckoutPage} isAuth={this.props.isAuth} />
                     <Route path="*" component={NotFound} />
                 </Switch>
             </Fragment>
@@ -51,4 +54,10 @@ class AppRoute extends Component {
     }
 }
 
-export default AppRoute;
+const mapStateToProps = (state) => {
+    return {
+        isAuth: state.auth.isAuth,
+    }
+}
+
+export default connect(mapStateToProps)(AppRoute)
