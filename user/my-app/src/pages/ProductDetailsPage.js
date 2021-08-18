@@ -35,8 +35,26 @@ class ProductDetailsPage extends Component {
     render() {
         return (
             <Fragment>
-                <ProductDetails product={this.state.product} />
-                <SuggestedProducts />
+                {!this.state.product ?
+                    (<div className="row">
+                        <div className="col-md-12">
+                            <div className="loader-custom-wrapper">
+                                <h4>
+                                    <i className="fa fa-spinner fa-spin mx-2" />
+                                    Loading...
+                                </h4>
+                            </div>
+                        </div>
+                    </div>) :
+                    (
+                        <>
+                            <ProductDetails product={this.state.product} />
+                            <SuggestedProducts />
+                        </>
+                    )
+                }
+
+
             </Fragment>
         );
     }

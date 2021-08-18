@@ -31,7 +31,6 @@ class Cart extends Component {
     store.dispatch(() => cartProductDelete(cartId));
   };
 
-
     render() {
         return (
             <Fragment>

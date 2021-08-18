@@ -1,7 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {Container, Row, Col} from "react-bootstrap";
 import AppURL from "../../api/AppURL";
-import ReactDom from "react-dom";
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import InnerImageZoom from 'react-inner-image-zoom';
 import axios from "axios";
@@ -24,8 +23,9 @@ class ProductDetails extends Component {
         addToCartStatus: false
       }
     }
-    componentDidMount() {
-      this.setState({previewImg: AppURL.ServerBaseURL+this.props.product.image});
+    componentWillMount() {
+        console.log(this.props.product.image);
+        this.setState({previewImg: AppURL.ServerBaseURL+this.props.product.image});
     }
 
     imgOnclick = (e) =>{
@@ -151,19 +151,19 @@ class ProductDetails extends Component {
                                 <Col className="p-3 " md={5} lg={5} sm={12} xs={12}>
                                     <h3 className="Product-Name">{product.name}</h3>
 
-                                        {
-                                            product_details && product_details.short_description
-                                                ?
-                                                (
-                                                    <div>
-                                                        <h6 className="section-sub-title"> product description</h6>
-                                                            <p>
-                                                                {product_details.short_description}
-                                                            </p>
-                                                    </div>
-                                                )
-                                                : ''
-                                        }
+                                    {
+                                        product_details && product_details.short_description
+                                            ?
+                                            (
+                                                <div>
+                                                    <h6 className="section-sub-title"> product description</h6>
+                                                    <p>
+                                                        {product_details.short_description}
+                                                    </p>
+                                                </div>
+                                            )
+                                            : ''
+                                    }
 
                                     <div className="d-flex align-items-center">
                                         <h6 className="mt-2">Category - </h6>
@@ -172,44 +172,44 @@ class ProductDetails extends Component {
 
                                     <div> { this.price() } </div>
 
-                                   <div className="row mt-5">
-                                       <div className="col-md-4">
-                                           <h6 className="mt-2">Choose Quantity</h6>
-                                           <input onChange={this.quantityChangeHandler} type="number" defaultValue="1" className="form-control"/>
-                                       </div>
-                                       <div className="col-md-4">
-                                         {
-                                           product_details && product_details.color
-                                             ?
-                                             <div>
-                                               <h6 className="mt-2">Color</h6>
-                                               <select className="form-control form-select" onChange={this.colorChangeHandler}>
-                                                 <option value="" selected disabled>Choose Color</option>
-                                                 { product_details.color.split(',').map(option => {
-                                                      return (<option value={option}>{option}</option>)
-                                                    })
-                                                 }
-                                               </select>
-                                             </div> : ''
-                                         }
-                                       </div>
-                                       <div className="col-md-4">
-                                         {
-                                           product_details && product_details.size
-                                             ?
-                                             <div>
-                                               <h6 className="mt-2">Choose Size</h6>
-                                               <select onChange={this.sizeChangeHandler} className="form-control form-select">
-                                                 <option value="">Choose Size</option>
-                                                 { product_details.size.split(',').map(option => {
-                                                   return (<option value={option}>{option}</option>)
-                                                 })
-                                                 }
-                                               </select>
-                                             </div> : ""
-                                         }
-                                       </div>
-                                   </div>
+                                    <div className="row mt-5">
+                                        <div className="col-md-4">
+                                            <h6 className="mt-2">Choose Quantity</h6>
+                                            <input onChange={this.quantityChangeHandler} type="number" defaultValue="1" className="form-control" min="1" />
+                                        </div>
+                                        <div className="col-md-4">
+                                            {
+                                                product_details && product_details.color
+                                                    ?
+                                                    <div>
+                                                        <h6 className="mt-2">Color</h6>
+                                                        <select className="form-control form-select" onChange={this.colorChangeHandler}>
+                                                            <option value="" selected disabled>Choose Color</option>
+                                                            { product_details.color.split(',').map(option => {
+                                                                return (<option value={option}>{option}</option>)
+                                                            })
+                                                            }
+                                                        </select>
+                                                    </div> : ''
+                                            }
+                                        </div>
+                                        <div className="col-md-4">
+                                            {
+                                                product_details && product_details.size
+                                                    ?
+                                                    <div>
+                                                        <h6 className="mt-2">Choose Size</h6>
+                                                        <select onChange={this.sizeChangeHandler} className="form-control form-select">
+                                                            <option value="">Choose Size</option>
+                                                            { product_details.size.split(',').map(option => {
+                                                                return (<option value={option}>{option}</option>)
+                                                            })
+                                                            }
+                                                        </select>
+                                                    </div> : ""
+                                            }
+                                        </div>
+                                    </div>
                                     <div className="input-group mt-3 product-button-group">
                                         <button onClick={this.addToCart} className="btn site-btn m-1 "> <i className="fa fa-shopping-cart"/> {/*{this.state.addToCart}*/}Add To Cart</button>
                                         <button onClick={this.orderNow} className="btn btn-primary m-1"> <i className="fa fa-car"/>Buy Now</button>
