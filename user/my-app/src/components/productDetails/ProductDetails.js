@@ -3,12 +3,9 @@ import {Container, Row, Col} from "react-bootstrap";
 import AppURL from "../../api/AppURL";
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import InnerImageZoom from 'react-inner-image-zoom';
-import axios from "axios";
-import AppStorage from "../../helpers/AppStorage";
-import {toast} from "react-toastify";
 import {Redirect} from "react-router-dom";
 import {store} from "../../store/store";
-import {getCartAction} from "../../redux/actions/cartActions";
+import {addToCart} from "../../redux/actions/cartActions";
 
 class ProductDetails extends Component {
     
@@ -24,7 +21,7 @@ class ProductDetails extends Component {
       }
     }
     componentWillMount() {
-        console.log(this.props.product.image);
+        console.log(this.props.product)
         this.setState({previewImg: AppURL.ServerBaseURL+this.props.product.image});
     }
 
@@ -84,7 +81,22 @@ class ProductDetails extends Component {
     };
     
     addToCart = () => {
-      let formData = new FormData();
+     let product = {
+          'product_id' : this.props.product.id,
+          'name' : this.props.product.name,
+          'image' : this.props.product.image,
+          'price' : this.props.product.price,
+          'quantity' : this.state.quantity,
+          'subtotal' : this.props.product.price * this.state.quantity,
+          'description' : this.props.product.product_details ? this.props.product.product_details.short_description : '',
+          'product_color' : this.state.product_color,
+          'product_size' : this.state.product_size,
+     }
+
+     store.dispatch(() => addToCart(product));
+
+
+      /*let formData = new FormData();
       formData.append('product_color', this.state.product_color);
       formData.append('product_size', this.state.product_size);
       formData.append('product_id', this.props.product.id);
@@ -106,7 +118,7 @@ class ProductDetails extends Component {
         })
         .catch(err => {
 
-        })
+        })*/
     };
 
     cartPageRedirect = () => {

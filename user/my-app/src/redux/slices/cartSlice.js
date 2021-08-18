@@ -9,11 +9,13 @@ export const cartSlice = createSlice({
     },
     reducers: {
         setCart(state, action) {
-            state.items = action.payload.data;
-            state.isLoading = false;
-            state.totalPrice = action.payload.data.reduce(function (accumulator, current) {
-                return accumulator + current.total_price;
-            }, 0);
+            if(action.payload != null) {
+                state.items = action.payload;
+                state.isLoading = false;
+                state.totalPrice = action.payload.reduce(function (accumulator, current) {
+                    return accumulator + current.subtotal;
+                }, 0);
+            }
         },
     }
 })

@@ -34,7 +34,7 @@ class AppRoute extends Component {
                     <ProtectedRoute path="/register" component={RegisterPage} isAuth={this.props.isAuth} />
                     <Route path="/notification" component={NotificationPage} />
                     <Route path="/favourite" component={FavouritePage} />
-                    <ProtectedRoute path="/cart" component={CartPage} isAuth={this.props.isAuth} />
+                    <Route path="/cart" component={CartPage} />
                     <Route path="/order" component={OrderPage} />
                     <Route path="/contact-us" component={Contact} />
                     <Route path="/about" component={AboutPage} />

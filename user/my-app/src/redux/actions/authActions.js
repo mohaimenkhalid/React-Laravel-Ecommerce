@@ -5,6 +5,7 @@ const {actions: authSlices} = authSlice;
 
 //login actions
 export const loginAction = (loginResponseData) => {
+    console.log(loginResponseData);
     AppStorage.store(loginResponseData.access_token, loginResponseData.user)
     store.dispatch(authSlices.setLogin(loginResponseData))
 }
