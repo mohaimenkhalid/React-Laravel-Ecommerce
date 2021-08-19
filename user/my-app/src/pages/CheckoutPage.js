@@ -100,7 +100,7 @@ class CheckoutPage extends Component {
       'Accept' : 'application/json',
       'Authorization' : `Bearer ${AppStorage.getToken()}`
     };
-
+    console.log(orderFormData);
     axios.post(AppURL.placeOrder, orderFormData, {headers: headers})
       .then(function (res) {
         if (res.status === 200 && res.data) {
@@ -217,7 +217,6 @@ class CheckoutPage extends Component {
               <div className="card w-100 mt-3">
                 <div className="card-body">
                   <h5>Order Review</h5>
-
                   <table className="table border bg-white">
                     <thead>
                       <tr>
@@ -230,28 +229,28 @@ class CheckoutPage extends Component {
                     <tbody>
 
                       {
-                        this.props.carts.map((cart, index) => {
+                        this.props.carts.map((product, index) => {
                           return (
                             <tr>
                               <td>
                                 <div className="row">
                                   <div className="col-lg-2 Product-img">
-                                    <img src={AppURL.ServerBaseURL + cart.product.image} alt="..."
+                                    <img src={AppURL.ServerBaseURL + product.image} alt="..."
                                          className="img-responsive"/>
                                   </div>
                                   <div className="col-lg-10">
-                                    <h5 className="nomargin">{cart.product.name}</h5>
-                                    <p>{cart.product.product_details ? cart.product.product_details.short_description : ''}</p>
+                                    <h5 className="nomargin">{product.name}</h5>
+                                    <p>{product.description }</p>
                                   </div>
                                 </div>
                               </td>
-                              <td> {cart.unit_price} </td>
+                              <td> {product.price} </td>
                               <td>
                                 <div className="d-flex">
-                                  {cart.quantity}
+                                  {product.quantity}
                                 </div>
                               </td>
-                              <td>{cart.total_price}</td>
+                              <td>{product.subtotal}</td>
                             </tr>
                           );
                         })
@@ -284,7 +283,6 @@ class CheckoutPage extends Component {
                       </div>
                       <button onClick={this.confirmOrder} className="btn btn-danger btn-lg btn-block mt-5" disabled={this.state.submit}>
                         {this.state.submit ? (<div>< i className="fa fa-spin fa-spinner mr-2" /> Processing...</div>) : 'Place Order'}
-
                       </button>
                     </div>
                 </div>

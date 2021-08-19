@@ -1,8 +1,5 @@
 import {store} from "../../store/store";
 import {cartSlice} from "../slices/cartSlice";
-import AppStorage from "../../helpers/AppStorage";
-import axios from "axios";
-import AppURL from "../../api/AppURL";
 import {toast} from "react-toastify";
 const {actions: cartSlices} = cartSlice;
 

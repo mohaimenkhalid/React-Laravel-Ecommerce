@@ -24,7 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/cart/Cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/CheckoutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/CheckoutPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/redux/actions/cartActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/redux/actions/cartActions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -299,7 +300,7 @@
       <workItem from="1629131348219" duration="1237000" />
       <workItem from="1629216905397" duration="810000" />
       <workItem from="1629303458561" duration="616000" />
-      <workItem from="1629390243532" duration="1215000" />
+      <workItem from="1629390243532" duration="1431000" />
     </task>
     <servers />
   </component>
