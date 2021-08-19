@@ -88,7 +88,12 @@ class Cart extends Component {
                                               </td>
                                               <td>{product.subtotal}</td>
                                               <td className="actions" data-th="" width="10%">
-                                                <button onClick={() => this.cartProductDelete(product.id)} className="btn btn-danger btn-sm" style={{borderRadius: '2rem'}}>
+                                                <button onClick={function() {
+                                                    let actionDelete = window.confirm(`Are you sure to delete ${product.name}!`)
+                                                    if(actionDelete) {
+                                                        store.dispatch(() => cartProductDelete(product.product_id));
+                                                    }
+                                                }} className="btn btn-danger btn-sm" style={{borderRadius: '2rem'}}>
                                                   <i className="fa fa-times"/>
                                                 </button>
                                               </td>

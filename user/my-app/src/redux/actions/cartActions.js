@@ -11,11 +11,13 @@ export const addToCart = (product) => {
     let cart = localStorage.getItem('cart');
     var dataCart = cart !== null ? JSON.parse(cart) : [];
 
-    if (dataCart.length === 0 || !dataCart.find((p) => p.product_id === product.product_id)) {
+    let findCartItem = dataCart.find((p) => p.product_id === product.product_id);
+
+    if (dataCart.length === 0 || !findCartItem) {
         dataCart.push(product)
-    } else if (dataCart.find((p) => p.product_id === product.product_id)) {
-        product.subtotal += dataCart.find((p) => p.product_id === product.product_id).subtotal
-        product.quantity += dataCart.find((p) => p.product_id === product.product_id).quantity
+    } else if (findCartItem) {
+        product.subtotal += findCartItem.subtotal
+        product.quantity += findCartItem.quantity
         dataCart.splice(
             dataCart.findIndex((p) => p.product_id === product.product_id),
             1,
@@ -52,27 +54,22 @@ export const updateCartAction = (productId, type) => {
         dataCart[cartIndex].quantity = findCartItem.quantity;
         dataCart[cartIndex].subtotal = findCartItem.subtotal;
     }
-
     localStorage.setItem('cart', JSON.stringify(dataCart))
     store.dispatch(() => getCartAction());
 }
 
-export const cartProductDelete = (cartId) => {
-    const headers = {
-        'Content-Type' : 'application/json',
-        'Accept' : 'application/json',
-        'Authorization' : `Bearer ${AppStorage.getToken()}`
-    };
-    axios.post(AppURL.cartProductDelete(cartId), { }, {headers: headers})
-        .then(res => {
-            if(res.status === 200) {
-                store.dispatch(() => getCartAction());
-                toast.success(res.data.message);
-            } else {
-                toast.error(res.data.error);
-            }
-        })
-        .catch(err => {
-            console.log(err)
-        });
+export const cartProductDelete = (productId) => {
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    let findCartItem = cart.find((p) => p.product_id === productId)
+    if(cart && findCartItem) {
+        let cartIndex = cart.findIndex((p) => p.product_id === productId);
+        console.log(cartIndex);
+        cart.splice(cartIndex, 1)
+        localStorage.setItem('cart', JSON.stringify(cart))
+        store.dispatch(() => getCartAction());
+        toast.error("Product removed from Cart!")
+    } else {
+        toast.error("Something went wrong!")
+    }
+
 }
