@@ -25,11 +25,7 @@
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/cart/Cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/productDetails/ProductDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/productDetails/ProductDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/redux/actions/authActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/redux/actions/authActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/redux/actions/cartActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/redux/actions/cartActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/redux/slices/cartSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/redux/slices/cartSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,6 +299,7 @@
       <workItem from="1629131348219" duration="1237000" />
       <workItem from="1629216905397" duration="810000" />
       <workItem from="1629303458561" duration="616000" />
+      <workItem from="1629390243532" duration="1215000" />
     </task>
     <servers />
   </component>
@@ -326,11 +323,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1628795380125" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1629217117470">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1629391184123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="437" y="176" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1628442968834" />
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1629217117470" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1629391184123" />
     <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1626291333882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

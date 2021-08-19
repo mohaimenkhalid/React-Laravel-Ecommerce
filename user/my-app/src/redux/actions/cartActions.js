@@ -13,7 +13,6 @@ export const addToCart = (product) => {
 
     if (dataCart.length === 0 || !dataCart.find((p) => p.product_id === product.product_id)) {
         dataCart.push(product)
-
     } else if (dataCart.find((p) => p.product_id === product.product_id)) {
         product.subtotal += dataCart.find((p) => p.product_id === product.product_id).subtotal
         product.quantity += dataCart.find((p) => p.product_id === product.product_id).quantity
@@ -33,22 +32,29 @@ export const getCartAction = () => {
     store.dispatch(cartSlices.setCart(cart))
 }
 
-export const updateCartAction = (cartId, type) => {
-    const headers = {
-        'Content-Type' : 'application/json',
-        'Accept' : 'application/json',
-        'Authorization' : `Bearer ${AppStorage.getToken()}`
-    };
-    axios.post(AppURL.updateCartProductQuantity(cartId, type), { }, {headers: headers})
-        .then(res => {
-            if(res.status === 200) {
-                store.dispatch(() => getCartAction());
-            }
-        })
-        .catch(err => {
-            console.log(err)
-        });
+export const updateCartAction = (productId, type) => {
+    let cart = localStorage.getItem('cart');
+    var dataCart = cart !== null ? JSON.parse(cart) : [];
 
+    let findCartItem = dataCart.find((p) => p.product_id === productId)
+    if(type === 'increment') {
+        findCartItem.quantity++;
+        findCartItem.subtotal += parseInt(findCartItem.price);
+    } else if(type === 'decrement') {
+        findCartItem.quantity--;
+        findCartItem.subtotal -= parseInt(findCartItem.price);
+    }
+
+    let cartIndex = dataCart.findIndex((p) => p.product_id === productId);
+    if(findCartItem.quantity === 0) {
+        dataCart.splice(cartIndex, 1)
+    } else {
+        dataCart[cartIndex].quantity = findCartItem.quantity;
+        dataCart[cartIndex].subtotal = findCartItem.subtotal;
+    }
+
+    localStorage.setItem('cart', JSON.stringify(dataCart))
+    store.dispatch(() => getCartAction());
 }
 
 export const cartProductDelete = (cartId) => {

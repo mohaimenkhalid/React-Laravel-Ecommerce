@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import AppURL from "../../api/AppURL";
-import CartItemLoader from "../loader/CartItemLoader";
 import {loadProgressBar} from "axios-progress-bar";
 import {Link} from "react-router-dom";
 import EmptyCart from "../../assets/images/cart-empty.png";
@@ -23,8 +22,8 @@ class Cart extends Component {
       loadProgressBar();
   }
 
-  updateCartProduct = (cartId, type) => {
-      store.dispatch(() => updateCartAction(cartId, type));
+  updateCartProduct = (productId, type) => {
+      store.dispatch(() => updateCartAction(productId, type));
   };
 
   cartProductDelete = (cartId) => {
@@ -79,15 +78,15 @@ class Cart extends Component {
                                                   </div>
                                                 </div>
                                               </td>
-                                              <td> {product.unit_price} </td>
+                                              <td> {product.price} </td>
                                               <td data-th="Quantity" width="12%">
                                                 <div className="d-flex">
-                                                  <button className="btn btn-info" onClick={() => this.updateCartProduct(product.id, 'decrement')}>-</button>
+                                                  <button className="btn btn-info" onClick={() => this.updateCartProduct(product.product_id, 'decrement')}>-</button>
                                                   <input type="number" className="form-control text-center" value={product.quantity} readOnly/>
-                                                  <button className="btn btn-info" onClick={() => this.updateCartProduct(product.id, 'increment')}>+</button>
+                                                  <button className="btn btn-info" onClick={() => this.updateCartProduct(product.product_id, 'increment')}>+</button>
                                                 </div>
                                               </td>
-                                              <td>{this.props.total_price}</td>
+                                              <td>{product.subtotal}</td>
                                               <td className="actions" data-th="" width="10%">
                                                 <button onClick={() => this.cartProductDelete(product.id)} className="btn btn-danger btn-sm" style={{borderRadius: '2rem'}}>
                                                   <i className="fa fa-times"/>
