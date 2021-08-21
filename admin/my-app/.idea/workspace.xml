@@ -24,13 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Cart.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_07_19_185904_create_carts_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/CheckoutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/CheckoutPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/redux/slices/cartSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/redux/slices/cartSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/OrderPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/route/AppRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,16 +63,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1629533778" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="cart-system-update" />
                     <option name="lastUsedInstant" value="1629307143" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="route-protection" />
                     <option name="lastUsedInstant" value="1629307078" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1629142393" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="redux-toolkit" />
@@ -306,7 +301,7 @@
       <workItem from="1629303458561" duration="616000" />
       <workItem from="1629390243532" duration="1583000" />
       <workItem from="1629476108878" duration="2781000" />
-      <workItem from="1629523500607" duration="5982000" />
+      <workItem from="1629523500607" duration="6581000" />
     </task>
     <servers />
   </component>

@@ -6,7 +6,7 @@ import ProductDetailsPage from "../pages/ProductDetailsPage";
 import NotificationPage from "../pages/NotificationPage";
 import FavouritePage from "../pages/FavouritePage";
 import CartPage from "../pages/CartPage";
-import OrderPage from "../pages/OrderPage";
+import OrderPage from "../pages/user/OrderPage";
 import Contact from "../pages/Contact";
 import AboutPage from "../pages/AboutPage";
 import PolicyPage from "../pages/PolicyPage";
@@ -21,6 +21,7 @@ import CheckoutPage from "../pages/CheckoutPage";
 import NotFound from "../components/other/NotFound";
 import ProtectedRoute from "./protected.route";
 import {connect} from "react-redux";
+import MyAccountPage from "../pages/user/MyAccountPage";
 
 class AppRoute extends Component {
     render() {
@@ -47,6 +48,10 @@ class AppRoute extends Component {
                     <Route path="/search" component={SearchComponent} />
                     <Route path="/product/:slug" component={ProductDetailsPage} />
                     <ProtectedRoute path="/checkout" component={CheckoutPage} isAuth={this.props.isAuth} />
+
+                    {/*User Panel Routes*/}
+                    <Route path="/my-account" component={MyAccountPage} />
+
                     <Route path="*" component={NotFound} />
                 </Switch>
             </Fragment>
