@@ -33,10 +33,6 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
     Route::middleware('auth:api')->group(function () {
         Route::post('/auth/logout', [AuthController::class, 'logout']);
-        Route::post('/addToCart', [CartController::class, 'addToCart']);
-        Route::get('/getCart', [CartController::class, 'getCart']);
-        Route::post('/updateCartProductQuantity/{cartId}/{type}', [CartController::class, 'updateCartProductQuantity']);
-        Route::post('/cartProductDelete/{cartId}', [CartController::class, 'cartProductDelete']);
         Route::post('/placeOrder', [OrderController::class, 'placeOrder']);
     });
 });

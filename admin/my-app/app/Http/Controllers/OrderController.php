@@ -15,8 +15,7 @@ class OrderController extends Controller
             $payment_type = Order::CASH_ON_DELIVERY;
         }
 
-        $carts = Cart::where('user_id', auth()->user()->id)->get();
-
+        $carts = json_decode($request->carts);
         $order = new Order;
         $order->customer_id = auth()->user()->id;
         $order->total_amount = $request->total_amount;
@@ -41,11 +40,9 @@ class OrderController extends Controller
             $orderDetails->product_color = $cart->product_color;
             $orderDetails->product_size = $cart->product_size;
             $orderDetails->quantity = $cart->quantity;
-            $orderDetails->unit_price = $cart->unit_price;
-            $orderDetails->total_price = $cart->total_price;
+            $orderDetails->unit_price = $cart->price;
+            $orderDetails->total_price = $cart->subtotal;
             $orderDetails->save();
-
-            $cart->delete();
         }
 
         $order->update(['is_completed' => 1, 'status' => 'success']);

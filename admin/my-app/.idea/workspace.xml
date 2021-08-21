@@ -24,9 +24,13 @@
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Cart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_07_19_185904_create_carts_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/CheckoutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/CheckoutPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/redux/actions/cartActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/redux/actions/cartActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/redux/slices/cartSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/redux/slices/cartSlice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +304,9 @@
       <workItem from="1629131348219" duration="1237000" />
       <workItem from="1629216905397" duration="810000" />
       <workItem from="1629303458561" duration="616000" />
-      <workItem from="1629390243532" duration="1431000" />
+      <workItem from="1629390243532" duration="1583000" />
+      <workItem from="1629476108878" duration="2781000" />
+      <workItem from="1629523500607" duration="5982000" />
     </task>
     <servers />
   </component>
@@ -324,11 +330,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1628795380125" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1629391184123">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1629476118983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="437" y="176" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1628442968834" />
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1629391184123" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1629476118983" />
     <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1626291333882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -337,10 +343,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1628448909533" />
-    <state x="498" y="181" width="672" height="538" key="search.everywhere.popup" timestamp="1628449296502">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1629525247842">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="498" y="181" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1628449296502" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1625652150327" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1629525247842" />
   </component>
 </project>

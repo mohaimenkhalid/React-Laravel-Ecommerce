@@ -15,6 +15,10 @@ export const cartSlice = createSlice({
                 state.totalPrice = action.payload.reduce(function (accumulator, current) {
                     return accumulator + current.subtotal;
                 }, 0);
+            } else {
+                state.items = [];
+                state.isLoading = false;
+                state.totalPrice = 0
             }
         },
     }

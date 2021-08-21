@@ -6,15 +6,15 @@ import {loadProgressBar} from "axios-progress-bar";
 import {Link, Redirect} from "react-router-dom";
 import {toast} from "react-toastify";
 import {connect} from "react-redux";
+import {store} from "../store/store";
+import {getCartAction} from "../redux/actions/cartActions";
 
 class CheckoutPage extends Component {
 
   constructor () {
     super();
     this.state = {
-      carts: [],
       isLoading: true,
-      totalPrice: 0,
       full_name: '',
       phone_no: '',
       region: '',
@@ -23,6 +23,7 @@ class CheckoutPage extends Component {
       address: '',
       payment_type: '',
       submit: false,
+      redirectAfterOrderComplete: false
     }
   }
 
@@ -30,10 +31,16 @@ class CheckoutPage extends Component {
     loadProgressBar();
   }
 
-  HomePageRedirect = () => {
+  componentDidMount() {
     if(this.props.carts.length < 1) {
-      toast.error("Your cart is empty.");
-      return <Redirect to="/" />
+      toast.error("Your cart is empty. Continue shopping.");
+      this.props.history.push("/");
+    }
+  }
+
+  redirectAfterOrder = () => {
+    if(this.state.redirectAfterOrderComplete === true) {
+      this.props.history.push("/");
     }
   };
 
@@ -76,7 +83,7 @@ class CheckoutPage extends Component {
 
   order = () => {
 
-    let totalPrice = this.state.totalPrice;
+    let totalPrice = this.props.totalPrice;
     let full_name = this.state.full_name;
     let phone_no = this.state.phone_no;
     let region = this.state.region;
@@ -94,17 +101,21 @@ class CheckoutPage extends Component {
     orderFormData.append('area', area);
     orderFormData.append('address', address);
     orderFormData.append('payment_type', payment_type);
+    orderFormData.append('carts', JSON.stringify(this.props.carts));
 
     const headers = {
       'Content-Type' : 'application/json',
       'Accept' : 'application/json',
       'Authorization' : `Bearer ${AppStorage.getToken()}`
     };
-    console.log(orderFormData);
+
     axios.post(AppURL.placeOrder, orderFormData, {headers: headers})
-      .then(function (res) {
+      .then((res) => {
         if (res.status === 200 && res.data) {
+          localStorage.removeItem('cart')
+          store.dispatch(() => getCartAction());
           toast.success(res.data.message);
+          this.setState({'redirectAfterOrderComplete': true});
         } else {
           toast.error("Something went wrong!");
         }
@@ -227,7 +238,6 @@ class CheckoutPage extends Component {
                       </tr>
                     </thead>
                     <tbody>
-
                       {
                         this.props.carts.map((product, index) => {
                           return (
@@ -289,7 +299,7 @@ class CheckoutPage extends Component {
             </div>
         </div>
 
-        { this.HomePageRedirect() }
+        { this.redirectAfterOrder() }
       </>
     );
   }
