@@ -8,7 +8,6 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
 
 Route::group(['middleware' => ['cors', 'json.response']], function () {
@@ -34,7 +33,9 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::middleware('auth:api')->group(function () {
         Route::post('/auth/logout', [AuthController::class, 'logout']);
         Route::post('/placeOrder', [OrderController::class, 'placeOrder']);
+        Route::get('/getMyOrder', [OrderController::class, 'getMyOrder']);
     });
+
 });
 
 

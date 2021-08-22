@@ -23,6 +23,7 @@ class CreateOrdersTable extends Migration
             $table->string('shipping_price')->default(0);
             $table->tinyInteger('is_completed')->default(0);
             $table->string('status')->default('pending');
+            $table->tinyInteger('shipped')->default(0);
             $table->timestamps();
         });
     }

@@ -101,8 +101,12 @@ class NavMenuDesktop extends Component {
                                             </Dropdown.Toggle>
 
                                             <Dropdown.Menu>
-                                                <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
-                                                <Dropdown.Item href="#/action-2">dashboard</Dropdown.Item>
+                                                <Dropdown.Item>
+                                                    <Link to="/my-account">My Account</Link>
+                                                </Dropdown.Item>
+                                                <Dropdown.Item>
+                                                    <Link to="/my-account/orders">My Orders</Link>
+                                                </Dropdown.Item>
                                                 <Dropdown.Item onClick={this.onLogout}>Logout</Dropdown.Item>
                                             </Dropdown.Menu>
                                         </Dropdown>

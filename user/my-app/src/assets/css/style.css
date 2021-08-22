@@ -135,3 +135,22 @@
     display: inline-block;
 }
 .contant_box_404{ margin-top:-50px;}
+
+.user-panel-left-sidebar ul{
+    list-style: none;
+}
+
+.user-panel-left-sidebar ul li a {
+    padding: 10px;
+    background: #efefef;
+    color: #000;
+    font-weight: 500;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.is-active {
+    color: #ffffff !important;
+    background: #e43023 !important;
+}
+

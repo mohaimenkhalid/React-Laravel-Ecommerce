@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {Link, matchPath} from "react-router-dom";
-import {Route, Switch} from "react-router";
-import OrderPage from "./OrderPage";
+import {NavLink} from "react-router-dom";
+import UserPanelRoute from "../../route/UserPanelRoute";
 
 class MyAccountPage extends Component {
     constructor() {
@@ -15,36 +14,21 @@ class MyAccountPage extends Component {
     }
 
     render() {
-        console.log(this.props.history);
         return (
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-4">
-                        <div className="card">
+                        <div className="card user-panel-left-sidebar">
                             <div className="card-body">
-                                <h3>My Order List</h3>
                                 <ul>
-                                    <li><Link to="/my-account">Account Setting</Link> </li>
-                                    <li><Link to="/my-account/orders">My Orders</Link> </li>
+                                    <li><NavLink exact activeClassName='is-active' to="/my-account">Account Setting</NavLink> </li>
+                                    <li><NavLink  activeClassName='is-active' to="/my-account/orders">My Orders</NavLink> </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-8">
-                        <Switch>
-                            <Route exact path="/my-account">
-                                <h3>Please select a topic.</h3>
-                            </Route>
-                            <Route path="/my-account/:pageId"
-                                render={(props) => {
-                                    console.log(props);
-                                    if(props.location.pathname === '/my-account/orders') {
-                                        return <OrderPage {...props} />
-                                    }}
-                                }
-                            />
-
-                        </Switch>
+                        <UserPanelRoute />
                     </div>
                 </div>
             </div>

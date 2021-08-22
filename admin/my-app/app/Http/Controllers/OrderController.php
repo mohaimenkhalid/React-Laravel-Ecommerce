@@ -49,4 +49,9 @@ class OrderController extends Controller
 
         return response()->json(['message' => 'Order placed successfully.']);
     }
+
+    public function getMyOrder() {
+        $orders = Order::with(['customer'])->where(['customer_id' => auth()->user()->id])->get();
+        return response()->json($orders);
+    }
 }

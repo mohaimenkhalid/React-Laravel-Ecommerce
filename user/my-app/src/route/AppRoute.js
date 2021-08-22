@@ -50,7 +50,7 @@ class AppRoute extends Component {
                     <ProtectedRoute path="/checkout" component={CheckoutPage} isAuth={this.props.isAuth} />
 
                     {/*User Panel Routes*/}
-                    <Route path="/my-account" component={MyAccountPage} />
+                    <ProtectedRoute path="/my-account" component={MyAccountPage} isAuth={this.props.isAuth} />
 
                     <Route path="*" component={NotFound} />
                 </Switch>

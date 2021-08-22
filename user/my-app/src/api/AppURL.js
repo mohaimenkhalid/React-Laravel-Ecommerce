@@ -1,3 +1,5 @@
+import AppStorage from "../helpers/AppStorage";
+
 class AppURL {
 
     static ApiBaseURL = "http://127.0.0.1:8000/api/";
@@ -29,6 +31,7 @@ class AppURL {
       return this.ApiBaseURL+'cartProductDelete/'+cartId;
     }
     static placeOrder = this.ApiBaseURL+'placeOrder';
+    static getMyOrder = this.ApiBaseURL+'getMyOrder';
 }
 
 export default AppURL;
