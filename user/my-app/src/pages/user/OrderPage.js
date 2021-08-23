@@ -40,7 +40,7 @@ class OrderPage extends Component {
                         <h3>My Order List</h3>
                         <table className="table">
                             <thead>
-                            <th>Order</th>
+                            <th>Order#</th>
                             <th>Date</th>
                             <th>Shipped To</th>
                             <th>Order Total</th>
