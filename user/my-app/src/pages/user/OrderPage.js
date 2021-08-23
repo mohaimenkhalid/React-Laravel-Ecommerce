@@ -3,6 +3,7 @@ import axios from "axios";
 import AppURL from "../../api/AppURL";
 import AppStorage from "../../helpers/AppStorage";
 import ListLoader from "../../components/loader/ListLoader";
+import {Link} from "react-router-dom";
 
 class OrderPage extends Component {
 
@@ -24,7 +25,6 @@ class OrderPage extends Component {
                 if(res.status === 200) {
                     this.setState({myOrders: res.data})
                     this.setState({isLoading: false})
-                    console.log(this.state.myOrders.length)
                 }
             })
             .catch(error => {
@@ -65,7 +65,10 @@ class OrderPage extends Component {
                                             <td>{order.total_amount}</td>
                                             <td>{order.shipped}</td>
                                             <td>
-                                                <button>View</button>
+                                                <Link to={'/my-account/orders/'+order.id} class="btn btn-info btn-sm">
+                                                    <i className="fa fa-eye" />
+                                                    <span className='ml-1'>View</span>
+                                                </Link>
                                             </td>
                                         </tr>
                                     );

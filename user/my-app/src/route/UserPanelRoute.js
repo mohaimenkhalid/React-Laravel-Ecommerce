@@ -1,21 +1,25 @@
 import React, {Component, Fragment} from 'react';
 import {Route, Switch} from "react-router";
 import OrderPage from "../pages/user/OrderPage";
+import OrderDetailsPage from "../pages/user/OrderDetailsPage";
+import MyAccountIndex from "../pages/user/MyAccountIndex";
 
 class UserPanelRoute extends Component {
     render() {
         return (
             <Fragment>
                 <Switch>
-                    <Route exact path="/my-account">
-                        <h3>Please select a topic.</h3>
-                    </Route>
-                    <Route path="/my-account/:pageId"
-                           render={(props) => {
-                               if(props.match.params.pageId === 'orders') {
-                                   return <OrderPage {...props} />
-                               }}
-                           }
+                    <Route
+                        path="/my-account"
+                        render={(props) => {
+                            return (
+                                <>
+                                    <Route path={`${props.match.path}/`} component={MyAccountIndex} exact />
+                                    <Route path={`${props.match.path}/orders`} component={OrderPage} exact />
+                                    <Route path={`${props.match.path}/orders/:orderId`} component={OrderDetailsPage}/>
+                                </>
+                            )}
+                        }
                     />
 
                 </Switch>

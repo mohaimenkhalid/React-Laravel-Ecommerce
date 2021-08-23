@@ -3,15 +3,6 @@ import {NavLink} from "react-router-dom";
 import UserPanelRoute from "../../route/UserPanelRoute";
 
 class MyAccountPage extends Component {
-    constructor() {
-        super();
-        this.state = {
-            currentUrl: ''
-        }
-    }
-    componentDidMount() {
-        this.setState({currentUrl: this.props.history.location.pathname})
-    }
 
     render() {
         return (
@@ -21,8 +12,8 @@ class MyAccountPage extends Component {
                         <div className="card user-panel-left-sidebar">
                             <div className="card-body">
                                 <ul>
-                                    <li><NavLink exact activeClassName='is-active' to="/my-account">Account Setting</NavLink> </li>
-                                    <li><NavLink  activeClassName='is-active' to="/my-account/orders">My Orders</NavLink> </li>
+                                    <li><NavLink exact activeClassName='is-active' to={this.props.match.path}>Account Setting</NavLink> </li>
+                                    <li><NavLink  activeClassName='is-active' to={`${this.props.match.path}/orders`}>My Orders</NavLink> </li>
                                 </ul>
                             </div>
                         </div>
