@@ -4,6 +4,7 @@ import AppURL from "../../api/AppURL";
 import AppStorage from "../../helpers/AppStorage";
 import ListLoader from "../../components/loader/ListLoader";
 import {Link} from "react-router-dom";
+import Moment from "react-moment";
 
 class OrderPage extends Component {
 
@@ -60,10 +61,20 @@ class OrderPage extends Component {
                                     return (
                                         <tr>
                                             <td>{order.invoice_number}</td>
-                                            <td>{order.created_at}</td>
-                                            <td></td>
+                                            <td>
+                                                {
+                                                    <Moment parse="YYYY-MM-DD HH:mm:ss" format="D MMM YYYY">
+                                                        {order.created_at}
+                                                    </Moment>
+                                                }
+                                            </td>
+                                            <td>{order.shipping_address ? order.shipping_address.full_name : ''}</td>
                                             <td>{order.total_amount}</td>
-                                            <td>{order.shipped}</td>
+                                            <td>
+                                                <span className="badge badge-secondary">
+                                                    {order.shipped === 1 ? "Shipped" : "Not Shipped"}
+                                                </span>
+                                            </td>
                                             <td>
                                                 <Link to={'/my-account/orders/'+order.id} class="btn btn-info btn-sm">
                                                     <i className="fa fa-eye" />

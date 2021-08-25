@@ -8,7 +8,7 @@ class MyAccountPage extends Component {
         return (
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-md-3">
                         <div className="card user-panel-left-sidebar">
                             <div className="card-body">
                                 <ul>
@@ -18,7 +18,7 @@ class MyAccountPage extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-9">
                         <UserPanelRoute />
                     </div>
                 </div>

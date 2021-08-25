@@ -54,4 +54,14 @@ class OrderController extends Controller
         $orders = Order::with(['customer'])->where(['customer_id' => auth()->user()->id])->get();
         return response()->json($orders);
     }
+
+    public function getOrderById($orderId) {
+        $order = Order::with(['customer', 'orderDetails', 'shippingAddress'])->where(['customer_id' => auth()->user()->id, 'id' => $orderId])->first();
+        if($order) {
+            return response()->json($order);
+        }
+        return response()->json(['message' => 'Order not found.']);
+    }
+
+
 }

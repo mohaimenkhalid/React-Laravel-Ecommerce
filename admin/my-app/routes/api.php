@@ -34,6 +34,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::post('/auth/logout', [AuthController::class, 'logout']);
         Route::post('/placeOrder', [OrderController::class, 'placeOrder']);
         Route::get('/getMyOrder', [OrderController::class, 'getMyOrder']);
+        Route::get('/getOrderById/{orderId}', [OrderController::class, 'getOrderById']);
     });
 
 });

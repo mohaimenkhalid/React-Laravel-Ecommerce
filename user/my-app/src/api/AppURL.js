@@ -32,6 +32,9 @@ class AppURL {
     }
     static placeOrder = this.ApiBaseURL+'placeOrder';
     static getMyOrder = this.ApiBaseURL+'getMyOrder';
+    static getOrderById(orderId) {
+        return this.ApiBaseURL+'getOrderById/'+orderId;
+    }
 }
 
 export default AppURL;
