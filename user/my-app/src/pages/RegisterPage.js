@@ -56,8 +56,8 @@ class RegisterPage extends Component {
             .then(res => {
                 console.log(res)
                 if(res.status === 200 && res.data.access_token) {
-                    let token = JSON.stringify(res.data.access_token);
-                    let user = JSON.stringify(res.data.user);
+                    let token = res.data.access_token;
+                    let user = res.data.user;
                     AppStorage.store(token, user)
                     this.props.history.push('/');
                     toast.success("Registration successfully Completed!");

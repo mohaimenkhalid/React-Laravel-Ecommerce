@@ -6,6 +6,7 @@ import {Button, Card, Col, Container, Row} from "react-bootstrap";
 import {Link, Redirect} from "react-router-dom";
 import {loginAction} from "../redux/actions/authActions";
 import { store } from "../store/store";
+import GoogleLoginComponent from "../components/login/GoogleLoginComponent";
 
 class LoginPage extends Component {
 
@@ -36,36 +37,7 @@ class LoginPage extends Component {
         loginFormData.append('email', email)
         loginFormData.append('password', password)
 
-        axios.post(AppURL.login, loginFormData)
-            .then(res => {
-                if(res.status === 200 && res.data.access_token) {
-                    store.dispatch(() => loginAction(res.data))
-                    this.setState({userRedirect: true});
-                    toast.success("Login Successfully!");
-                }else {
-                    if(res.data.error) {
-                        toast.error(res.data.error)
-                    }
-                    if(res.data.email && res.data.email.length > 0) {
-                        toast.error(res.data.email[0])
-                    }
-                    if(res.data.password && res.data.password.length > 0) {
-                        toast.error(res.data.password[0])
-                    }
-                }
-            })
-            .then(error => {
-                //console.log(error)
-            })
-
-    }
-
-    onUserRedirect = () => {
-        if(this.state.userRedirect === true) {
-            return (
-                <Redirect to="/" />
-            )
-        }
+        store.dispatch(()=> loginAction(loginFormData))
     }
 
     render() {
@@ -73,12 +45,14 @@ class LoginPage extends Component {
             <Fragment>
                 <Container>
                     <Row className="d-flex justify-content-center">
-                        <Col md={6} lg={6} xs={12}>
-                            <Card style={{ width: '18rem' }} className="mt-5">
+                        <Col md={5} lg={5} xs={12}>
+                            <Card className="mt-5">
                                 <Card.Img variant="top" src="" />
-                                <Card.Body>
-                                    <Card.Title>Login</Card.Title>
-                                    <p>Enter Your Login Details.</p>
+                                <Card.Body className="text-center">
+                                    <Card.Title>
+                                        <h4>Login</h4>
+                                    </Card.Title>
+                                    <p>Enter your login details.</p>
                                     <form onSubmit={this.onFormSubmit}>
                                         <div className="form-group">
                                             <input type="email" onChange={this.emailChangeHandler} className="form-control" placeholder="Email Address" required/>
@@ -89,14 +63,18 @@ class LoginPage extends Component {
                                         <div className="form-group">
                                             <small>Not Register User? <Link to="/register">Register</Link> </small>
                                         </div>
-                                        <Button variant="danger" type="submit">LOGIN</Button>
+                                        <Button className="btn-block main-login-button" variant="danger" type="submit">LOGIN</Button>
                                     </form>
+
+                                    <div className="social-divider mt-5">
+                                        <span>or</span>
+                                    </div>
+                                    <GoogleLoginComponent />
                                 </Card.Body>
                             </Card>
                         </Col>
                     </Row>
                 </Container>
-                { this.onUserRedirect() }
             </Fragment>
         );
     }

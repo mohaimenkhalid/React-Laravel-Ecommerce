@@ -74,4 +74,34 @@ class AuthController extends Controller
             'token_type' => 'Bearer',
         ]);
     }
+
+    public function socialLogin(Request $request) {
+
+        $response = $request->socialAuthResponse;
+        $user = User::where(['email' => $response['email']])->first();
+
+        if(empty($user)) {
+            $user = new User();
+            $user->first_name = $response['givenName'];
+            $user->last_name = $response['familyName'];
+            $user->email = $response['email'];
+            $user->social_auth_service = $request->socialAuthService;
+            $user->social_auth_id = $response['googleId'];
+            $user->save();
+        } else {
+            if(empty($user->social_auth_service && $user->social_auth_id)) {
+                $user->social_auth_service = $request->socialAuthService;
+                $user->social_auth_id = $response['googleId'];
+                $user->save();
+            }
+        }
+
+        $token = $user->createToken('Login Token With Google')->accessToken;
+
+        return response()->json([
+            'access_token' => $token,
+            'user' => $user,
+            'token_type' => 'Bearer',
+        ]);
+    }
 }

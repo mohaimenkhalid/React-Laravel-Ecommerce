@@ -37,6 +37,7 @@ class NavMenuDesktop extends Component {
           if(res.status === 200 && res.data.status === true) {
               store.dispatch(() => logoutAction())
               this.setState({ homeRedirect: true });
+              this.HomeRedirect();
               toast.success("You are logged out!");
           }
         })
@@ -122,7 +123,6 @@ class NavMenuDesktop extends Component {
                         </Col>
                     </Row>
                 </Navbar>
-              { this.HomeRedirect() }
             </Fragment>
         );
     }
