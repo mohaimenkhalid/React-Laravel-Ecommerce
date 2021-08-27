@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\Payment;
 use App\Models\ShippingAddress;
 use Illuminate\Http\Request;
 use App\Models\OrderDetails;
@@ -49,7 +50,38 @@ class OrderController extends Controller
             $orderDetails->save();
         }
 
-        $order->update(['is_completed' => 1, 'status' => 'success']);
+        //Payment start
+        try {
+            $stripe = new \Stripe\StripeClient(
+                'sk_test_51JT1fGH9lpuw7xB2EwwLks4SEUFTRNMcwfkiHQQOXabvcxFFCkje42HBbWdualpPoxTCul1V065XaXlZpwwqIMoU003Sg6xWrf'
+            );
+            //Create Payment Intent
+            $paymentIntent = $stripe->paymentIntents->create([
+                'amount' => $request->total_amount*100,
+                'currency' => 'usd',
+                'payment_method_types' => ['card'],
+            ]);
+
+            $payment =  $stripe->paymentIntents->confirm(
+                $paymentIntent->id,
+                ['payment_method' => 'pm_card_visa']
+            );
+            $tnx_id =  $payment->charges->data[0]->id;
+
+            $paymentCreate = new Payment();
+            $paymentCreate->order_id = $order->id;
+            $paymentCreate->payment_method = Order::PAY_WITH_STRIPE;
+            $paymentCreate->tnx_id = $tnx_id;
+            $paymentCreate->amount = $request->total_amount;
+            $paymentCreate->currency = 'usd';
+            $paymentCreate->status = 'success';
+            $paymentCreate->save();
+        } catch (\Exception $e) {
+            $order->update(['is_completed' => 2, 'status' => 'pending']);
+            return response()->json(['message' => 'Order placed but payment is not completed.']);
+        }
+
+        $order->update(['payment_id' => $paymentCreate->id, 'is_completed' => 1, 'status' => 'success']);
 
         return response()->json(['message' => 'Order placed successfully.']);
     }

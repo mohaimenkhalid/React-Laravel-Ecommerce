@@ -5,6 +5,7 @@ import {toast} from "react-toastify";
 import axios from "axios";
 import AppStorage from "../../helpers/AppStorage";
 import ListLoader from "../../components/loader/ListLoader";
+import Moment from "react-moment";
 
 class OrderDetailsPage extends Component {
 
@@ -48,7 +49,12 @@ class OrderDetailsPage extends Component {
                 <div className="card mt-3">
                     <div className="card-body">
                         <h5>Order #{this.state.order.invoice_number}</h5>
-                        <h6>Order Date: {this.state.order.created_at}</h6>
+                        <h6>Order Date: {
+                            <Moment parse="YYYY-MM-DD HH:mm:ss" format="D MMM YYYY">
+                                {this.state.order.created_at}
+                            </Moment>
+                            }
+                        </h6>
                         <h6>Order Status: <span className="badge badge-info">{this.state.order.shipping_status}</span></h6>
                         <div>
                             <table className="table">

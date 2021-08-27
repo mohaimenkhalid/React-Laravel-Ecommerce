@@ -30,7 +30,8 @@ class CheckoutPage extends Component {
       processing: false,
       error: null,
       disabled: true,
-      email: ''
+      email: '',
+      isProcessingPayment: false
     }
   }
 
@@ -65,7 +66,7 @@ class CheckoutPage extends Component {
 
   redirectAfterOrder = () => {
     if(this.state.redirectAfterOrderComplete === true) {
-      this.props.history.push("/");
+      this.props.history.push("/my-account/orders");
     }
   };
 
@@ -107,13 +108,13 @@ class CheckoutPage extends Component {
     } else {
       this.setState({error: ""});
     }
-
   };
 
-  confirmOrder = (e) =>{
+  confirmOrder = (e) => {
     e.preventDefault();
     this.setState({submit: true});
     if(this.validate() !== false) {
+      this.setState({isProcessingPayment: true});
       this.order();
     } else {
       this.setState({submit: false});
@@ -152,6 +153,7 @@ class CheckoutPage extends Component {
         if (res.status === 200 && res.data) {
           localStorage.removeItem('cart')
           store.dispatch(() => getCartAction());
+          this.setState({isProcessingPayment: false});
           toast.success(res.data.message);
           this.setState({'redirectAfterOrderComplete': true});
         } else {
@@ -186,7 +188,7 @@ class CheckoutPage extends Component {
       toast.error("Payment Type field is empty.", {position: "bottom-left",});
     }
 
-    if(this.state.email === '') {
+    if(this.state.payment_type === 'pay_with_stripe' && this.state.email === '') {
       toast.error("Email field is empty.", {position: "bottom-left",});
     }
 
@@ -387,6 +389,18 @@ class CheckoutPage extends Component {
                     </div>
                 </div>
             </div>
+            {
+              this.state.isProcessingPayment === true ?
+                  (
+                      <div className="login-overlay text-center">
+                        <div>
+                          <i className="fa fa-spinner fa-spin"></i><br />
+                          <h5>Your Payment is Processing please wait...</h5>
+                        </div>
+                      </div>
+                  ) : ''
+
+            }
         </div>
 
         { this.redirectAfterOrder() }
