@@ -15,6 +15,10 @@ class OrderController extends Controller
             $payment_type = Order::CASH_ON_DELIVERY;
         }
 
+        if($request->payment_type == 'pay_with_stripe') {
+            $payment_type = Order::PAY_WITH_STRIPE;
+        }
+
         $carts = json_decode($request->carts);
         $order = new Order;
         $order->customer_id = auth()->user()->id;

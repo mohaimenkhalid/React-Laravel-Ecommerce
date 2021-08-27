@@ -3,11 +3,14 @@ import AppStorage from "../helpers/AppStorage";
 import axios from "axios";
 import AppURL from "../api/AppURL";
 import {loadProgressBar} from "axios-progress-bar";
-import {Link, Redirect} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {toast} from "react-toastify";
 import {connect} from "react-redux";
 import {store} from "../store/store";
 import {getCartAction} from "../redux/actions/cartActions";
+import { loadStripe } from "@stripe/stripe-js";
+import {CardElement, Elements} from "@stripe/react-stripe-js";
+import "../assets/css/stripe.css";
 
 class CheckoutPage extends Component {
 
@@ -21,22 +24,44 @@ class CheckoutPage extends Component {
       city: '',
       area: '',
       address: '',
-      payment_type: '',
+      payment_type: 'cash_on_delivery',
       submit: false,
-      redirectAfterOrderComplete: false
+      redirectAfterOrderComplete: false,
+      processing: false,
+      error: null,
+      disabled: true,
+      email: ''
     }
   }
+
+   cardStyle = {
+     style: {
+       base: {
+         color: "#32325d",
+         fontFamily: 'Arial, sans-serif',
+         fontSmoothing: "antialiased",
+         fontSize: "16px",
+         "::placeholder": {
+           color: "#32325d"
+         }
+       },
+       invalid: {
+         color: "#fa755a",
+         iconColor: "#fa755a"
+       }
+     }
+  };
 
   componentWillMount () {
     loadProgressBar();
   }
 
-  componentDidMount() {
+  /*componentDidMount() {
     if(this.props.carts.length < 1) {
       toast.error("Your cart is empty. Continue shopping.");
       this.props.history.push("/");
     }
-  }
+  }*/
 
   redirectAfterOrder = () => {
     if(this.state.redirectAfterOrderComplete === true) {
@@ -71,6 +96,20 @@ class CheckoutPage extends Component {
     this.setState({payment_type: e.target.value});
   };
 
+  handleCardChange = (event) => {
+    // Listen for changes in the CardElement
+    // and display any errors as the customer types their card details
+    this.setState({disabled: event.empty })
+
+    if(event.error) {
+      this.setState({error: event.error.message});
+      this.setState({disabled: true })
+    } else {
+      this.setState({error: ""});
+    }
+
+  };
+
   confirmOrder = (e) =>{
     e.preventDefault();
     this.setState({submit: true});
@@ -82,7 +121,6 @@ class CheckoutPage extends Component {
   };
 
   order = () => {
-
     let totalPrice = this.props.totalPrice;
     let full_name = this.state.full_name;
     let phone_no = this.state.phone_no;
@@ -121,7 +159,6 @@ class CheckoutPage extends Component {
         }
       })
       .catch(function (error) {
-        //this.setState({submit: false});
         console.log(error)
       })
   }
@@ -149,6 +186,10 @@ class CheckoutPage extends Component {
       toast.error("Payment Type field is empty.", {position: "bottom-left",});
     }
 
+    if(this.state.email === '') {
+      toast.error("Email field is empty.", {position: "bottom-left",});
+    }
+
     if(this.state.full_name === ''
       || this.state.phone_no === ''
       || this.state.region === ''
@@ -161,9 +202,8 @@ class CheckoutPage extends Component {
     }
   }
 
-
   render() {
-
+    const promise = loadStripe("pk_test_51JT1fGH9lpuw7xB2N43mzN5hNVz1sWNoIKpZ9hRQ6sOL6YYsD5KqkVvF1NuSpxosBIF9sSAix4WSxHEA8249kffB00tCPGLZsT");
     if (this.props.isLoading === true) {
       return (
         <div className="row">
@@ -215,14 +255,23 @@ class CheckoutPage extends Component {
 
                   <div className="row">
                     <label className="col-12"><strong>Payment Type</strong></label>
-                    <div className="form-group col-12">
-                      <select className="form-control" onChange={this.paymentTypeChangeHandle}>
-                        <option value="">Select Payment Type</option>
-                        <option value="cash_on_delivery">Cash on Delivery</option>
-                        <option value="">Stripe</option>
-                      </select>
+                    <div className="form-group col-12 d-flex">
+
+                      <div className="form-check">
+                        <input className="form-check-input" type="radio" onChange={this.paymentTypeChangeHandle} name="flexRadioDefault" id="CashOnDelivery" value="cash_on_delivery" defaultChecked />
+                          <label className="form-check-label" htmlFor="CashOnDelivery">
+                            Cash On Delivery
+                          </label>
+                      </div>
+                      <div className="form-check ml-3">
+                        <input className="form-check-input" type="radio" onChange={this.paymentTypeChangeHandle} value="pay_with_stripe" name="flexRadioDefault" id="payWithStripe" />
+                          <label className="form-check-label" htmlFor="payWithStripe">
+                            Pay with Stripe
+                          </label>
+                      </div>
                     </div>
                   </div>
+
                 </div>
               </div>
               <div className="card w-100 mt-3">
@@ -291,9 +340,50 @@ class CheckoutPage extends Component {
                           { this.props.totalPrice }
                         </h6>
                       </div>
-                      <button onClick={this.confirmOrder} className="btn btn-danger btn-lg btn-block mt-5" disabled={this.state.submit}>
-                        {this.state.submit ? (<div>< i className="fa fa-spin fa-spinner mr-2" /> Processing...</div>) : 'Place Order'}
-                      </button>
+
+                      {
+                        this.state.payment_type === 'pay_with_stripe'
+                            ?
+                            (<div className="row">
+                              <div className="form-group col-12">
+                                <Elements stripe={promise}>
+                                  <form id="payment-form" onSubmit={this.confirmOrder}>
+                                    <input
+                                        type="text"
+                                        value={this.state.email}
+                                        onChange={(e) => this.setState({email: e.target.value})}
+                                        placeholder="Enter email address"
+                                    />
+                                    <CardElement id="card-element" options={this.cardStyle} onChange={this.handleCardChange} />
+                                    <button
+                                        disabled={this.state.processing || this.state.disabled}
+                                        id="submit"
+                                    >
+                                    <span id="button-text">
+                                      {this.state.processing ? (
+                                          <div className="spinner" id="spinner"></div>
+                                      ) : (
+                                          "Pay now"
+                                      )}
+                                    </span>
+                                    </button>
+                                    {/* Show any error that happens when processing the payment */}
+                                    {this.state.error && (
+                                        <div className="card-error text-danger text-center my-2" role="alert">
+                                          <strong>{this.state.error}</strong>
+                                        </div>
+                                    )}
+                                  </form>
+                                </Elements>
+                              </div>
+                            </div>)
+                            :
+                            (
+                                <button onClick={this.confirmOrder} className="btn btn-danger btn-lg btn-block mt-5" disabled={this.state.submit}>
+                                  {this.state.submit ? (<div>< i className="fa fa-spin fa-spinner mr-2" /> Processing...</div>) : 'Place Order'}
+                                </button>
+                            )
+                      }
                     </div>
                 </div>
             </div>

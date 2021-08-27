@@ -13,6 +13,7 @@ class Order extends Model
     protected $appends = ['invoice_number', 'shipping_status', 'full_shipping_address', 'payment_method'];
 
     CONST CASH_ON_DELIVERY = 1;
+    CONST PAY_WITH_STRIPE = 2;
 
     CONST NOT_SHIPPED = 0;
     CONST SHIPPED = 1;
