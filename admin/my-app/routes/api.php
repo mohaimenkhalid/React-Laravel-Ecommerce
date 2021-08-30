@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VisitorController;
 use App\Http\Controllers\ContactController;
@@ -38,6 +39,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::post('/placeOrder', [OrderController::class, 'placeOrder']);
         Route::get('/getMyOrder', [OrderController::class, 'getMyOrder']);
         Route::get('/getOrderById/{orderId}', [OrderController::class, 'getOrderById']);
+        Route::post('/updateProfile', [UserController::class, 'updateProfile']);
     });
 
 });

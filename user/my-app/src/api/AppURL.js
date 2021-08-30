@@ -36,6 +36,7 @@ class AppURL {
         return this.ApiBaseURL+'getOrderById/'+orderId;
     }
     static socialLogin = this.ApiBaseURL+'auth/social/login';
+    static updateProfile = this.ApiBaseURL+'updateProfile';
 }
 
 export default AppURL;
