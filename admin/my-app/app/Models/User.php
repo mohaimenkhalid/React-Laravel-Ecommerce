@@ -12,6 +12,8 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $appends = ['profile_url'];
+
     /**
      * The attributes that are mass assignable.
      *
@@ -43,4 +45,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    CONST USER_PROFILE_UPLOAD_PATH = 'upload/profile/';
+
+    public function getProfileUrlAttribute() {
+        return self::USER_PROFILE_UPLOAD_PATH.''.$this->image;
+    }
 }

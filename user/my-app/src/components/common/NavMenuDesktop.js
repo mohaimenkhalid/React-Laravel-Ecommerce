@@ -11,6 +11,7 @@ import {connect} from 'react-redux';
 import {logoutAction} from "../../redux/actions/authActions";
 import {store} from "../../store/store";
 import {getCartAction} from "../../redux/actions/cartActions";
+import noProfileImage from "../../assets/images/no-profile.jpg";
 
 class NavMenuDesktop extends Component {
 
@@ -98,6 +99,7 @@ class NavMenuDesktop extends Component {
                                             <Dropdown.Toggle variant="default"
                                                              id="dropdown-basic dropdown-button-drop-left"
                                                              drop="left">
+                                                <img style={{borderRadius: "1rem"}} alt="" src={this.props.user.image !== null ? `${AppURL.ServerBaseURL+'/'+this.props.user.profile_url}` : noProfileImage} width={30} className="mr-2"/>
                                                 {this.props.user.first_name}
                                             </Dropdown.Toggle>
 

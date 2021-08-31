@@ -18,6 +18,10 @@ export const authSlice = createSlice({
             state.isAuth = !!AppStorage.getToken();
             state.access_token = AppStorage.getToken();
             state.user = AppStorage.getUser();
+        },
+
+        setUser(state, action) {
+            state.user =  AppStorage.getUser();
         }
     }
 })

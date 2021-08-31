@@ -43,7 +43,6 @@ export const logoutAction = () => {
 //Login from google
 export const loginWithGoogle = (loginResponseData, socialAuthService) => {
     if(loginResponseData.tokenId) {
-        console.log("ok")
         axios.post(AppURL.socialLogin, {socialAuthResponse: loginResponseData.profileObj, 'socialAuthService': socialAuthService})
             .then(res=> {
                 console.log(res);
@@ -56,4 +55,9 @@ export const loginWithGoogle = (loginResponseData, socialAuthService) => {
             })
             .carch(err => console.log(err))
     }
+}
+
+export const setUserDetails = (user) => {
+    AppStorage.setUser(user);
+    store.dispatch(authSlices.setUser(user));
 }
