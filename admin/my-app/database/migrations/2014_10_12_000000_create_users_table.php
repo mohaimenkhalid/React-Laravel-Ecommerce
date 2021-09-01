@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('image')->nullable();
             $table->string('social_auth_service')->nullable();
             $table->string('social_auth_id')->nullable();
+            $table->string('guard')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

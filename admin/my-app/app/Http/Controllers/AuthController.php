@@ -21,6 +21,13 @@ class AuthController extends Controller
             return response()->json($validator->messages());
         }
 
+        $checkAuthGuard = User::whereEmail($request->email)->first();
+        if(!empty($checkAuthGuard) && $checkAuthGuard->guard != null) {
+            return response()->json([
+                'error' => 'Invalid login credentials.'
+            ]);
+        }
+
         if (!Auth::attempt($request->only('email', 'password'))) {
             return response()->json([
                 'error' => 'Invalid login credentials.'

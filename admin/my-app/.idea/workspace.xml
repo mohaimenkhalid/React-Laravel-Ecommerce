@@ -26,15 +26,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/my-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my-app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavMenuDesktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavMenuDesktop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/user/MyAccountIndex.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/user/MyAccountIndex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/redux/actions/authActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/redux/actions/authActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/redux/slices/authSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/redux/slices/authSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,6 +210,7 @@
       <path value="$PROJECT_DIR$/vendor/laravel/passport" />
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1u2cZilYlW7K5ZW1e4AFzfT16Qv" />
@@ -220,7 +223,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../user/my-app" />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs/role-management-laravel" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -309,7 +312,8 @@
       <workItem from="1629994939861" duration="4634000" />
       <workItem from="1630043169744" duration="7855000" />
       <workItem from="1630336109422" duration="2046000" />
-      <workItem from="1630427400578" duration="10774000" />
+      <workItem from="1630427400578" duration="10775000" />
+      <workItem from="1630512829687" duration="8066000" />
     </task>
     <servers />
   </component>
@@ -333,11 +337,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1628795380125" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1630336136575">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1630518390587">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1630518390587" />
+    <state x="603" y="201" key="FileChooserDialogImpl" timestamp="1630516285233">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="437" y="176" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1628442968834" />
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1630336136575" />
+    <state x="603" y="201" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1630516285233" />
     <state x="733" y="243" key="NewPhpClassDialog" timestamp="1630353901318">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -359,10 +367,10 @@
     </state>
     <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1628448909533" />
     <state x="531" y="236" width="840" height="855" key="run.anything.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1630081608402" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1630430763290">
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1630517305728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="498" y="181" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1628449296502" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1630430763290" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1630517305728" />
   </component>
 </project>
