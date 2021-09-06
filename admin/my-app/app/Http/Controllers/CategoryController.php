@@ -16,4 +16,5 @@ class CategoryController extends Controller
                     ->take(6)->get();
         return response()->json($category);
     }
+
 }
