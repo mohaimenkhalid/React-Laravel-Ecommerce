@@ -31,7 +31,7 @@
                             @if($category->image !== null)
                                 <img src="{{ asset($category->image) }}" width="100">
                             @endif
-                            <input type="text" name="old_image" value="{{ $category->image }}" class="form-control">
+                            <input type="hidden" name="old_image" value="{{ $category->image }}" class="form-control">
                             <input type="file" name="image" class="form-control">
                         </div>
 
