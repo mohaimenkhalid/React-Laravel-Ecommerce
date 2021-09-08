@@ -28,7 +28,7 @@
                                     <strong>{!! $category->product_level == 1 ? "<span class='badge badge-success'>product level</span>" : '' !!}</strong>
                                     <i class="fa fa-chevron-right"></i>
                                 </p>
-                                <a class="btn btn-primary text-white">Edit</a>
+                                <a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-primary text-white">Edit</a>
                             </div>
 
                             <div id="collapseOne-{{$key}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -47,7 +47,7 @@
                                                                 <i class="fa fa-chevron-right"></i>
                                                             @endif
                                                         </p>
-                                                        <a class="btn btn-primary text-white">Edit</a>
+                                                        <a href="{{ route('admin.category.edit', $subcategory->id) }}" class="btn btn-primary text-white">Edit</a>
                                                     </div>
 
                                                     <div id="subcategory-{{$subkey}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -63,7 +63,7 @@
                                                                                     <strong>{{ $subsubcategory->name }}</strong>
                                                                                     <strong>{!! $subsubcategory->product_level == 1 ? "<span class='badge badge-success'>product level</span>" : '' !!}</strong>
                                                                                 </p>
-                                                                                <a class="btn btn-primary text-white">Edit</a>
+                                                                                <a href="{{ route('admin.category.edit', $subsubcategory->id) }}" class="btn btn-primary text-white">Edit</a>
                                                                             </div>
 
                                                                         </div>

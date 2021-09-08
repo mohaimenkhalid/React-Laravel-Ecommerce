@@ -25,10 +25,8 @@
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_06_27_180829_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_06_27_180829_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,19 +214,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../user/my-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/category" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\react-ecommerce-project\admin\my-app\app\Http\Controllers\Backend" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\react-ecommerce-project\admin\my-app\resources\views\backend\category" />
       <recent name="E:\react-ecommerce-project\admin\my-app\public" />
       <recent name="C:\xampp\htdocs\react-ecommerce-project\react-ecommerce-project\admin\my-app\resources\views" />
       <recent name="E:\react-ecommerce-project\admin\my-app\database\migrations" />
       <recent name="E:\react-ecommerce-project\admin\my-app\resources\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\react-ecommerce-project\admin\my-app\app\Http\Controllers\Backend" />
     </key>
   </component>
   <component name="RunManager">
@@ -312,7 +311,7 @@
       <workItem from="1630427400578" duration="10775000" />
       <workItem from="1630512829687" duration="8066000" />
       <workItem from="1630945259018" duration="10298000" />
-      <workItem from="1631115859898" duration="5982000" />
+      <workItem from="1631115859898" duration="11749000" />
     </task>
     <servers />
   </component>
@@ -332,10 +331,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1628795380125">
+    <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1631128221739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1628795380125" />
+    <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1631128221739" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1630948344789">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

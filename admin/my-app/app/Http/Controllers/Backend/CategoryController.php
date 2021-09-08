@@ -52,6 +52,47 @@ class CategoryController extends Controller
         return back()->with('success', 'Category added successfully');
     }
 
+    public function edit(Category $category) {
+        $categories = Category::where(['product_level' => null, 'level' => 1])
+            ->with('singleChildren' , function($q) {
+                $q->where('product_level', null);
+            })->get();
+        return view('backend.category.edit', compact('category', 'categories'));
+    }
+
+    public function update(Category $category, Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'slug' => 'required',
+        ]);
+
+        $category->name = $request->name;
+        $category->slug = $request->slug;
+        $category->parent_id = $request->parent_id;
+        $category->product_level = $request->product_level ? $request->product_level : null;
+        $category->featured = $request->featured ? $request->featured : 0;
+        $parent_category = Category::find($request->parent_id);
+        if($parent_category) {
+            $category->level = $parent_category->level+1;
+        } else {
+            $category->level = 1;
+        }
+        $image = $request->image;
+        if ($request->image) {
+            if(!empty($category->image)){
+                unlink(public_path($category->image));
+            }
+            $imageName = Str::slug(strtolower($request->name)).'.'. $image->getClientOriginalExtension();
+            $image->move(public_path(Category::IMAGE_UPLOAD_PATH), $imageName);
+            $image_path = Category::IMAGE_UPLOAD_PATH.$imageName;
+            $category->image = $image_path;
+        } else {
+            $category->image = $request->old_image;
+        }
 
 
+        $category->save();
+
+        return back()->with('success', 'Category updated successfully');
+    }
 }
