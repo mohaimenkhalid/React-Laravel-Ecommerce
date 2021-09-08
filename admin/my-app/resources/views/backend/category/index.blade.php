@@ -10,8 +10,13 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
+                <div class="card-header mt-2">
+                    <div class="d-flex justify-content-between">
+                        <h5><strong>Category List</strong></h5>
+                        <a href="{{ route('admin.category.create') }}" class="btn btn-primary">Create Category</a>
+                    </div>
+                </div>
                 <div class="card-body">
-                   <h5>Category List</h5>
                     <div class="accordion" id="accordionExample">
                         @foreach($parent_categories as $key => $category)
                         <div class="card">

@@ -25,3 +25,4 @@ Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 Route::get('/category', [CategoryController::class, 'index'])->name('admin.category.index');
 Route::get('/category/create', [CategoryController::class, 'create'])->name('admin.category.create');
 Route::post('/category/store', [CategoryController::class, 'store'])->name('admin.category.store');
+Route::post('/category/edit/{id}', [CategoryController::class, 'edit'])->name('admin.category.edit');

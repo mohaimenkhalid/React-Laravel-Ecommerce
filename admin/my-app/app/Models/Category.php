@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     CONST FEATURED_CATEGORY = 1;
+    CONST IMAGE_UPLOAD_PATH = '/upload/category/';
 
     public function singleChildren() {
         return $this->hasMany(Category::class, 'parent_id');

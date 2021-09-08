@@ -19,6 +19,8 @@ class CreateCategoriesTable extends Migration
             $table->string('slug');
             $table->string('image')->nullable();
             $table->integer('parent_id')->nullable();
+            $table->tinyInteger('level')->nullable();
+            $table->tinyInteger('product_level')->nullable();
             $table->tinyInteger('featured')->default(0)->nullable();
             $table->tinyInteger('product_level')->nullable();
             $table->tinyInteger('status')->default(1)->nullable();
