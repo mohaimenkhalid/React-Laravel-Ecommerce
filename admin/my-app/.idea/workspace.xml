@@ -24,8 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,20 +213,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/category" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\react-ecommerce-project\admin\my-app\app\Http\Controllers\Backend" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\react-ecommerce-project\admin\my-app\resources\views\backend" />
       <recent name="E:\react-ecommerce-project\admin\my-app\resources\views\backend\category" />
       <recent name="E:\react-ecommerce-project\admin\my-app\public" />
       <recent name="C:\xampp\htdocs\react-ecommerce-project\react-ecommerce-project\admin\my-app\resources\views" />
       <recent name="E:\react-ecommerce-project\admin\my-app\database\migrations" />
-      <recent name="E:\react-ecommerce-project\admin\my-app\resources\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\react-ecommerce-project\admin\my-app\app\Http\Controllers\Backend" />
     </key>
   </component>
   <component name="RunManager">
@@ -309,7 +310,8 @@
       <workItem from="1630427400578" duration="10775000" />
       <workItem from="1630512829687" duration="8066000" />
       <workItem from="1630945259018" duration="10298000" />
-      <workItem from="1631115859898" duration="11847000" />
+      <workItem from="1631115859898" duration="12285000" />
+      <workItem from="1631202592996" duration="9968000" />
     </task>
     <servers />
   </component>
@@ -333,10 +335,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1631128221739" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1630948344789">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1631215098204">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1630948344789" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1631215098204" />
     <state x="603" y="201" key="FileChooserDialogImpl" timestamp="1630698472494">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -354,19 +356,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1626291333882" />
-    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1630699982638">
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1631128882336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1630699982638" />
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1631128882336" />
     <state x="531" y="236" width="840" height="855" key="run.anything.popup" timestamp="1630081608402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1628448909533" />
     <state x="531" y="236" width="840" height="855" key="run.anything.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1630081608402" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1630696608591">
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1631208662013">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="498" y="181" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1628449296502" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1630696608591" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1631208662013" />
   </component>
 </project>
