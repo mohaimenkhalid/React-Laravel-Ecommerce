@@ -56,6 +56,8 @@ class Order extends Model
     public function getPaymentMethodAttribute() {
         if($this->payment_type == self::CASH_ON_DELIVERY) {
             return "Cash On Delivery";
+        } else {
+            return "Pay with stripe";
         }
     }
 }

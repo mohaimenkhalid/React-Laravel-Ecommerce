@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProductController;
+use \App\Http\Controllers\Backend\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,4 +36,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/product/store', [ProductController::class, 'store'])->name('admin.product.store');
     Route::get('/product/edit/{product}', [ProductController::class, 'edit'])->name('admin.product.edit');
     Route::post('/product/update/{id}', [ProductController::class, 'update'])->name('admin.product.update');
+
+    Route::get('/orders', [OrderController::class, 'index'])->name('admin.orders.index');
+    Route::get('/orders/view/{id}', [OrderController::class, 'view'])->name('admin.orders.view');
 });
