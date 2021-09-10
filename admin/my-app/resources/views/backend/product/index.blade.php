@@ -13,7 +13,7 @@
                 <div class="card-header mt-2">
                     <div class="d-flex justify-content-between">
                         <h5><strong>Product List</strong></h5>
-                        <a href="{{ route('admin.category.create') }}" class="btn btn-primary">Create Product</a>
+                        <a href="{{ route('admin.product.create') }}" class="btn btn-primary">Create Product</a>
                     </div>
                 </div>
                 <div class="card-body">

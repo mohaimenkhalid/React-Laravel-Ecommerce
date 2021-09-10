@@ -38,6 +38,12 @@
                         <p>Category</p>
                     </a>
                 </li>
+                <li class="nav-item {{ Request::is('product') || Request::is('product/*') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('admin.product.index') }}">
+                        <i class="material-icons">Product</i>
+                        <p>Product</p>
+                    </a>
+                </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="./user.html">
                         <i class="material-icons">person</i>

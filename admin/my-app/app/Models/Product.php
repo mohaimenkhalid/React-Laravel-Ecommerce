@@ -12,6 +12,8 @@ class Product extends Model
     CONST FEATURED_PRODUCT = 1;
     CONST NEW_PRODUCT = 2;
     CONST COLLECTION_PRODUCT = 3;
+    CONST IMAGE_UPLOAD_PATH = '/upload/products/';
+    CONST SLIDER_IMAGE_UPLOAD_PATH = '/upload/products/slider/';
 
     public function product_details() {
         return $this->hasOne(ProductDetails::class, 'product_id');

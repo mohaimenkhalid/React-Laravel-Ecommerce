@@ -16,7 +16,7 @@
                     @endif
                     <h5>Product Create</h5>
 
-                    <form class="mt-5" method="post" action="" enctype="multipart/form-data">
+                    <form class="mt-5" method="post" action="/product/store" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label>Product Name</label>
@@ -24,7 +24,7 @@
                         </div>
                         <div class="form-group">
                             <label>Product Category</label>
-                            <select name="category_id" class="form-control">
+                            <select name="category_id" class="form-control" required>
                                 <option value="">Select category</option>
                                 @foreach($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->category_path }}</option>
@@ -41,17 +41,17 @@
 
                         <div class="form-group">
                             <label>Product Price</label>
-                            <input type="text" name="price" class="form-control" placeholder="Enter product price" required>
+                            <input type="number" name="price" class="form-control" placeholder="Enter product price" required>
                         </div>
 
                         <div class="form-group">
                             <label>Special Price</label>
-                            <input type="text" name="special_price" class="form-control" placeholder="Enter special price" >
+                            <input type="number" name="special_price" class="form-control" placeholder="Enter special price" >
                         </div>
 
                         <div class="form-group">
                             <label>Unit</label>
-                            <input type="text" name="unit" class="form-control" placeholder="Enter product unit" >
+                            <input type="text" name="unit" class="form-control" placeholder="Enter product unit" required>
                         </div>
                         <div class="form-group">
                             <label>Product Code</label>

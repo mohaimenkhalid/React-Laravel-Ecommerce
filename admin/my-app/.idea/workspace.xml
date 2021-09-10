@@ -24,9 +24,57 @@
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/aer-power-pocket-bathroom-fragrance-berry-rush-10-gm.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/aer-power-pocket-bathroom-fragrance-berry-rush-10-gm.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/aer-power-pocket-bathroom-fragrance-fresh-blossom-10gm.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/aer-power-pocket-bathroom-fragrance-fresh-blossom-10gm.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/almer-air-freshener-deodorizer-250-ml.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/almer-air-freshener-deodorizer-250-ml.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/almer-air-freshener-free-almer-toilet-seat-sanitizer-50-ml-450-ml.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/angelic-fresh-air-freshener-orchid-breeze-300-ml.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/angelic-fresh-air-freshener-orchid-breeze-300-ml.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/baccaurea-motleyana-lotkon-500-gm.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/baccaurea-motleyana-lotkon-500-gm.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/cherry-pineapple-1-pcs.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/cherry-pineapple-1-pcs.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/china-fuji-apple-net-weight-50-gm-1-kg.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/china-fuji-apple-net-weight-50-gm-1-kg.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/coconut-1-pcs.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/coconut-1-pcs.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/dragon-fruit-local-net-weight-100-gm-11-kg.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/dragon-fruit-local-net-weight-100-gm-11-kg.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/green-coconut-daab-1-pcs.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/green-coconut-daab-1-pcs.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/mabroom-al-madina-premium-dates-sealed-500-gm.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/mabroom-al-madina-premium-dates-sealed-500-gm.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/malta-net-weight-50-gm-1-kg.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/malta-net-weight-50-gm-1-kg.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/odonil-air-freshener-block-mix-fragrance-buy-50-gm.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/odonil-air-freshener-block-mix-fragrance-buy-50-gm.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/odonil-air-freshener-block-orchid-dew-50-gm.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/odonil-air-freshener-block-orchid-dew-50-gm.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/orange-south-africa-1-kg.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/orange-south-africa-1-kg.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/pear-green-nashpati-2-pcs.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/pear-green-nashpati-2-pcs.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/pear-white-2-pcs.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/pear-white-2-pcs.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/pineapple-1-pcs.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/pineapple-1-pcs.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/pomegranate-2-pcs.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/pomegranate-2-pcs.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/red-grapes-250-gm.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/red-grapes-250-gm.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/images/products/spring-air-freshener-lemon-fresh-300-ml.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload/products/spring-air-freshener-lemon-fresh-300-ml.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/product/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/product/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/product/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/aer-power-pocket-bathroom-fragrance-berry-rush-10-gm.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/aer-power-pocket-bathroom-fragrance-fresh-blossom-10gm.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/almer-air-freshener-deodorizer-250-ml.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/almer-air-freshener-free-almer-toilet-seat-sanitizer-50-ml-450-ml.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/angelic-fresh-air-freshener-orchid-breeze-300-ml.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/baccaurea-motleyana-lotkon-500-gm.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/cherry-pineapple-1-pcs.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/china-fuji-apple-net-weight-50-gm-1-kg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/coconut-1-pcs.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/dragon-fruit-local-net-weight-100-gm-11-kg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/green-coconut-daab-1-pcs.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/mabroom-al-madina-premium-dates-sealed-500-gm.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/malta-net-weight-50-gm-1-kg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/odonil-air-freshener-block-mix-fragrance-buy-50-gm.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/odonil-air-freshener-block-orchid-dew-50-gm.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/orange-south-africa-1-kg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/pear-green-nashpati-2-pcs.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/pear-white-2-pcs.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/pineapple-1-pcs.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/pomegranate-2-pcs.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/red-grapes-250-gm.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/products/spring-air-freshener-lemon-fresh-300-ml.webp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,15 +266,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\react-ecommerce-project\admin\my-app\app\Http\Controllers\Backend" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\react-ecommerce-project\admin\my-app\resources\views\backend" />
       <recent name="E:\react-ecommerce-project\admin\my-app\resources\views\backend\category" />
       <recent name="E:\react-ecommerce-project\admin\my-app\public" />
       <recent name="C:\xampp\htdocs\react-ecommerce-project\react-ecommerce-project\admin\my-app\resources\views" />
       <recent name="E:\react-ecommerce-project\admin\my-app\database\migrations" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\react-ecommerce-project\admin\my-app\public\upload" />
+      <recent name="E:\react-ecommerce-project\admin\my-app\app\Http\Controllers\Backend" />
     </key>
   </component>
   <component name="RunManager">
@@ -311,7 +360,8 @@
       <workItem from="1630512829687" duration="8066000" />
       <workItem from="1630945259018" duration="10298000" />
       <workItem from="1631115859898" duration="12285000" />
-      <workItem from="1631202592996" duration="9968000" />
+      <workItem from="1631202592996" duration="10028000" />
+      <workItem from="1631244318881" duration="12352000" />
     </task>
     <servers />
   </component>
@@ -331,14 +381,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1631128221739">
+    <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1631264147491">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1631128221739" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1631215098204">
+    <state x="575" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1631264147491" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1631247445310">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1631215098204" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1631247445310" />
     <state x="603" y="201" key="FileChooserDialogImpl" timestamp="1630698472494">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -365,10 +415,10 @@
     </state>
     <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1628448909533" />
     <state x="531" y="236" width="840" height="855" key="run.anything.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1630081608402" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1631208662013">
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1631263184420">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="498" y="181" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1628449296502" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1631208662013" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1631263184420" />
   </component>
 </project>
