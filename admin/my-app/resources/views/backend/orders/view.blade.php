@@ -17,10 +17,9 @@
                 </div>
                 <div class="card mt-3">
                     <div class="card-body">
-                        <h5>Order </h5>
-                        <h6>Order Date:
-                        </h6>
-                        <h6>Order Status: <span class="badge badge-info">fghfh</span></h6>
+                        <h5>Order #{{ $order->invoice_number}}</h5>
+                        <h6>Order Date: {{ $order->created_at}}</h6>
+                        <h6>Order Status: <span class="badge badge-danger">{{ $order->shipping_status }}</span></h6>
                         <div>
                             <table class="table">
                                 <thead>
@@ -31,44 +30,38 @@
                                 <th>Amount</th>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>
-                                        <img src={`${AppURL.ServerBaseURL}${orderDetails.product.image}`} width="80" alt="image" />
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                </tr>
+                                @if($order->orderDetails)
+                                    @foreach($order->orderDetails as $productDetail)
+                                        <tr>
+                                            <td><img src="{{ $productDetail->product->image }}" width="120" alt="image" /></td>
+                                            <td>{{ $productDetail->product->name }}</td>
+                                            <td>{{ $productDetail->unit_price }}</td>
+                                            <td>{{ $productDetail->quantity }}</td>
+                                            <td>{{ $productDetail->total_price }}</td>
+                                        </tr>
+                                    @endforeach
+                                @endif
                                 </tbody>
                                 <tfoot>
                                 <tr>
                                     <td colSpan="3"></td>
                                     <td>Subtotal</td>
                                     <td>
-                                        gertg
+                                        {{ $order->total_amount }}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colSpan="3"></td>
                                     <td>Shipping</td>
                                     <td>
-                                        fxghtrfh
+                                        {{ $order->shipping_price }}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colSpan="3"></td>
                                     <td>Grand total</td>
                                     <td>
-                                        dfheyhhy
+                                        {{ $order->total_amount + $order->shipping_price }}
                                     </td>
                                 </tr>
                                 </tfoot>
@@ -82,19 +75,17 @@
                             <div class="col-md-12 mb-3">
                                 <h5>Order Information</h5>
                             </div>
-                            <>
                             <div class="col-md-6">
                                 <h6>Shipping Address</h6>
+                                <p>{{ $order->full_shipping_address }}</p>
                                 <p>
-                                </p>
-                                <p>
-                                    <i class="fa fa-phone-square mr-1"/>
-                                    tdyjky6uj
+                                    <i class="fa fa-phone-square mr-1"></i>
+                                    {{ $order->shippingAddress->phone_no }}
                                 </p>
                             </div>
                             <div class="col-md-6">
                                 <h6>Payment Method</h6>
-                                <p>dfhgrtdhg</p>
+                                <p>{{ $order->payment_method }}</p>
                             </div>
 
                     </div>

@@ -44,10 +44,10 @@
                         <p>Product</p>
                     </a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="./user.html">
-                        <i class="material-icons">person</i>
-                        <p>User Profile</p>
+                <li class="nav-item {{ Request::is('orders') || Request::is('orders/*') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('admin.orders.index') }}">
+                        <i class="material-icons">Orders</i>
+                        <p>Orders</p>
                     </a>
                 </li>
             </ul>
@@ -184,8 +184,6 @@
 <script src="../assets/js/plugins/bootstrap-notify.js"></script>
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="../assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
-<!-- Material Dashboard DEMO methods, don't include it in your project! -->
-<script src="../assets/demo/demo.js"></script>
 </body>
 
 </html>

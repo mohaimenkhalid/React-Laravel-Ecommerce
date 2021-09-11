@@ -14,8 +14,8 @@ class OrderController extends Controller
     }
 
     public function view($orderId) {
-         $order = Order::with('orderDetails')->find($orderId);
-         return view('backend.orders.view');
+         $order = Order::with(['orderDetails', 'shippingAddress'])->find($orderId);
+         return view('backend.orders.view', compact('order'));
 
     }
 }
