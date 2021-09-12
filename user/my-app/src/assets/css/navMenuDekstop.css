@@ -7,7 +7,7 @@
     font-size: 18px;
     font-weight: bold;
     border: 0.5px solid #E43023;
-    background: #ff0000 !important;
+    background: #ff686e !important;
     border-radius: 1rem !important;
     height: 45px;
     display: flex;
@@ -34,6 +34,13 @@
 
 .navbar {
     display: block;
+    background-color: #fdd670!important;
+    padding: 5px 0;
+}
+
+.navbar .badge-danger {
+    color: #fff;
+    background-color: #ff686e;
 }
 
 .navbar-right-side {
@@ -43,7 +50,7 @@
     align-items: center;
 }
 
-.navbar-right-side .fa{
+.navbar-right-side .fa, .navbar-right-side .far{
     background: transparent;
     color: #363636;
     text-align: center;
@@ -55,16 +62,17 @@
 }
 
 .navbar-right-side .signin{
-    background: #ffffff;
+    background: #ff686e;
+    border: 1px solid #ff686e;
     height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 2rem;
-    color: #000000;
+    color: #fff;
     font-size: 16px;
-    font-weight: bold;
-    border-radius: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
 }
 
 .navbar-right-side sub {

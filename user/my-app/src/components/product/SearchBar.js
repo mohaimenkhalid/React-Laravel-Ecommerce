@@ -51,7 +51,7 @@ class SearchBar extends Component {
                     <input type="text" className="form-control"
                            onChange={this.searchHandler}
                            value={this.state.query}
-                           placeholder="Search Product..." />
+                           placeholder="Search for products (e.g. eggs, milk, potato)..." />
                     <button type="button" className="btn site-btn">
                         <i className="fa fa-search" />
                     </button>

@@ -13,7 +13,7 @@ import {store} from "../../store/store";
 import {getCartAction} from "../../redux/actions/cartActions";
 import noProfileImage from "../../assets/images/no-profile.jpg";
 
-class NavMenuDesktop extends Component {
+class NavBar extends Component {
 
     constructor() {
       super();
@@ -71,14 +71,14 @@ class NavMenuDesktop extends Component {
                         <Col lg={5} md={5} sm={12} xs={12}>
                             <div className="navbar-right-side">
                                 <Link to="/favourite">
-                                    <i className="fa fa-heart font-30" />
+                                    <i className="far fa-heart font-30"></i>
                                     <sub>
                                         <span className="badge badge-danger">4</span>
                                     </sub>
                                 </Link>
 
                                 <Link to="/notification" >
-                                    <i className="fa fa-bell font-30" />
+                                    <i className="far fa-bell font-30" />
                                     <sub>
                                         <span className="badge badge-danger">4</span>
                                     </sub>
@@ -139,4 +139,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(NavMenuDesktop)
+export default connect(mapStateToProps)(NavBar)

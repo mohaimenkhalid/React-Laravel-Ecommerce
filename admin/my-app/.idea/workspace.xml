@@ -24,9 +24,19 @@
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/orders/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/orders/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/navMenuDekstop.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/navMenuDekstop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavMenuDesktop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavMenuMobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/product/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/product/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/DeliveryNoticePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/DeliveryNoticePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/NotificationPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/NotificationPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/PolicyPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/PolicyPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/PurchaseGuidePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/PurchaseGuidePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/TermsConditionPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/TermsConditionPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +325,8 @@
       <workItem from="1631202592996" duration="10028000" />
       <workItem from="1631244318881" duration="18255000" />
       <workItem from="1631297192381" duration="146000" />
-      <workItem from="1631377687562" duration="2121000" />
+      <workItem from="1631377687562" duration="2862000" />
+      <workItem from="1631463367879" duration="2508000" />
     </task>
     <servers />
   </component>

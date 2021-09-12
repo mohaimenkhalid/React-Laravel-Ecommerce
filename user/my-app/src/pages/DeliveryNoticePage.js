@@ -3,11 +3,8 @@ import {loadProgressBar} from "axios-progress-bar";
 import axios from "axios";
 import AppURL from "../api/AppURL";
 import {toast, ToastContainer} from "react-toastify";
-import NavMenuDesktop from "../components/common/NavMenuDesktop";
-import NavMenuMobile from "../components/common/NavMenuMobile";
 import LargeTextLoader from "../components/loader/LargeTextLoader";
 import ReactHtmlParser from "react-html-parser";
-import FooterDesktop from "../components/common/FooterDesktop";
 
 class DeliveryNoticePage extends Component {
     constructor() {

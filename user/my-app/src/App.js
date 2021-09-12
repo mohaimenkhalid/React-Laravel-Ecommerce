@@ -3,8 +3,7 @@ import {BrowserRouter} from "react-router-dom";
 import AppRoute from "./route/AppRoute";
 import 'axios-progress-bar/dist/nprogress.css'
 import 'react-toastify/dist/ReactToastify.css';
-import NavMenuDesktop from "./components/common/NavMenuDesktop";
-import NavMenuMobile from "./components/common/NavMenuMobile";
+import NavBar from "./components/common/NavBar";
 import MegaMenu from "./components/home/MegaMenu";
 import FooterDesktop from "./components/common/FooterDesktop";
 import {ToastContainer} from "react-toastify";
@@ -14,8 +13,7 @@ class App extends Component {
         return (
             <Fragment>
                 <BrowserRouter>
-                    <NavMenuDesktop />
-                    <NavMenuMobile />
+                    <NavBar />
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-md-2 p-0 desktop_menu">
