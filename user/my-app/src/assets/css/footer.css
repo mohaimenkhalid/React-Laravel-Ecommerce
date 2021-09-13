@@ -5,6 +5,10 @@ ul {
 .footer-section {
     background: #151414;
     position: relative;
+    background: url(https://spacingtech.com/html/vegist-final/vegist/image/footer-5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .footer-cta {
     border-bottom: 1px solid #373636;
@@ -50,11 +54,11 @@ ul {
 .footer-text p {
     margin-bottom: 14px;
     font-size: 14px;
-    color: #7e7e7e;
+    color: #000000;
     line-height: 28px;
 }
 .footer-social-icon span {
-    color: #fff;
+    color: #000000;
     display: block;
     font-size: 20px;
     font-weight: 700;
@@ -83,7 +87,7 @@ ul {
     background: #DD4B39;
 }
 .footer-widget-heading h3 {
-    color: #fff;
+    color: #ff686e;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 40px;
@@ -108,7 +112,7 @@ ul {
     color: #ff5e14;
 }
 .footer-widget ul li a {
-    color: #878787;
+    color: #000000;
     text-transform: capitalize;
 }
 .subscribe-form {
@@ -118,17 +122,17 @@ ul {
 .subscribe-form input {
     width: 100%;
     padding: 14px 28px;
-    background: #2E2E2E;
-    border: 1px solid #2E2E2E;
-    color: #fff;
+    background: #ffffff;
+    border: 1px solid #fdd670;
+    color: #000;
 }
 .subscribe-form button {
     position: absolute;
     right: 0;
-    background: #ff5e14;
+    background: #fdd670;
     padding: 13px 20px;
-    border: 1px solid #ff5e14;
-    top: 0;
+    border: 1px solid #fdd670;
+    top: 1px;
 }
 .subscribe-form button i {
     color: #fff;
@@ -136,7 +140,7 @@ ul {
     transform: rotate(-6deg);
 }
 .copyright-area{
-    background: #202020;
+    background: #f6f6f6;
     padding: 25px 0;
 }
 .copyright-text p {
