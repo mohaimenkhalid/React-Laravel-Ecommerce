@@ -77,14 +77,14 @@ class NewArrival extends Component {
         return (
             <Container fluid={true} className="card py-5 mb-3">
                 <div className="text-center">
-                    <h5 className="text-danger">New Arrival</h5>
+                    <h3 className="text-dark-color">New Arrival</h3>
                     <p>Some of Our Exclusive Collection, you May Like</p>
                 </div>
                 <div className="d-flex align-self-end">
-                    <button className="btn btn-danger btn-sm mr-1" onClick={this.previous}>
+                    <button className="btn theme-bg btn-sm mr-1" onClick={this.previous}>
                         <i className="fa fa-chevron-left"></i>
                     </button>
-                    <button className="btn btn-danger btn-sm" onClick={this.next}>
+                    <button className="btn theme-bg btn-sm" onClick={this.next}>
                         <i className="fa fa-chevron-right"></i>
                     </button>
                 </div>

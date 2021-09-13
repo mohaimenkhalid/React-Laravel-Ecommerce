@@ -59,9 +59,9 @@ class NavBar extends Component {
                 <Navbar bg="light" className="Desktop navbar sticky-top">
                     <Row className="align-items-center">
                         <Col lg={2} md={2} sm={12} xs={12}>
-                            <div className="d-flex">
+                            <div className="d-flex justify-content-center">
                                 <Link to="/">
-                                    <img width="175px" src={logo} alt="" />
+                                    <img width="115px" src={logo} alt="" />
                                 </Link>
                             </div>
                         </Col>

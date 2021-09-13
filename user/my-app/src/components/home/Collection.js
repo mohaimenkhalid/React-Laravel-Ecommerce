@@ -30,7 +30,7 @@ class Collection extends Component {
             <Fragment>
                 <Container fluid={true} className="card py-5 mb-3">
                     <div className="text-center">
-                        <h2 className="text-danger">Collection</h2>
+                        <h2 className="text-dark-color">Collection</h2>
                         <p>Some of Our Exclusive Collection, you May Like</p>
                     </div>
                     <ProductList products={this.state.collection_products} />

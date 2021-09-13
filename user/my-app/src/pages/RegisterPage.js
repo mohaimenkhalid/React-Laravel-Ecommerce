@@ -76,18 +76,16 @@ class RegisterPage extends Component {
             .then(error => {
                 console.log(error)
             })
-
     }
-
 
     render() {
         return (
             <Fragment>
                 <Row className="d-flex justify-content-center">
                     <Col md={6} lg={6} xs={12}>
-                        <Card className="mt-5">
+                        <Card className="mt-5 social-card">
                             <Card.Img variant="top" src="" />
-                            <Card.Body>
+                            <Card.Body className="py-5 px-4">
                                 <Card.Title>Register</Card.Title>
                                 <p>Enter Your Registration Details.</p>
                                <form onSubmit={this.onFormSubmit} id="registerForm">
@@ -110,7 +108,7 @@ class RegisterPage extends Component {
                                    <div className="form-group">
                                        <small>Already have an account? <Link to="/login">Login</Link> </small>
                                    </div>
-                                   <Button variant="danger mt-4" type="submit">Register</Button>
+                                   <Button className="btn-block btn theme-bg" variant="danger" type="submit">Register</Button>
                                </form>
                             </Card.Body>
                         </Card>

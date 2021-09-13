@@ -46,7 +46,7 @@ class LoginPage extends Component {
                 <Container>
                     <Row className="d-flex justify-content-center">
                         <Col md={5} lg={5} xs={12}>
-                            <Card className="mt-5">
+                            <Card className="mt-5 social-card">
                                 <Card.Img variant="top" src="" />
                                 <Card.Body className="text-center">
                                     <Card.Title>
@@ -63,7 +63,7 @@ class LoginPage extends Component {
                                         <div className="form-group">
                                             <small>Not Register User? <Link to="/register">Register</Link> </small>
                                         </div>
-                                        <Button className="btn-block main-login-button" variant="danger" type="submit">LOGIN</Button>
+                                        <Button className="btn-block main-login-button theme-bg" variant="danger" type="submit">LOGIN</Button>
                                     </form>
 
                                     <div className="social-divider mt-5">

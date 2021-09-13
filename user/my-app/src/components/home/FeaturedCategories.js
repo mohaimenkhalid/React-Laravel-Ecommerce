@@ -37,7 +37,7 @@ class FeaturedCategories extends Component {
             <Fragment>
                 <Container fluid={true} className="card py-5 mb-3 feature-category">
                     <div className="text-center">
-                        <h2 className="text-danger">Our Product Categories</h2>
+                        <h2 className="text-dark-color">Our Product Categories</h2>
                     </div>
                     <div className="row mt-5">
                         {
@@ -57,7 +57,7 @@ class FeaturedCategories extends Component {
                                             <div className="col-md-4">
                                                 <Link to={`/category/${category.slug}`}>
                                                     <div className="card">
-                                                        <div className="card-body text-muted">
+                                                        <div className="card-body text-dark-color">
                                                             {category.name}
                                                         </div>
                                                     </div>

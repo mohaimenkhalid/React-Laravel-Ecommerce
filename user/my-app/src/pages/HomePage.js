@@ -7,6 +7,7 @@ import HomeTop from "../components/home/HomeTop";
 import AppURL from "../api/AppURL";
 import {loadProgressBar} from "axios-progress-bar";
 import axios from "axios";
+import SubBanner from "../components/home/SubBanner";
 
 class HomePage extends Component {
     componentDidMount() {
@@ -27,6 +28,7 @@ class HomePage extends Component {
             <Fragment>
                 <HomeTop />
                 <FeaturedCategories />
+                <SubBanner />
                 <NewArrival />
                 <FeaturedProducts />
                 <Collection />

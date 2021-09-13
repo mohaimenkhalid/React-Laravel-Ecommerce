@@ -3,12 +3,12 @@
     text-decoration: none;
     border: none !important;
     border-radius: 0% !important;
-    box-shadow: 0 0 4px 0 rgba(57, 78, 234, 0.1)
+   /* box-shadow: 0 0 4px 0 rgba(57, 78, 234, 0.1)*/
 }
 .card:hover {
-    border-radius: 0% !important;
+    border-radius: 0 !important;
     text-decoration: none;
-    box-shadow: 0 0 12px 0 rgba(57, 78, 234, 0.1)
+    /*box-shadow: 0 0 12px 0 rgba(57, 78, 234, 0.1)*/
 }
 
 .image-box {
@@ -17,13 +17,32 @@
     overflow: hidden;
     width: 100% !important;
     margin-bottom: 1.5rem;
+    box-shadow: 0 0 4px 0 rgba(57, 78, 234, 0.1)
 }
+
 .image-box img {
     width: 100% !important;
     transition: all 0.3s;
     height: auto;
     transform: scale(1);
 }
+
 .image-box:hover img {
     transform: scale(1.1);
+}
+
+.image-box .fav-item{
+    position: absolute;
+    right: 0;
+    transform: translate(-100%, 65%);
+}
+
+.image-box .fav-item .far{
+    font-size: 22px;
+    color: #343a4094 !important;
+}
+
+.social-card {
+    background: #fdd670;
+    border-radius: 10px !important;
 }

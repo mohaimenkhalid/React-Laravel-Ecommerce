@@ -11,9 +11,8 @@ class ProductList extends Component {
                     <Row>
                         {
                             this.props.products.map((product, index) => {
-
                                 return (
-                                    <Col xl={2} lg={2} md={2} sm={4} xs={6} key={index}>
+                                    <Col xl={3} lg={3} md={3} sm={4} xs={6} key={index}>
                                         <Link to={`/product/${product.slug}`}>
                                             <Card className="image-box card">
                                                 <div className="product-card-image">
@@ -32,6 +31,9 @@ class ProductList extends Component {
                                                         </h5>
                                                     </div>
                                                 </Card.Body>
+                                                <div className="fav-item">
+                                                    <i className="far fa-heart text-dark"></i>
+                                                </div>
                                             </Card>
                                         </Link>
                                     </Col>
