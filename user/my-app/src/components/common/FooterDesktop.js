@@ -6,6 +6,7 @@ import AppURL from "../../api/AppURL";
 import {toast} from "react-toastify";
 import ReactHtmlParser from "react-html-parser";
 import TextLoader from "../loader/TextLoader";
+import footerBg from "../../assets/images/footer.jpg";
 
 class FooterDesktop extends Component {
 
@@ -44,7 +45,7 @@ class FooterDesktop extends Component {
     render() {
         return (
             <Fragment>
-                <footer className="footer-section mt-5">
+                <footer className="footer-section mt-5" style={{"backgroundImage": `url(${footerBg})`}}>
                     {
                         this.state.isLoading
                             ? <TextLoader />

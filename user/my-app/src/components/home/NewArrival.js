@@ -89,12 +89,11 @@ class NewArrival extends Component {
                     </button>
                 </div>
                 <Slider ref={c => (this.slider = c)} {...settings}>
-
                     {
                         this.state.new_products.map((product, index) => {
                             return (
                                 <div>
-                                    <Link to="/productDetails">
+                                    <Link to={`/product/${product.slug}`}>
                                         <Card className="image-box card">
                                             <div className="product-card-image">
                                                 <Card.Img variant="top" src={AppURL.ServerBaseURL+product.image} />

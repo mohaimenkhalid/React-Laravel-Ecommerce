@@ -8,6 +8,7 @@ import AppURL from "../api/AppURL";
 import {loadProgressBar} from "axios-progress-bar";
 import axios from "axios";
 import SubBanner from "../components/home/SubBanner";
+import newsBg from "../assets/images/news-bg.jpg";
 
 class HomePage extends Component {
     componentDidMount() {
@@ -22,7 +23,6 @@ class HomePage extends Component {
             .catch()
     }
 
-
     render() {
         return (
             <Fragment>
@@ -32,6 +32,18 @@ class HomePage extends Component {
                 <NewArrival />
                 <FeaturedProducts />
                 <Collection />
+                <div className="news-subscribe" style={{"backgroundImage": `url(${newsBg})`}}>
+                    <div className="row">
+                        <div className="col-md-4 offset-4 top-30 text-center">
+                            <h3>Get the latest deals</h3>
+                            <p>And receive 20% off coupon for first shopping</p>
+                            <form>
+                                <input type="text" placeholder="Enter Your Email Address" className="form-control bg-white"/>
+                                <button className="btn btn-success mt-1">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </Fragment>
         );
     }

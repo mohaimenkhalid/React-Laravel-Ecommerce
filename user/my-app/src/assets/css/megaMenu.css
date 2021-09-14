@@ -89,6 +89,10 @@
     top: 100px !important;
 }
 
+.top-30 {
+    top: 30px !important;
+}
+
 .desktop_menu {
     border-right: 2px solid #e9e2e2;
     background: white;

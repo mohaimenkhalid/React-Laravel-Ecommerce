@@ -29,7 +29,7 @@ class FeaturedProducts extends Component {
     render() {
         return (
             <div>
-                <Container fluid={true} className="card py-5 mb-3">
+                <Container fluid={true} className="card pb-5 mb-3">
                     <div className="text-center">
                         <h2 className="text-dark-color">Featured Product</h2>
                         <p>Some of Our Exclusive Collection, you May Like</p>

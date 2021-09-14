@@ -1,71 +1,114 @@
 import React, {Component, Fragment} from 'react';
 import {Container, Row, Col, Card} from "react-bootstrap";
+import axios from "axios";
+import AppURL from "../../api/AppURL";
+import Slider from "react-slick";
+import {Link} from "react-router-dom";
 
 class SuggestedProducts extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            new_products: []
+        }
+        this.next = this.next.bind(this);
+        this.previous = this.previous.bind(this);
+    }
+
+    componentDidMount() {
+        //NEW_PRODUCT = 3
+        axios.get(AppURL.getProductByRemark, { params: { remark: 3 } })
+            .then(res => {
+                if(res.status === 200) {
+                    this.setState({new_products: res.data})
+                }
+            })
+            .catch(error => {
+
+            })
+    }
+
+
+    next() {
+        this.slider.slickNext();
+    }
+    previous() {
+        this.slider.slickPrev();
+    }
     render() {
+        var settings = {
+            dots: false,
+            speed: 500,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            infinite: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        };
         return (
-            <Fragment>
-                <Container fluid={true} className="text-center BetweenTwoSection">
-                    <h4 className="section-title">YOU MAY LIKE</h4>
-                    <h6 className="section-sub-title">Some Of Our Exclusive Collection, You May Like</h6>
-                   {/* <Row>
-                        <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6} >
-                            <Card className="card h-100 w-100  image-box ">
-                                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt=""/>
-                                <Card.Body>
-                                    <h5 className="product-name-on-card">Title</h5>
-                                    <p className="product-price-on-card">Price: 5000TK</p>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6} >
-                            <Card className="card h-100 w-100  image-box ">
-                                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt=""/>
-                                <Card.Body>
-                                    <h5 className="product-name-on-card">Title</h5>
-                                    <p className="product-price-on-card">Price: 5000TK</p>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6} >
-                            <Card className="card h-100 w-100  image-box ">
-                                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt=""/>
-                                <Card.Body>
-                                    <h5 className="product-name-on-card">Title</h5>
-                                    <p className="product-price-on-card">Price: 5000TK</p>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6} >
-                            <Card className="card h-100 w-100  image-box ">
-                                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt=""/>
-                                <Card.Body>
-                                    <h5 className="product-name-on-card">Title</h5>
-                                    <p className="product-price-on-card">Price: 5000TK</p>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6} >
-                            <Card className="card h-100 w-100  image-box ">
-                                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt=""/>
-                                <Card.Body>
-                                    <h5 className="product-name-on-card">Title</h5>
-                                    <p className="product-price-on-card">Price: 5000TK</p>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6} >
-                            <Card className="card h-100 w-100  image-box ">
-                                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt=""/>
-                                <Card.Body>
-                                    <h5 className="product-name-on-card">Title</h5>
-                                    <p className="product-price-on-card">Price: 5000TK</p>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    </Row>*/}
-                </Container>
-            </Fragment>
+            <Container fluid={true} className="card py-5 mb-3">
+                <div className="text-center">
+                    <h3 className="text-dark-color">You may also like this product</h3>
+                    <p>Here we show you related product</p>
+                </div>
+                <div className="d-flex align-self-end">
+                    <button className="btn theme-bg btn-sm mr-1" onClick={this.previous}>
+                        <i className="fa fa-chevron-left"></i>
+                    </button>
+                    <button className="btn theme-bg btn-sm" onClick={this.next}>
+                        <i className="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+                <Slider ref={c => (this.slider = c)} {...settings}>
+                    {
+                        this.state.new_products.map((product, index) => {
+                            return (
+                                <div>
+                                    <Link to={`/product/${product.slug}`}>
+                                        <Card className="image-box card">
+                                            <div className="product-card-image">
+                                                <Card.Img variant="top" src={AppURL.ServerBaseURL+product.image} />
+                                            </div>
+                                            <Card.Body>
+                                                <div className="product-card-details">
+                                                    <h5 className='product-name-on-card'>{product.name}</h5>
+                                                    <h5 className="product-price-on-card">Price: {product.price}Tk</h5>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                    </Link>
+                                </div>
+                            )
+                        })
+                    }
+
+                </Slider>
+            </Container>
         );
     }
 }

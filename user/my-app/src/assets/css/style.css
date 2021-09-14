@@ -203,6 +203,15 @@
     width: 100%;
 }
 
+.news-subscribe {
+    background: #151414;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+}
+
 .main-login-button {
     width: 100%;
     line-height: 2;

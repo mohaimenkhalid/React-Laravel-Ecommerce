@@ -6,6 +6,7 @@ import InnerImageZoom from 'react-inner-image-zoom';
 import {Redirect} from "react-router-dom";
 import {store} from "../../store/store";
 import {addToCart} from "../../redux/actions/cartActions";
+import rightSideBanner1 from "../../assets/images/right-banner-1.jpg"
 
 class ProductDetails extends Component {
     
@@ -29,8 +30,6 @@ class ProductDetails extends Component {
         let imgSource = e.target.getAttribute('src');
         console.log(imgSource);
         this.setState({previewImg: imgSource})
-        //let previewImage = document.getElementById('previewImage');
-        //ReactDom.findDOMNode(previewImage).setAttribute('src', imgSource);
     };
 
     price() {
@@ -92,33 +91,7 @@ class ProductDetails extends Component {
           'product_color' : this.state.product_color,
           'product_size' : this.state.product_size,
      }
-
      store.dispatch(() => addToCart(product));
-
-
-      /*let formData = new FormData();
-      formData.append('product_color', this.state.product_color);
-      formData.append('product_size', this.state.product_size);
-      formData.append('product_id', this.props.product.id);
-      formData.append('quantity', this.state.quantity);
-
-      const headers = {
-        'Content-Type' : 'application/json',
-        'Accept' : 'application/json',
-        'Authorization' : `Bearer ${AppStorage.getToken()}`
-      };
-      axios.post(AppURL.addToCart, formData, {headers: headers})
-        .then(res => {
-          console.log(res);
-          if(res.data && res.status === 200) {
-              store.dispatch(() => getCartAction());
-              toast.success(res.data.message);
-              this.setState({ addToCartStatus: true });
-          }
-        })
-        .catch(err => {
-
-        })*/
     };
 
     cartPageRedirect = () => {
@@ -160,9 +133,9 @@ class ProductDetails extends Component {
                                     }
 
                                 </Col>
-                                <Col className="p-3 " md={5} lg={5} sm={12} xs={12}>
+                                <Col className="p-3" md={5} lg={5} sm={12} xs={12}>
                                     <h3 className="Product-Name">{product.name}</h3>
-
+                                    <h5>Availability: <span className="text-success">In stock</span></h5>
                                     {
                                         product_details && product_details.short_description
                                             ?
@@ -178,13 +151,13 @@ class ProductDetails extends Component {
                                     }
 
                                     <div className="d-flex align-items-center">
-                                        <h6 className="mt-2">Category - </h6>
+                                        <h6 className="mt-2 mr-2">Category - </h6>
                                         <span className="badge badge-info"> {product.category && product.category.name}</span>
                                     </div>
 
                                     <div> { this.price() } </div>
 
-                                    <div className="row mt-5">
+                                    <div className="row mt-2">
                                         <div className="col-md-4">
                                             <h6 className="mt-2">Choose Quantity</h6>
                                             <input onChange={this.quantityChangeHandler} type="number" defaultValue="1" className="form-control" min="1" />
@@ -223,9 +196,9 @@ class ProductDetails extends Component {
                                         </div>
                                     </div>
                                     <div className="input-group mt-3 product-button-group">
-                                        <button onClick={this.addToCart} className="btn site-btn m-1 "> <i className="fa fa-shopping-cart"/> {/*{this.state.addToCart}*/}Add To Cart</button>
-                                        <button onClick={this.orderNow} className="btn btn-primary m-1"> <i className="fa fa-car"/>Buy Now</button>
-                                        <button onClick={this.addToFav} className="btn btn-primary m-1"> <i className="fa fa-heart"/> Add To Favourite</button>
+                                        <button onClick={this.addToFav} className="btn btn-primary theme-bg m-1"> <i className="fa fa-heart"/> Add To Favourite</button>
+                                        <button onClick={this.addToCart} className="btn btn-success m-1 "> <i className="fa fa-shopping-bag"/> {/*{this.state.addToCart}*/}Add To Cart</button>
+                                        <button onClick={this.orderNow} className="btn btn-primary m-1"> <i className="fa fa-car"/> Buy Now</button>
                                     </div>
                                 </Col>
                                 <Col className="mt-3" md={3} lg={3} sm={12}>
@@ -234,6 +207,15 @@ class ProductDetails extends Component {
                                         <li>7 Days Happy Return</li>
                                         <li>Delivery Charge Tk. 50(Online Order)</li>
                                     </ul>
+
+                                    <div className="position-relative mt-3 p-3">
+                                        <img src={rightSideBanner1} alt="" width="100%"/>
+                                        <div className="position-absolute top-30 text-center" style={{"left": "25%"}}>
+                                            <h6>Fresh Food</h6>
+                                            <h5>Fruits Collection</h5>
+                                            <a href="" className="btn btn-success">Shop now</a>
+                                        </div>
+                                    </div>
                                 </Col>
                             </Row>
                         </Col>
@@ -244,8 +226,7 @@ class ProductDetails extends Component {
                                 <h3 className="mt-2">DETAILS</h3>
                                 {
                                     product_details
-                                        ?
-                                        (<p>{product_details.description }</p>)
+                                        ? (<p>{product_details.description }</p>)
                                         :
                                         (<p>No description found.</p>)
                                 }
