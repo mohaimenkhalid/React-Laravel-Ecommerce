@@ -40,6 +40,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::get('/getMyOrder', [OrderController::class, 'getMyOrder']);
         Route::get('/getOrderById/{orderId}', [OrderController::class, 'getOrderById']);
         Route::post('/updateProfile', [UserController::class, 'updateProfile']);
+        Route::post('/addFavourite/{productId}', [ProductController::class, 'addFavourite']);
     });
 
 });

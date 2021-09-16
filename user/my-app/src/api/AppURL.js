@@ -37,6 +37,9 @@ class AppURL {
     }
     static socialLogin = this.ApiBaseURL+'auth/social/login';
     static updateProfile = this.ApiBaseURL+'updateProfile';
+    static addFavourite(productId) {
+        return this.ApiBaseURL+'addFavourite/'+productId;
+    }
 }
 
 export default AppURL;

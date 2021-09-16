@@ -7,6 +7,9 @@ import {Redirect} from "react-router-dom";
 import {store} from "../../store/store";
 import {addToCart} from "../../redux/actions/cartActions";
 import rightSideBanner1 from "../../assets/images/right-banner-1.jpg"
+import AppStorage from "../../helpers/AppStorage";
+import axios from "axios";
+import {toast} from "react-toastify";
 
 class ProductDetails extends Component {
     
@@ -18,7 +21,8 @@ class ProductDetails extends Component {
         product_color: '',
         product_size: '',
         product_id: '',
-        addToCartStatus: false
+        addToCartStatus: false,
+        isProcessing: false
       }
     }
     componentWillMount() {
@@ -99,6 +103,30 @@ class ProductDetails extends Component {
         return <Redirect to="/cart" />
       }
     };
+
+    addToFav = () => {
+        this.setState({isProcessing: true});
+        const headers = {
+            'Accept' : 'application/json',
+            'Authorization' : `Bearer ${AppStorage.getToken()}`
+        };
+        console.log(this.props.product.id);
+
+        axios.post(AppURL.addFavourite(this.props.product.id), { }, {headers: headers})
+            .then(res => {
+                console.log(res);
+                if(res.data && res.data.status === 'success') {
+                    toast.success(res.data.message);
+                }
+                if(res.data && res.data.status === 'error') {
+                    toast.error(res.data.message);
+                }
+                this.setState({isProcessing: false});
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
 
     render() {
         let product = this.props.product;
@@ -196,7 +224,11 @@ class ProductDetails extends Component {
                                         </div>
                                     </div>
                                     <div className="input-group mt-3 product-button-group">
-                                        <button onClick={this.addToFav} className="btn btn-primary theme-bg m-1"> <i className="fa fa-heart"/> Add To Favourite</button>
+                                        <button onClick={this.addToFav} className="btn btn-primary theme-bg m-1" disabled={this.state.isProcessing}>
+                                            {this.state.isProcessing
+                                                ? 'Processing...'
+                                                : <><i className="fa fa-heart"/><span>Add To Favourite</span></>}
+                                        </button>
                                         <button onClick={this.addToCart} className="btn btn-success m-1 "> <i className="fa fa-shopping-bag"/> {/*{this.state.addToCart}*/}Add To Cart</button>
                                         <button onClick={this.orderNow} className="btn btn-primary m-1"> <i className="fa fa-car"/> Buy Now</button>
                                     </div>

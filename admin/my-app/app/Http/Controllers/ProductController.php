@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\FavouriteProduct;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -39,6 +40,18 @@ class ProductController extends Controller
     public function getProductDetails($slug) {
         $product = Product::with(['category', 'product_details'])->where('slug', $slug)->first();
         return response()->json($product);
+    }
+
+    public function addFavourite($productId) {
+        $product = FavouriteProduct::find($productId);
+        if($product) {
+            return response()->json(['status' => 'error', 'message' => 'Product already added to favourite list.']);
+        }
+        $product = new FavouriteProduct;
+        $product->user_id = auth()->user()->id;
+        $product->product_id = $productId;
+        $product->save();
+        return response()->json(['status' => 'success', 'message' => 'Product added favourite list.']);
     }
 
 }
