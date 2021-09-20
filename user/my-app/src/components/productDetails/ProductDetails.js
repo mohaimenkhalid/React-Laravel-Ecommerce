@@ -228,13 +228,13 @@ class ProductDetails extends Component {
                                         { this.state.error ? (<p className="text-danger">{this.state.error} <Link to="/login">Click to Login</Link></p>) : '' }
                                     </div>
                                     <div className="input-group mt-3 product-button-group">
+                                        <button onClick={this.addToCart} className="btn btn-success m-1 "> <i className="fa fa-shopping-bag"/> {/*{this.state.addToCart}*/}Add To Cart</button>
+
                                         <button onClick={this.addToFav} className="btn btn-primary theme-bg m-1" disabled={this.state.isProcessing}>
                                             {this.state.isProcessing
                                                 ? 'Processing...'
                                                 : <><i className="fa fa-heart"/><span>Add To Favourite</span></>}
                                         </button>
-                                        <button onClick={this.addToCart} className="btn btn-success m-1 "> <i className="fa fa-shopping-bag"/> {/*{this.state.addToCart}*/}Add To Cart</button>
-                                        <button onClick={this.orderNow} className="btn btn-primary m-1"> <i className="fa fa-car"/> Buy Now</button>
                                     </div>
                                 </Col>
                                 <Col className="mt-3" md={3} lg={3} sm={12}>

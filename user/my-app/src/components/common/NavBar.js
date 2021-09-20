@@ -12,6 +12,7 @@ import {logoutAction} from "../../redux/actions/authActions";
 import {store} from "../../store/store";
 import {getCartAction} from "../../redux/actions/cartActions";
 import noProfileImage from "../../assets/images/no-profile.jpg";
+import {setWishListAction} from "../../redux/actions/wishListActions";
 
 class NavBar extends Component {
 
@@ -24,6 +25,7 @@ class NavBar extends Component {
 
     componentDidMount() {
         store.dispatch(() => getCartAction());
+        store.dispatch(() => setWishListAction());
     }
 
     onLogout = () => {
@@ -73,7 +75,7 @@ class NavBar extends Component {
                                 <Link to="/favourite">
                                     <i className="far fa-heart font-30"></i>
                                     <sub>
-                                        <span className="badge badge-danger">4</span>
+                                        <span className="badge badge-danger">{ this.props.numberOfWishLists }</span>
                                     </sub>
                                 </Link>
 
@@ -135,7 +137,8 @@ const mapStateToProps = (state) => {
         isAuth: state.auth.isAuth,
         user: state.auth.user,
         carts: state.cart.items,
-        numberOfItems: state.cart.items.length
+        numberOfItems: state.cart.items.length,
+        numberOfWishLists: state.wishList.items.length
     }
 }
 
