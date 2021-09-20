@@ -54,4 +54,9 @@ class ProductController extends Controller
         return response()->json(['status' => 'success', 'message' => 'Product added favourite list.']);
     }
 
+    public function favouriteList() {
+        $favourite_products = FavouriteProduct::with('product')->where('user_id', auth()->user()->id)->get();
+        return response()->json($favourite_products);
+    }
+
 }

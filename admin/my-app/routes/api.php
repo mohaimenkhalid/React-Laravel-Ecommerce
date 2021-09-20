@@ -41,6 +41,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::get('/getOrderById/{orderId}', [OrderController::class, 'getOrderById']);
         Route::post('/updateProfile', [UserController::class, 'updateProfile']);
         Route::post('/addFavourite/{productId}', [ProductController::class, 'addFavourite']);
+        Route::get('/favorite/list', [ProductController::class, 'favouriteList']);
     });
 
 });

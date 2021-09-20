@@ -3,13 +3,14 @@ import {Container, Row, Col} from "react-bootstrap";
 import AppURL from "../../api/AppURL";
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import InnerImageZoom from 'react-inner-image-zoom';
-import {Redirect} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 import {store} from "../../store/store";
 import {addToCart} from "../../redux/actions/cartActions";
 import rightSideBanner1 from "../../assets/images/right-banner-1.jpg"
 import AppStorage from "../../helpers/AppStorage";
 import axios from "axios";
 import {toast} from "react-toastify";
+import {connect} from "react-redux";
 
 class ProductDetails extends Component {
     
@@ -22,17 +23,16 @@ class ProductDetails extends Component {
         product_size: '',
         product_id: '',
         addToCartStatus: false,
-        isProcessing: false
+        isProcessing: false,
+        error: ''
       }
     }
     componentWillMount() {
-        console.log(this.props.product)
         this.setState({previewImg: AppURL.ServerBaseURL+this.props.product.image});
     }
 
     imgOnclick = (e) =>{
         let imgSource = e.target.getAttribute('src');
-        console.log(imgSource);
         this.setState({previewImg: imgSource})
     };
 
@@ -72,15 +72,12 @@ class ProductDetails extends Component {
 
     colorChangeHandler = (e) => {
       e.preventDefault();
-      console.log(e.target.value, this.state.product_color);
       this.setState({ product_color: e.target.value});
-      console.log(e.target.value, this.state.product_color)
     };
 
     sizeChangeHandler = (e) => {
       e.preventDefault();
       this.setState({ product_size: e.target.value});
-      console.log(e.target.value)
     };
     
     addToCart = () => {
@@ -105,12 +102,16 @@ class ProductDetails extends Component {
     };
 
     addToFav = () => {
+        if(this.props.isAuth === false) {
+            this.setState({error: 'You are not Logged in. please login first'})
+            alert("You are not Logged in. please login first")
+            return false;
+        }
         this.setState({isProcessing: true});
         const headers = {
             'Accept' : 'application/json',
             'Authorization' : `Bearer ${AppStorage.getToken()}`
         };
-        console.log(this.props.product.id);
 
         axios.post(AppURL.addFavourite(this.props.product.id), { }, {headers: headers})
             .then(res => {
@@ -223,6 +224,9 @@ class ProductDetails extends Component {
                                             }
                                         </div>
                                     </div>
+                                    <div className="mt-1">
+                                        { this.state.error ? (<p className="text-danger">{this.state.error} <Link to="/login">Click to Login</Link></p>) : '' }
+                                    </div>
                                     <div className="input-group mt-3 product-button-group">
                                         <button onClick={this.addToFav} className="btn btn-primary theme-bg m-1" disabled={this.state.isProcessing}>
                                             {this.state.isProcessing
@@ -272,4 +276,10 @@ class ProductDetails extends Component {
     }
 }
 
-export default ProductDetails;
+const mapStateToProps = (state) => {
+    return {
+        isAuth: state.auth.isAuth,
+    }
+}
+
+export default connect(mapStateToProps)(ProductDetails);

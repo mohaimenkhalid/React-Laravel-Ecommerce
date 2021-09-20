@@ -40,6 +40,7 @@ class AppURL {
     static addFavourite(productId) {
         return this.ApiBaseURL+'addFavourite/'+productId;
     }
+    static getFavouriteList = this.ApiBaseURL+'favorite/list';
 }
 
 export default AppURL;
