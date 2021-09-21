@@ -72,7 +72,6 @@ class ProductSearchPage extends Component {
             loadProgressBar()
             this.fetching = axios.get(AppURL.productSearch, {params: {searchQuery: query, signal}})
                 .then(res => {
-                    console.log(res)
                     if(res.status === 200) {
                         this.setState({results: res.data, isLoading: false})
 
