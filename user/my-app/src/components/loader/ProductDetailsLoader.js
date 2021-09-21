@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ProductLoader from "./ProductLoader";
-import ListLoader from "./ListLoader";
 
 class ProductDetailsLoader extends Component {
     render() {
