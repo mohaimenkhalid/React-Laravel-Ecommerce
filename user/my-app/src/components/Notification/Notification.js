@@ -46,49 +46,10 @@ class Notification extends Component {
                     <h3 className="text-center">Notifications</h3>
                     <Row  className="d-flex justify-content-center">
                         <Col  md={10} lg={10}  sm={12} xs={12}>
-                            <Row>
-                                {
-                                    this.state.notifications.map(notification => {
-                                        return (
-                                            <Col className="d-flex justify-content-around mt-3" md={12} lg={12} sm={12} xs={12}>
-                                                <div className="card" >
-                                                    <div className="card-body">
-                                                        <h6 className="notification-title">{notification.title}</h6>
-                                                        <button className="float-right btn-danger" onClick={this.handleShow}
-                                                                description={notification.message}
-                                                                title={notification.title}
-                                                                date={notification.date}
-                                                        >
-                                                            Details
-                                                        </button>
-                                                        <p className="py-1  px-0 notification-date m-0">
-                                                            <i className="fa fa-bell"/>
-                                                            {notification.date}
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </Col>
-                                        )
-                                    })
-                                }
-                            </Row>
+                            No Notification Found!
                         </Col>
                     </Row>
                 </Container>
-                <Modal show={this.state.NotificationModal} onHide={this.handleClose}>
-                    <Modal.Header closeButton>
-                        <h6> <i className="fa theme-text fa-bell"/> Date: {this.state.date}</h6>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <h6 className="notification-title">{this.state.title}</h6>
-                        <p>{this.state.message}</p>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <button className="btn site-btn" onClick={this.handleClose}>
-                            Close
-                        </button>
-                    </Modal.Footer>
-                </Modal>
             </Fragment>
         );
     }
