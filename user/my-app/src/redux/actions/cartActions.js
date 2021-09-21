@@ -60,7 +60,6 @@ export const cartProductDelete = (productId) => {
     let findCartItem = cart.find((p) => p.product_id === productId)
     if(cart && findCartItem) {
         let cartIndex = cart.findIndex((p) => p.product_id === productId);
-        console.log(cartIndex);
         cart.splice(cartIndex, 1)
         localStorage.setItem('cart', JSON.stringify(cart))
         store.dispatch(() => getCartAction());
@@ -69,4 +68,8 @@ export const cartProductDelete = (productId) => {
         toast.error("Something went wrong!")
     }
 
+}
+
+export const setCollapseAction = (response) => {
+    store.dispatch(cartSlices.setCollapse(response))
 }

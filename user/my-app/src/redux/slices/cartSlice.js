@@ -5,7 +5,8 @@ export const cartSlice = createSlice({
     initialState: {
         items: [],
         totalPrice: 0,
-        isLoading: true
+        isLoading: true,
+        collapse: false
     },
     reducers: {
         setCart(state, action) {
@@ -18,8 +19,12 @@ export const cartSlice = createSlice({
             } else {
                 state.items = [];
                 state.isLoading = false;
-                state.totalPrice = 0
+                state.totalPrice = 0;
             }
         },
+
+        setCollapse(state, action) {
+            state.collapse = action.payload;
+        }
     }
 })

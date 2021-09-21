@@ -5,7 +5,7 @@ import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import InnerImageZoom from 'react-inner-image-zoom';
 import {Link, Redirect} from "react-router-dom";
 import {store} from "../../store/store";
-import {addToCart} from "../../redux/actions/cartActions";
+import {addToCart, setCollapseAction} from "../../redux/actions/cartActions";
 import rightSideBanner1 from "../../assets/images/right-banner-1.jpg"
 import AppStorage from "../../helpers/AppStorage";
 import axios from "axios";
@@ -93,6 +93,7 @@ class ProductDetails extends Component {
           'product_size' : this.state.product_size,
      }
      store.dispatch(() => addToCart(product));
+     store.dispatch(() => setCollapseAction(true));
     };
 
     cartPageRedirect = () => {

@@ -7,6 +7,7 @@ import NavBar from "./components/common/NavBar";
 import MegaMenu from "./components/home/MegaMenu";
 import FooterDesktop from "./components/common/FooterDesktop";
 import {ToastContainer} from "react-toastify";
+import CartSideBar from "./components/cart/CartSideBar";
 
 class App extends Component {
     render() {
@@ -26,6 +27,7 @@ class App extends Component {
                             </div>
                         </div>
                     </div>
+                    <CartSideBar />
                     <FooterDesktop />
                     <ToastContainer />
                 </BrowserRouter>

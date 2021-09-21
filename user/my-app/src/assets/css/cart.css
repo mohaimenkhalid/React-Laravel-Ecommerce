@@ -5,3 +5,156 @@
     font-family: 'Roboto Condensed', sans-serif;
     margin-top: 20px;
 }
+
+/*cart design*/
+
+.cart-wrapper {
+    background-color: #000000c4;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 370px;
+    height: 100vh;
+    transition: .5s ease;
+    overflow: hidden;
+    z-index: 99999;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.CartStickyHeader {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    opacity: .7;
+    cursor: pointer;
+    box-shadow: 0 0 16px -1px rgb(0 0 0 / 75%);
+    transition: .5s ease;
+    z-index: 1;
+}
+
+.CartStickyHeader:hover {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    opacity: 1;
+}
+
+.CartStickyHeader .items {
+    background: #55584d;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+.CartStickyHeader .items h5{
+    color: #fdd670;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.CartStickyHeader .items .fas{
+    font-size: 20px;
+    color: #fdd670;
+    text-align: center;
+}
+
+
+.shopping-cart-button {
+    background: #676767;
+    color: #ffffff;
+    width: 20px;
+    font-size: 21px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transform: translate(0, 200%);
+}
+
+.cart-header {
+    background: #e4e0e1;
+    padding: 10px;
+    color: #000;
+}
+
+.cart-body {
+    padding: 25px 40px;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.cart-item {
+    background: #55584d;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 13px;
+    border: 2px dashed #e0e0e0;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.item-remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transform: translate(0%, 50%);
+    transform: translate(25%, -50%);
+}
+
+.item-remove .fas {
+    font-size: 25px;
+}
+
+.next-process{
+    color: #ffffff;
+}
+
+.next-process .card {
+    border-radius: 0;
+}
+
+.bounce {
+    display: inline-block;
+    position: relative;
+    -moz-animation: bounce 1s infinite linear;
+    -o-animation: bounce 1s infinite linear;
+    -webkit-animation: bounce 1s infinite linear;
+    animation: bounce 1s infinite linear;
+}
+
+@-webkit-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-moz-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-o-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-ms-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}

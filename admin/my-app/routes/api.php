@@ -26,7 +26,6 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::get('/getProductDetails/{slug}', [ProductController::class, 'getProductDetails']);
     Route::get('/getNotifications', [NotificationController::class, 'getNotifications']);
 
-
     //Authentication api
     Route::post('/auth/login', [AuthController::class, 'login']);
     Route::post('/auth/register', [AuthController::class, 'register']);

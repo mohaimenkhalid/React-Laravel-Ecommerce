@@ -9,6 +9,7 @@ ul {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    z-index: 0;
 }
 .footer-cta {
     border-bottom: 1px solid #373636;
