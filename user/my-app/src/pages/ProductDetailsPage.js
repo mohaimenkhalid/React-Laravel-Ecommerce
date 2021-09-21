@@ -3,6 +3,7 @@ import ProductDetails from "../components/productDetails/ProductDetails";
 import SuggestedProducts from "../components/productDetails/SuggestedProducts";
 import axios from "axios";
 import AppURL from "../api/AppURL";
+import ProductDetailsLoader from "../components/loader/ProductDetailsLoader";
 
 class ProductDetailsPage extends Component {
 
@@ -36,16 +37,7 @@ class ProductDetailsPage extends Component {
         return (
             <Fragment>
                 {!this.state.product ?
-                    (<div className="row">
-                        <div className="col-md-12">
-                            <div className="loader-custom-wrapper">
-                                <h4>
-                                    <i className="fa fa-spinner fa-spin mx-2" />
-                                    Loading...
-                                </h4>
-                            </div>
-                        </div>
-                    </div>) :
+                    (<ProductDetailsLoader />) :
                     (
                         <>
                             <ProductDetails product={this.state.product} />

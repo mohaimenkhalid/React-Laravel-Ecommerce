@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class ProductLoader extends Component {
     render() {
         return (
-            <div>
+            <>
                 <div className="mb-3" style={{transition: "all .5s ease-in-out"}}>
                     <div className="ph-item">
                         <div className="ph-col-12">
@@ -17,7 +17,7 @@ class ProductLoader extends Component {
                     </div>
                 </div>
 
-            </div>
+            </>
         );
     }
 }
