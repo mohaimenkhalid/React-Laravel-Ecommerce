@@ -64,7 +64,7 @@ class SuggestedProducts extends Component {
                 {
                     breakpoint: 480,
                     settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 2,
                         slidesToScroll: 1
                     }
                 }
@@ -78,10 +78,10 @@ class SuggestedProducts extends Component {
                 </div>
                 <div className="d-flex align-self-end">
                     <button className="btn theme-bg btn-sm mr-1" onClick={this.previous}>
-                        <i className="fa fa-chevron-left"></i>
+                        <i className="fa fa-chevron-left" />
                     </button>
                     <button className="btn theme-bg btn-sm" onClick={this.next}>
-                        <i className="fa fa-chevron-right"></i>
+                        <i className="fa fa-chevron-right" />
                     </button>
                 </div>
                 <Slider ref={c => (this.slider = c)} {...settings}>

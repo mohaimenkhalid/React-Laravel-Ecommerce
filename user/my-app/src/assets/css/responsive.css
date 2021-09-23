@@ -35,6 +35,7 @@
     .desktop-navbar-status {
         display: none !important;
     }
+
 }
 
 @media only screen and (min-width: 375.98px) and (max-width: 575.98px){
@@ -73,10 +74,35 @@
     .desktop-navbar-status {
         display: none !important;
     }
+
+    .sub-banner-wrapper .content h3 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .sub-banner-wrapper .content h3 {
+        font-size: 20px !important;
+    }
+
+    .BannerTop .search-section {
+        padding: 0 !important;
+    }
+
+    .search-section h1 {
+        font-size: 25px !important;
+    }
+
+    .feature-category .card-body {
+        font-size: 15px !important;
+    }
 }
 
 
 @media (min-width: 576px) and (max-width: 767.98px) {
+
+    .sub-banner-wrapper .content h3 {
+        font-size: 20px !important;
+    }
 
     .section-title{
         font-size: 16px;
@@ -106,6 +132,10 @@
 
     body {
         font-size: 14px;
+    }
+
+    .BannerTop .search-section {
+        padding: 0 !important;
     }
 
 }

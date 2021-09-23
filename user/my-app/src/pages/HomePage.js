@@ -34,7 +34,7 @@ class HomePage extends Component {
                 <Collection />
                 <div className="news-subscribe" style={{"backgroundImage": `url(${newsBg})`}}>
                     <div className="row">
-                        <div className="col-md-4 offset-4 top-30 text-center">
+                        <div className="col-md-4 offset-md-4 top-30 text-center">
                             <h3>Get the latest deals</h3>
                             <p>And receive 20% off coupon for first shopping</p>
                             <form>

@@ -45,7 +45,7 @@ class FeaturedCategories extends Component {
                                 ? (
                                     this.state.loaderCount.map((item, index) => {
                                         return (
-                                            <div className="col-md-4" key={index}>
+                                            <div className="col-md-4 col-6" key={index}>
                                                 <FeaturedLoader />
                                             </div>
                                         );
@@ -54,7 +54,7 @@ class FeaturedCategories extends Component {
                                 : (
                                     this.state.featured_categories.map((category) => {
                                         return (
-                                            <div className="col-md-4">
+                                            <div className="col-md-4 col-6">
                                                 <Link to={`/category/${category.slug}`}>
                                                     <div className="card">
                                                         <div className="card-body text-dark-color">

@@ -10,7 +10,6 @@ import ProductLoader from "../components/loader/ProductLoader";
 class ProductSearchPage extends Component {
     constructor(props) {
         super();
-
         this.state = {
             query: '',
             fetched: false,
@@ -96,7 +95,7 @@ class ProductSearchPage extends Component {
                                             {
                                                 this.state.loaderCount.map((item, index) => {
                                                     return (
-                                                        <div className="col-md-3" key={index}>
+                                                        <div className="col-md-3 col-6" key={index}>
                                                             <ProductLoader />
                                                         </div>
                                                     );

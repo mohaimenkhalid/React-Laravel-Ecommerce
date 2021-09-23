@@ -17,7 +17,7 @@ class App extends Component {
                     <NavBar />
                     <div className="container-fluid">
                         <div className="row">
-                            <div className="col-md-2 p-0 desktop_menu">
+                            <div className="col-md-2 p-0 col-md-2 p-0 desktop_menu Desktop">
                                 <div className="sticky-top top-70">
                                     <MegaMenu />
                                 </div>

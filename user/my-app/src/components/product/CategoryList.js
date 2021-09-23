@@ -22,7 +22,7 @@ class CategoryList extends Component {
                         {
                             this.props.categories.map((category, index) => {
                                 return (
-                                    <div className="col-md-3" key={index}>
+                                    <div className="col-md-3 col-6" key={index}>
                                         <Link to={`/category/${category.slug}`} >
                                             <div className="card">
                                                 <div className="card-body text-center">

@@ -42,7 +42,7 @@ class Cart extends Component {
                             this.props.carts.length < 1 ?
                               (
                                 <div className="row my-5">
-                                  <div className="col-md-4 offset-4 text-center">
+                                  <div className="col-md-4 offset-md-4 text-center">
                                     <img src={EmptyCart} alt="" width="100%" />
                                     <h3 className="mt-5 text-center">Your Cart is Empty!</h3>
                                     <Link to="/" className="btn btn-danger text-center">Continue Shopping </Link>
@@ -51,7 +51,7 @@ class Cart extends Component {
                               ) :
                               (
                                 <div className="col-lg-12 pl-3 pt-3">
-                                  <table className="table table-hover border bg-white">
+                                  <table className="table table-hover border bg-white table-responsive">
                                     <thead>
                                       <tr>
                                         <th>Product</th>
@@ -105,13 +105,13 @@ class Cart extends Component {
                                     <tfoot>
                                       <tr>
                                         <td>
-                                          <a href="#" className="btn btn-warning text-white">
-                                            <i className="fa fa-angle-left"/>
+                                          <Link to="/" className="btn btn-warning text-white">
+                                            <i className="fa fa-angle-left" />
                                             Continue Shopping
-                                          </a>
+                                          </Link>
                                         </td>
                                         <td colSpan="2" className="hidden-xs"></td>
-                                        <td className="hidden-xs text-center" width="10%">
+                                        <td className="hidden-xs text-center" width="20%">
                                             <strong>Total :
                                           {this.props.totalPrice}</strong></td>
                                         <td width="20%">

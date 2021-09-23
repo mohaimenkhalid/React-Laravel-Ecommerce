@@ -238,7 +238,7 @@ class ProductDetails extends Component {
                                         </button>
                                     </div>
                                 </Col>
-                                <Col className="mt-3" md={3} lg={3} sm={12}>
+                                <Col className="mt-3 Desktop" md={3} lg={3} sm={12}>
                                     <ul>
                                         <li>Cash On Delivery</li>
                                         <li>7 Days Happy Return</li>

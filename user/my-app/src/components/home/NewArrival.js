@@ -61,14 +61,14 @@ class NewArrival extends Component {
                 {
                     breakpoint: 600,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 3,
                         slidesToScroll: 1,
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 2,
                         slidesToScroll: 1
                     }
                 }
@@ -77,8 +77,8 @@ class NewArrival extends Component {
         return (
             <Container fluid={true} className="card py-5 mb-3">
                 <div className="text-center">
-                    <h3 className="text-dark-color">New Arrival</h3>
-                    <p>Some of Our Exclusive Collection, you May Like</p>
+                    <h3 className="text-dark-color">Latest Product</h3>
+                    <p>New product are comes for you</p>
                 </div>
                 <div className="d-flex align-self-end">
                     <button className="btn theme-bg btn-sm mr-1" onClick={this.previous}>

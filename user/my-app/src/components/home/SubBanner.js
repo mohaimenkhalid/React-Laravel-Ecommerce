@@ -9,7 +9,7 @@ class SubBanner extends Component {
                 <div className="row mt-3">
                     <div className="col-md-6">
                         <div className="sub-banner-wrapper">
-                            <img src={subBanner2} width="100%" />
+                            <img src={subBanner2} width="100%" alt="" />
                             <div className="content">
                                 <h3>Fresh vegetable</h3>
                                 <h5>15% discount</h5>
@@ -17,9 +17,9 @@ class SubBanner extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6 mt-2">
                         <div className="sub-banner-wrapper">
-                            <img src={subBanner1} width="100%" />
+                            <img src={subBanner1} width="100%" alt="" />
                             <div className="content">
                                 <h3>Oranges food</h3>
                                 <h5>25% discount</h5>

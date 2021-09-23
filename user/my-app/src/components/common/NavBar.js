@@ -58,7 +58,7 @@ class NavBar extends Component {
     render() {
         return (
             <Fragment>
-                <Navbar bg="light" className="Desktop navbar sticky-top">
+                <Navbar bg="light" className="navbar sticky-top">
                     <Row className="align-items-center">
                         <Col lg={2} md={2} sm={12} xs={12}>
                             <div className="d-flex justify-content-center">
@@ -91,8 +91,9 @@ class NavBar extends Component {
                                         <span className="badge badge-danger">{this.props.numberOfItems}</span>
                                     </sub>
                                 </Link>
-
-                                <div id="google_translate_element"></div>
+                                <div  className="Desktop">
+                                    <div id="google_translate_element"></div>
+                                </div>
                                 {
                                     this.props.isAuth
                                     ?
