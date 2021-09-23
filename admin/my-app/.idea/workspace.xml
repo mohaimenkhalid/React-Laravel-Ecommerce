@@ -24,18 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/cart/Cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/FeaturedCategories.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/FeaturedCategories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/NewArrival.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/NewArrival.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/home/SubBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/home/SubBanner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/product/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/product/CategoryList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/productDetails/ProductDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/productDetails/ProductDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/productDetails/SuggestedProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/productDetails/SuggestedProducts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/ProductSearchPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/ProductSearchPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,7 +320,7 @@
       <workItem from="1631816380905" duration="4357000" />
       <workItem from="1632239159838" duration="742000" />
       <workItem from="1632330105976" duration="618000" />
-      <workItem from="1632415227630" duration="1016000" />
+      <workItem from="1632415227630" duration="1615000" />
     </task>
     <servers />
   </component>
