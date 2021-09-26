@@ -27,6 +27,44 @@ class HomePage extends Component {
         return (
             <Fragment>
                 <HomeTop />
+                <div className="row mt-3 m-1">
+                    <div className="col-md-3 col-6">
+                        <div className="serviceItem d-flex">
+                            <i className="fa fa-truck" />
+                            <div>
+                                <h5>Free Home Delivery</h5>
+                                <p>Free shipping</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-3 col-6">
+                        <div className="serviceItem d-flex">
+                            <i className="fas fa-headset" />
+                            <div>
+                                <h5>Help Center</h5>
+                                <p>24/7 Support System</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-3 col-6">
+                        <div className="serviceItem d-flex">
+                            <i className="fas fa-dollar-sign" />
+                            <div>
+                                <h5>Money Back Guarantee</h5>
+                                <p>Money Back Within 7 Days</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-3 col-6">
+                        <div className="serviceItem d-flex">
+                            <i className="fab fa-cc-stripe" />
+                            <div>
+                                <h5>Payment With Stripe</h5>
+                                <p>Secure Payment With stripe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <FeaturedCategories />
                 <SubBanner />
                 <NewArrival />

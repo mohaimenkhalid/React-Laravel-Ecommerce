@@ -95,6 +95,27 @@
     .feature-category .card-body {
         font-size: 15px !important;
     }
+
+    .serviceItem h5 {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .serviceItem p {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .serviceItem i {
+        font-size: 18px;
+        color: #339966;
+        margin-right: 10px;
+    }
+
+    .serviceItem {
+        margin-bottom: 8px;
+    }
+
 }
 
 

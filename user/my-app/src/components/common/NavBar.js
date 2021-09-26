@@ -119,6 +119,9 @@ class NavBar extends Component {
                                     )
                                     :
                                     (
+                                        /*<Link to="/login">
+                                            <h5 className="text-dark"><i className="fa fa-user font-30" /> Account</h5>
+                                        </Link>*/
                                         <Link to="/login" className="signin">
                                             Sign In
                                         </Link>
