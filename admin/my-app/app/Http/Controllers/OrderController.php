@@ -90,7 +90,7 @@ class OrderController extends Controller
     }
 
     public function getMyOrder() {
-        $orders = Order::with(['customer'])->where(['customer_id' => auth()->user()->id])->get();
+        $orders = Order::with(['customer'])->orderBy('id', 'DESC')->where(['customer_id' => auth()->user()->id])->paginate(8);
         return response()->json($orders);
     }
 

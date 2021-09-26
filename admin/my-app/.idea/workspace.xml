@@ -25,8 +25,8 @@
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/cart/CartSideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/cart/CartSideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/CheckoutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/CheckoutPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/megaMenuMobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/megaMenuMobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/user/OrderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/user/OrderPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,7 +324,7 @@
       <workItem from="1632330105976" duration="618000" />
       <workItem from="1632415227630" duration="1616000" />
       <workItem from="1632456695542" duration="708000" />
-      <workItem from="1632671178225" duration="2622000" />
+      <workItem from="1632671178225" duration="3637000" />
     </task>
     <servers />
   </component>
