@@ -150,6 +150,7 @@ class CheckoutPage extends Component {
 
     axios.post(AppURL.placeOrder, orderFormData, {headers: headers})
       .then((res) => {
+        console.log(res);
         if (res.status === 200 && res.data) {
           localStorage.removeItem('cart')
           store.dispatch(() => getCartAction());

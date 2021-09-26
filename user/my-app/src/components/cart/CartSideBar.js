@@ -29,22 +29,23 @@ const CartSideBar = () => {
                     <button onClick={() => setCollapse(false)}>Close</button>
                 </div>
                 <div className="cart-body">
+
                     {
                         cartState.items.length > 0 ?
                             <>
+                                <div className="next-process mb-5">
+                                    <div className="card">
+                                        <div className="card-body">
+                                            <h5 className="text-dark">Total - BDT { cartState.totalPrice}</h5>
+                                            <Link to="/checkout" onClick={()=> setCollapse(false)}
+                                                  className="btn theme-bg btn-block">Process Checkout</Link>
+                                        </div>
+                                    </div>
+                                </div>
                                 {
                                     cartState.items.map((cart, index) => {
                                         return (
                                            <>
-                                               <div className="next-process mb-5">
-                                                   <div className="card">
-                                                       <div className="card-body">
-                                                           <h5 className="text-dark">Total - BDT { cartState.totalPrice}</h5>
-                                                           <Link to="/checkout" onClick={()=> setCollapse(false)}
-                                                                 className="btn theme-bg btn-block">Process Checkout</Link>
-                                                       </div>
-                                                   </div>
-                                               </div>
                                                <div className="cart-item">
                                                    <div className="row">
                                                        <div className="col-3">
