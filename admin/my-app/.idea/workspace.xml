@@ -23,11 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7015eab-84a4-4a66-aaec-f6eeaf71d63b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/react-ecommerce-project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/common/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/profile/1630438771.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/components/productDetails/ProductDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/components/productDetails/ProductDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/pages/user/OrderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/pages/user/OrderPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../user/my-app/src/redux/actions/cartActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../user/my-app/src/redux/actions/cartActions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,6 +333,9 @@
       <workItem from="1632415227630" duration="1616000" />
       <workItem from="1632456695542" duration="708000" />
       <workItem from="1632671178225" duration="4950000" />
+      <workItem from="1632940722046" duration="954000" />
+      <workItem from="1633450999431" duration="568000" />
+      <workItem from="1636212657513" duration="40000" />
     </task>
     <servers />
   </component>
@@ -353,11 +363,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1631247445310" />
-    <state x="603" y="201" key="FileChooserDialogImpl" timestamp="1632671276744">
+    <state x="603" y="201" key="FileChooserDialogImpl" timestamp="1636212704436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="437" y="176" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1628442968834" />
-    <state x="603" y="201" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1632671276744" />
+    <state x="603" y="201" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1636212704436" />
     <state x="733" y="243" key="NewPhpClassDialog" timestamp="1630353901318">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -366,10 +376,6 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="521" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1630061624298" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1626291333882">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1626291333882" />
     <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1631128882336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -379,11 +385,11 @@
     </state>
     <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1628448909533" />
     <state x="531" y="236" width="840" height="855" key="run.anything.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1630081608402" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1632677880571">
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1633451069489">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="498" y="181" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1628449296502" />
     <state x="519" y="189" width="672" height="561" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1631820325734" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1632677880571" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1633451069489" />
   </component>
 </project>

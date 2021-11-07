@@ -44,8 +44,8 @@ class ProductDetails extends Component {
                     <h3><del>Tk. {product.price}</del></h3>
                     <div className="d-flex align-items-center">
                         <h2>Tk. {product.special_price}</h2>
-                    <small> You Save TK. { product.price - product.special_price}</small>
-                </div>
+                         <small> You Save TK. { product.price - product.special_price}</small>
+                    </div>
                 </>
             );
         } else {

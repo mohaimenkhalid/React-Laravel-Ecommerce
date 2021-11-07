@@ -15,11 +15,17 @@ class Product extends Model
     CONST IMAGE_UPLOAD_PATH = '/upload/products/';
     CONST SLIDER_IMAGE_UPLOAD_PATH = '/upload/products/slider/';
 
+    protected $appends = ['image_path'];
+
     public function product_details() {
         return $this->hasOne(ProductDetails::class, 'product_id');
     }
 
     public function category() {
         return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    public function getImagePathAttribute() {
+        return asset($this->image);
     }
 }

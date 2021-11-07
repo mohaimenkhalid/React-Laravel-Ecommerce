@@ -83,7 +83,7 @@ class OrderController extends Controller
             }
 
         }
-        $order->update(['payment_id' => $paymentCreate->id ? $paymentCreate->id : null, 'is_completed' => 1, 'status' => 'success']);
+        $order->update(['payment_id' => isset($paymentCreate) ? $paymentCreate->id : null, 'is_completed' => 1, 'status' => 'success']);
 
 
         return response()->json(['message' => 'Order placed successfully.']);

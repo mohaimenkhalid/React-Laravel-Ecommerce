@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="447d47ce-33b3-4d7a-9dc8-c7b74d9ae326" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/react-ecommerce-project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/my-app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/my-app/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/my-app/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/my-app/app/Http/Controllers/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/my-app/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/my-app/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/my-app/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/my-app/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/my-app/public/upload/profile/1630438771.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/my-app/src/components/productDetails/ProductDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/user/my-app/src/components/productDetails/ProductDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/my-app/src/pages/user/OrderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/user/my-app/src/pages/user/OrderPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/my-app/src/redux/actions/cartActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/user/my-app/src/redux/actions/cartActions.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="ProjectId" id="1yu1uNm5dq6eaqhIVhFjhPO9jfK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rent2stay/backend" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="447d47ce-33b3-4d7a-9dc8-c7b74d9ae326" name="Default Changelist" comment="" />
+      <created>1633086880662</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1633086880662</updated>
+      <workItem from="1633086881772" duration="1632000" />
+      <workItem from="1633153621348" duration="5598000" />
+      <workItem from="1633183025837" duration="6949000" />
+      <workItem from="1633277191458" duration="3939000" />
+      <workItem from="1633362858063" duration="1835000" />
+      <workItem from="1633450977510" duration="2650000" />
+      <workItem from="1633537392510" duration="2634000" />
+      <workItem from="1633621053070" duration="5601000" />
+      <workItem from="1633679288721" duration="3018000" />
+      <workItem from="1633794927997" duration="3053000" />
+      <workItem from="1633883791962" duration="1918000" />
+      <workItem from="1633969874553" duration="2250000" />
+      <workItem from="1634053002238" duration="3853000" />
+      <workItem from="1634145948001" duration="856000" />
+      <workItem from="1634657736385" duration="8527000" />
+      <workItem from="1634703149433" duration="13714000" />
+      <workItem from="1635009167673" duration="61000" />
+      <workItem from="1635011386235" duration="3000" />
+      <workItem from="1635510887563" duration="6000" />
+      <workItem from="1636084891414" duration="492000" />
+      <workItem from="1636105198600" duration="637000" />
+      <workItem from="1636203902565" duration="32000" />
+      <workItem from="1636297503755" duration="2406000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="723" y="269" key="FileChooserDialogImpl" timestamp="1636302821652">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="723" y="269" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1636302821652" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1636297642612">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1636297642612" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1634707008168">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1634707008168" />
+  </component>
+</project>

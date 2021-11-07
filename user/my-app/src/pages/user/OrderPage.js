@@ -21,13 +21,13 @@ class OrderPage extends Component {
 
     componentDidMount() {
         const headers = {
-            'Accept' : 'application/json',
-            'Authorization' : `Bearer ${AppStorage.getToken()}`
+            'Accept': 'application/json',
+            'Authorization': `Bearer ${AppStorage.getToken()}`
         };
-        axios.get(AppURL.getMyOrder,  {headers: headers})
+        axios.get(AppURL.getMyOrder, {headers: headers})
             .then(res => {
                 console.log(res)
-                if(res.status === 200) {
+                if (res.status === 200) {
                     this.setState({myOrders: res.data})
                     this.setState({isLoading: false})
                 }
@@ -40,13 +40,13 @@ class OrderPage extends Component {
     getPaginationOrder(url) {
         this.setState({isLoading: true})
         const headers = {
-            'Accept' : 'application/json',
-            'Authorization' : `Bearer ${AppStorage.getToken()}`
+            'Accept': 'application/json',
+            'Authorization': `Bearer ${AppStorage.getToken()}`
         };
-        axios.get(url,  {headers: headers})
+        axios.get(url, {headers: headers})
             .then(res => {
                 console.log(res)
-                if(res.status === 200) {
+                if (res.status === 200) {
                     this.setState({myOrders: res.data})
                     this.setState({isLoading: false})
                 }
@@ -64,22 +64,22 @@ class OrderPage extends Component {
                         <h3>My Order List</h3>
                         <table className="table">
                             <thead>
-                                <tr>
-                                    <th>Order#</th>
-                                    <th>Date</th>
-                                    <th>Shipped To</th>
-                                    <th>Order Total</th>
-                                    <th>Order Status</th>
-                                    <th>Action</th>
-                                </tr>
+                            <tr>
+                                <th>Order#</th>
+                                <th>Date</th>
+                                <th>Shipped To</th>
+                                <th>Order Total</th>
+                                <th>Order Status</th>
+                                <th>Action</th>
+                            </tr>
                             </thead>
                             <tbody>
 
-                            { this.state.isLoading === true
+                            {this.state.isLoading === true
                                 ?
                                 (
                                     <tr>
-                                        <td colSpan="6"><ListLoader /></td>
+                                        <td colSpan="6"><ListLoader/></td>
                                     </tr>
                                 )
                                 :
@@ -95,7 +95,7 @@ class OrderPage extends Component {
                                                     <Link to="/" className="btn badge-info">Continue Shopping</Link>
                                                 </td>
                                             </tr>
-                                            )
+                                        )
                                         :
                                         (
                                             <>
@@ -106,7 +106,8 @@ class OrderPage extends Component {
                                                                 <td>{order.invoice_number}</td>
                                                                 <td>
                                                                     {
-                                                                        <Moment parse="YYYY-MM-DD HH:mm:ss" format="D MMM YYYY">
+                                                                        <Moment parse="YYYY-MM-DD HH:mm:ss"
+                                                                                format="D MMM YYYY">
                                                                             {order.created_at}
                                                                         </Moment>
                                                                     }
@@ -119,8 +120,9 @@ class OrderPage extends Component {
                                                                     </span>
                                                                 </td>
                                                                 <td>
-                                                                    <Link to={'/my-account/orders/'+order.id} className="btn btn-info btn-sm">
-                                                                        <i className="fa fa-eye" />
+                                                                    <Link to={'/my-account/orders/' + order.id}
+                                                                          className="btn btn-info btn-sm">
+                                                                        <i className="fa fa-eye"/>
                                                                         <span className='ml-1'>View</span>
                                                                     </Link>
                                                                 </td>
@@ -133,8 +135,10 @@ class OrderPage extends Component {
                                                     {
                                                         this.state.myOrders.links.map((link, index) => {
                                                             return (
-                                                                <Pagination.Item disabled={link.url === null} key={index} active={link.active} onClick={() => this.getPaginationOrder(link.url)}>
-                                                                    {ReactHtmlParser(link.label) }
+                                                                <Pagination.Item disabled={link.url === null}
+                                                                                 key={index} active={link.active}
+                                                                                 onClick={() => this.getPaginationOrder(link.url)}>
+                                                                    {ReactHtmlParser(link.label)}
                                                                 </Pagination.Item>
                                                             );
                                                         })

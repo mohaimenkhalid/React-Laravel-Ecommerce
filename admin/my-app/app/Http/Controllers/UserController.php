@@ -19,7 +19,7 @@ class UserController extends Controller
             }
             $request->image->move(User::USER_PROFILE_UPLOAD_PATH, $filename);
 
-            if($request->old_image) {
+            if($request->old_image && $request->old_image != null) {
                 unlink(User::USER_PROFILE_UPLOAD_PATH.''.$request->old_image);
             }
             $user->image = $filename;
